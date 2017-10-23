@@ -19,4 +19,16 @@ mix.setPublicPath(path.normalize(`public/themes/${theme}/assets`));
 mix.js('resources/assets/scripts/app.js', 'scripts');
 mix.sass('resources/assets/styles/app.scss', 'styles');
 
+mix.webpackConfig({
+  module: {
+    rules: [{
+      test: /\.js?$/,
+      use: [{
+        loader: 'babel-loader',
+        options: mix.config.babel()
+      }]
+    }]
+  }
+});
+
 mix.version();

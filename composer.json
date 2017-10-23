@@ -3,9 +3,11 @@
     "description": "Site for We Are Hiring",
     "keywords": ["wordplate", "wordpress", "boilerplate", "plate"],
     "license": "MIT",
+    "minimum-stability": "dev",
+    "prefer-stable" : true,
     "require": {
         "php": "^7.0",
-        "wordplate/framework": "^6.0",
+        "wordplate/framework": "^6.1",
         "wordplate/plate": "^3.0",
         "wordplate/autoloader": "^1.2",
         "wpackagist-plugin/disable-embeds": "^1.3",

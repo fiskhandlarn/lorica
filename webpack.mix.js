@@ -23,10 +23,15 @@ mix.webpackConfig({
   module: {
     rules: [{
       test: /\.js?$/,
-      use: [{
-        loader: 'babel-loader',
-        options: mix.config.babel()
-      }]
+      use: [
+        {
+          loader: 'babel-loader',
+          options: mix.config.babel()
+        },
+        {
+          loader: 'eslint-loader',
+        }
+      ]
     }]
   }
 });

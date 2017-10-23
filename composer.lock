@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "194ff622de9221996549e918d704165a",
+    "content-hash": "c1392ec03ad55ee22f423276a5d88301",
     "packages": [
         {
             "name": "composer/installers",
@@ -1235,6 +1235,26 @@
                 "wordpress"
             ],
             "time": "2017-05-03T14:04:55+00:00"
+        },
+        {
+            "name": "wpackagist-plugin/better-wp-security",
+            "version": "6.6.1",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/better-wp-security/",
+                "reference": "tags/6.6.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/better-wp-security.6.6.1.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/better-wp-security/"
         },
         {
             "name": "wpackagist-plugin/disable-embeds",

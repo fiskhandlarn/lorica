@@ -35,6 +35,12 @@ mix.webpackConfig({
       ]
     }]
   },
+  module: {
+    rules: [{
+      test: /\.scss$/,
+      loader: 'import-glob-loader'
+    }]
+  },
   plugins: [
     new sassLintPlugin({
       glob: 'resources/assets/styles/**/*.s?(a|c)ss'

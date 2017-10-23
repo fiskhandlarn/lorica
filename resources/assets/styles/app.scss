@@ -1,1 +1,16 @@
-// WordPlate
+@charset 'UTF-8';
+
+// if a grid system is needed,
+// 1. run:
+// npm add bootstrap-sass --dev
+// 2. uncomment bootstrap variable include:
+// @import '../../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/variables';
+
+// 3. override bootstrap variables if needed
+@import 'settings/*';
+
+// 4. uncomment bootstrap includes:
+// @import '../../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins';
+// @import '../../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/grid';
+
+//@import 'components/*';

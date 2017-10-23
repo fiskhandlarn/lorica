@@ -1,6 +1,6 @@
 @charset 'UTF-8';
 
-//@import '../../../node_modules/sass-rem/_rem.scss';
+@import '../../../node_modules/sass-rem/_rem.scss';
 
 // Bootstrap: Core variables
 @import '../../../node_modules/bootstrap/scss/functions';
@@ -57,3 +57,8 @@
 // Wangeskog
 //@import 'base/*';
 //@import 'components/*';
+
+
+body {
+  padding: rem(100px);
+}

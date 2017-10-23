@@ -28,6 +28,7 @@
         "import-glob-loader": "^1.1.0",
         "laravel-mix": "^1.4.4",
         "sass-lint": "^1.12.1",
+        "sass-rem": "^2.0.0",
         "sasslint-webpack-plugin": "^1.0.4"
     }
 }

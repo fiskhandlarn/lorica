@@ -1,28 +1,68 @@
-# WordPlate
+# We Are Hiring
 
-[![WordPlate](https://cloud.githubusercontent.com/assets/499192/24309675/09eec350-10cd-11e7-98f3-094003bc8e15.png)](https://wordplate.github.io)
+## Install
 
-A modern WordPress stack built with Composer. It simplifies the fuzziness around WordPress development.
+1: Install the node dependencies and build the resources:
 
-```sh
-$ composer create-project wordplate/wordplate
+```bash
+$ npm install
+$ npm run dev
 ```
 
-[![Build Status](https://img.shields.io/travis/wordplate/framework/master.svg?style=flat)](https://travis-ci.org/wordplate/framework)
-[![StyleCI](https://styleci.io/repos/13329845/shield?style=flat)](https://styleci.io/repos/13329845)
-[![Coverage Status](https://img.shields.io/codecov/c/github/wordplate/framework.svg?style=flat)](https://codecov.io/github/wordplate/framework)
-[![Total Downloads](https://img.shields.io/packagist/dt/wordplate/framework.svg?style=flat)](https://packagist.org/packages/wordplate/framework)
-[![Latest Version](https://img.shields.io/github/release/wordplate/wordplate.svg?style=flat)](https://github.com/wordplate/wordplate/releases)
-[![License](https://img.shields.io/packagist/l/wordplate/wordplate.svg?style=flat)](https://packagist.org/packages/wordplate/wordplate)
+2: Install the composer dependencies:
 
-## Documentation
+```bash
+$ composer install
+```
 
-Visit the [official documentation](https://wordplate.github.io/docs/getting-started) page if you want to dive right in and start building WordPress applications with WordPlate. The documentation is thorough, complete, and makes it a breeze to get started learning WordPlate.
+3: Configure your web server setting the web root to the `public/` folder or configure Homestead (see below).
 
-## Contributing
+4: If you want to use a custom domain you should update your `/etc/hosts` file.
 
-Please review our [contribution guidelines](https://github.com/wordplate/framework/blob/master/CONTRIBUTING.md) before submitting a pull request.
+5: Edit the `.env` file with your credentials and [WordPress salts](https://wordplate.github.io/salt/).
 
-## License
+### Homestead
 
-[MIT](LICENSE) © [Vincent Klaiber](https://vinkla.com)
+If you want to use [Homestead](https://laravel.com/docs/homestead#per-project-installation) vagrant box (optional) run the command below:
+
+```bash
+$ vendor/bin/homestead make
+```
+
+This will create a `Homestead.yaml` file which you need to update with your credentials.
+
+Make sure you've [Vagrant](https://www.vagrantup.com/) and [VirtualBox](https://www.virtualbox.org/) installed on your computer.
+
+Then start you vagrant box with the command below:
+
+```bash
+$ vagrant up
+```
+
+## Develop
+
+Build CSS & JS files one time:
+
+```bash
+$ npm run dev
+```
+
+Build CSS & JS files and watch for file changes:
+
+```bash
+$ npm run watch
+```
+
+Build minified CSS & JS files one time:
+
+```bash
+$ npm run prod
+```
+
+## Deploy
+
+Deploy with [DeployBot](https://hoymultimedia.deploybot.com/NNNNNN-NNNNN-project/) to:
+
+* [d.domain.tld](http://d.domain.tld)
+* [q.domain.tld](http://q.domain.tld)
+* [domain.tld](http://domain.tld)

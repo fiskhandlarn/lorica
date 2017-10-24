@@ -1,10 +1,15 @@
 {
     "name": "sot/we-are-hiring",
     "description": "Site for We Are Hiring",
-    "keywords": ["wordplate", "wordpress", "boilerplate", "plate"],
+    "keywords": [
+        "wordplate",
+        "wordpress",
+        "boilerplate",
+        "plate"
+    ],
     "license": "MIT",
     "minimum-stability": "dev",
-    "prefer-stable" : true,
+    "prefer-stable": true,
     "require": {
         "php": "^7.0",
         "wordplate/framework": "^6.1",
@@ -14,7 +19,8 @@
         "wpackagist-plugin/disable-emojis": "^1.7",
         "wpackagist-plugin/normalizer": "^1.0",
         "koodimonni-language/core-sv_se": "^4.8",
-        "wpackagist-plugin/better-wp-security": "^6.6"
+        "wpackagist-plugin/better-wp-security": "^6.6",
+        "advanced-custom-fields/advanced-custom-fields-pro": "5.6.4"
     },
     "repositories": [
         {
@@ -24,11 +30,26 @@
         {
             "type": "composer",
             "url": "https://wp-languages.github.io"
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "advanced-custom-fields/advanced-custom-fields-pro",
+                "version": "5.6.4",
+                "type": "wordpress-plugin",
+                "dist": {
+                    "type": "zip",
+                    "url": "https://connect.advancedcustomfields.com/index.php?p=pro&a=download&k=b3JkZXJfaWQ9MzQyMTl8dHlwZT1kZXZlbG9wZXJ8ZGF0ZT0yMDE0LTA3LTEwIDA2OjEwOjM3&t=5.6.4"
+                }
+            }
         }
     ],
     "scripts": {
         "post-root-package-install": [
             "php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+        ],
+        "update-acf-plugin": [
+            "php -r \"file_exists('composer/update-acf-plugin.php') && require 'composer/update-acf-plugin.php';\""
         ]
     },
     "config": {
@@ -40,13 +61,21 @@
                 "type:wordpress-muplugin",
                 "type:wordpress-plugin"
             ],
-            "public/themes/{$name}": ["type:wordpress-theme"]
+            "public/themes/{$name}": [
+                "type:wordpress-theme"
+            ]
         },
         "wordpress-install-dir": "public/wordpress",
         "dropin-paths": {
-            "public/languages/": ["vendor:koodimonni-language"],
-            "public/languages/plugins/": ["vendor:koodimonni-plugin-language"],
-            "public/languages/themes/": ["vendor:koodimonni-theme-language"]
+            "public/languages/": [
+                "vendor:koodimonni-language"
+            ],
+            "public/languages/plugins/": [
+                "vendor:koodimonni-plugin-language"
+            ],
+            "public/languages/themes/": [
+                "vendor:koodimonni-theme-language"
+            ]
         }
     }
 }

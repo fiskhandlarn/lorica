@@ -1,5 +1,6 @@
 const mix = require('laravel-mix');
 const sassLintPlugin = require('sasslint-webpack-plugin');
+const styleLintPlugin = require('stylelint-webpack-plugin');
 
 /*
  |--------------------------------------------------------------------------
@@ -44,6 +45,9 @@ mix.webpackConfig({
   plugins: [
     new sassLintPlugin({
       glob: 'resources/assets/styles/**/*.s?(a|c)ss'
+    }),
+    new styleLintPlugin({
+      context: 'resources/assets/styles/'
     })
   ]
 });

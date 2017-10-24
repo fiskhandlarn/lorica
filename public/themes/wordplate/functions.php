@@ -3,7 +3,10 @@
 declare(strict_types=1);
 
 // Register plugin helpers.
-require template_path('library/plate.php');
+require_once template_path('library/assets.php');
+require_once template_path('library/better-wp-security.php');
+require_once template_path('library/normalizer.php');
+require_once template_path('library/plate.php');
 
 // Set theme defaults.
 add_action('after_setup_theme', function () {
@@ -44,27 +47,17 @@ add_action('after_setup_theme', function () {
     add_theme_support('soil-nice-search');
 });
 
-// Enqueue and register scripts the right way.
-add_action('wp_enqueue_scripts', function () {
-    wp_deregister_script('jquery');
+// // Remove JPEG compression.
+// add_filter('jpeg_quality', function () {
+//     return 100;
+// }, 10, 2);
 
-    wp_enqueue_style('wordplate', mix('styles/app.css'));
+// // Set custom excerpt more.
+// add_filter('excerpt_more', function () {
+//     return '...';
+// });
 
-    wp_register_script('wordplate', mix('scripts/app.js'), '', '', true);
-    wp_enqueue_script('wordplate');
-});
-
-// Remove JPEG compression.
-add_filter('jpeg_quality', function () {
-    return 100;
-}, 10, 2);
-
-// Set custom excerpt more.
-add_filter('excerpt_more', function () {
-    return '...';
-});
-
-// Set custom excerpt length.
-add_filter('excerpt_length', function () {
-    return 101;
-});
+// // Set custom excerpt length.
+// add_filter('excerpt_length', function () {
+//     return 101;
+// });

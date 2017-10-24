@@ -33,6 +33,17 @@ add_action('after_setup_theme', function () {
     register_nav_menu('primary-menu', __('Primary Menu', 'wordplate'));
 });
 
+// configure roots/soil
+// https://github.com/roots/soil
+add_action('after_setup_theme', function () {
+    add_theme_support('soil-clean-up');
+    add_theme_support('soil-disable-trackbacks');
+    //add_theme_support('soil-google-analytics', 'UA-XXXXX-Y');
+    add_theme_support('soil-js-to-footer');
+    //add_theme_support('soil-nav-walker');
+    add_theme_support('soil-nice-search');
+});
+
 // Enqueue and register scripts the right way.
 add_action('wp_enqueue_scripts', function () {
     wp_deregister_script('jquery');

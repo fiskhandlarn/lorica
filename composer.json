@@ -20,7 +20,8 @@
         "wpackagist-plugin/normalizer": "^1.0",
         "koodimonni-language/core-sv_se": "^4.8",
         "wpackagist-plugin/better-wp-security": "^6.6",
-        "advanced-custom-fields/advanced-custom-fields-pro": "5.6.4"
+        "advanced-custom-fields/advanced-custom-fields-pro": "5.6.4",
+        "roots/soil": "^3.7"
     },
     "repositories": [
         {

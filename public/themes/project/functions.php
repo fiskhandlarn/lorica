@@ -5,6 +5,7 @@ declare(strict_types=1);
 // Register plugin helpers.
 require_once template_path('library/assets.php');
 require_once template_path('library/better-wp-security.php');
+require_once template_path('library/bladerunner.php');
 require_once template_path('library/normalizer.php');
 require_once template_path('library/plate.php');
 require_once template_path('library/soil.php');

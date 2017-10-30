@@ -22,7 +22,8 @@
         "wordplate/polylang": "^3.0",
         "wordplate/framework": "^6.0",
         "wpackagist-plugin/wp-migrate-db": "^1.0",
-        "wordplate/mail": "^2.1"
+        "wordplate/mail": "^2.1",
+        "ekandreas/bladerunner": "^1.7"
     },
     "repositories": [
         {

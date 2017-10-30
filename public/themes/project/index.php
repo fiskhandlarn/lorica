@@ -3,7 +3,7 @@
 <main role="main">
     <?php if (have_posts()): while (have_posts()): the_post(); ?>
         <!-- This is an example of blade templating -->
-        <?php echo view('article'); ?>
+        <?php bladerunner('article'); ?>
     <?php endwhile; else: ?>
         <article>
             <p>Nothing to see.</p>

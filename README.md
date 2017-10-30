@@ -54,7 +54,7 @@ Add languages for Polylang in wp-admin (*Languages* in the side menu) so you can
 
 Read [TODO.md](./TODO.md) so you now what must be done before launching your project.
 
-Change "project" and "domain.tld" in this README.md below to reflect your project's name and domain name.
+Change "domain.tld" in this README.md below to reflect your project's name and domain name.
 
 Setup done! Remove everything in this README.md above this line:
 

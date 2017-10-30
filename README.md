@@ -67,17 +67,17 @@ Setup done! Remove everything in this README.md above this line:
 
 ## Install
 
-1: Install the node dependencies and build the resources:
+1: Install the composer dependencies:
+
+```bash
+$ composer install
+```
+
+2: Install the node dependencies and build the resources:
 
 ```bash
 $ npm install
 $ npm run dev
-```
-
-2: Install the composer dependencies:
-
-```bash
-$ composer install
 ```
 
 3: Configure your web server setting the web root to the `public/` folder or configure Valet.

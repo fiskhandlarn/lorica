@@ -7,6 +7,7 @@ require_once template_path('library/assets.php');
 require_once template_path('library/better-wp-security.php');
 require_once template_path('library/normalizer.php');
 require_once template_path('library/plate.php');
+require_once template_path('library/soil.php');
 
 // Set theme defaults.
 add_action('after_setup_theme', function () {
@@ -34,17 +35,6 @@ add_action('after_setup_theme', function () {
 
     // Add primary WordPress menu.
     register_nav_menu('primary-menu', __('Primary Menu', 'wordplate'));
-});
-
-// configure roots/soil
-// https://github.com/roots/soil
-add_action('after_setup_theme', function () {
-    add_theme_support('soil-clean-up');
-    add_theme_support('soil-disable-trackbacks');
-    //add_theme_support('soil-google-analytics', 'UA-XXXXX-Y');
-    add_theme_support('soil-js-to-footer');
-    //add_theme_support('soil-nav-walker');
-    add_theme_support('soil-nice-search');
 });
 
 // // Remove JPEG compression.

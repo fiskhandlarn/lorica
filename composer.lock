@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "a196310b00dcb1987e52188a1687b387",
+    "content-hash": "40b18735d6ca357331930b1a00f6ef08",
     "packages": [
         {
             "name": "advanced-custom-fields/advanced-custom-fields-pro",
@@ -1565,23 +1565,22 @@
         },
         {
             "name": "wordplate/framework",
-            "version": "dev-master",
+            "version": "6.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/wordplate/framework.git",
-                "reference": "46d14958b0dae91f3795699524eb8eb96195fe4e"
+                "reference": "008a0077c1040eb256a8b417f996f5c4cd9a607d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wordplate/framework/zipball/46d14958b0dae91f3795699524eb8eb96195fe4e",
-                "reference": "46d14958b0dae91f3795699524eb8eb96195fe4e",
+                "url": "https://api.github.com/repos/wordplate/framework/zipball/008a0077c1040eb256a8b417f996f5c4cd9a607d",
+                "reference": "008a0077c1040eb256a8b417f996f5c4cd9a607d",
                 "shasum": ""
             },
             "require": {
                 "composer/installers": "^1.3",
                 "ext-mbstring": "*",
                 "illuminate/support": "^5.5",
-                "jenssegers/blade": "^1.1",
                 "johnpbloch/wordpress": "^4.8",
                 "php": "^7.0",
                 "roots/wp-password-bcrypt": "^1.0",
@@ -1590,12 +1589,12 @@
                 "vlucas/phpdotenv": "^2.4"
             },
             "require-dev": {
-                "phpunit/phpunit": "^6.4"
+                "phpunit/phpunit": "^6.3"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "6.1-dev"
+                    "dev-master": "6.0-dev"
                 }
             },
             "autoload": {
@@ -1629,7 +1628,56 @@
                 "wordplate",
                 "wordpress"
             ],
-            "time": "2017-10-22T16:34:01+00:00"
+            "time": "2017-10-05T11:54:32+00:00"
+        },
+        {
+            "name": "wordplate/mail",
+            "version": "2.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/wordplate/mail.git",
+                "reference": "77fa1161f25e09c6dee42c940595be4b20316bcc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/wordplate/mail/zipball/77fa1161f25e09c6dee42c940595be4b20316bcc",
+                "reference": "77fa1161f25e09c6dee42c940595be4b20316bcc",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.0",
+                "wordplate/framework": "^6.0"
+            },
+            "type": "wordpress-plugin",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.1-dev"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Vincent Klaiber",
+                    "email": "hello@vinkla.com",
+                    "homepage": "https://vinkla.com"
+                },
+                {
+                    "name": "Chris Andersson",
+                    "email": "hello@puredazzle.se",
+                    "homepage": "https://puredazzle.se"
+                }
+            ],
+            "description": "A mail plugin for WordPlate",
+            "keywords": [
+                "mail",
+                "plugin",
+                "wordplate",
+                "wordpress"
+            ],
+            "time": "2017-10-16T17:34:44+00:00"
         },
         {
             "name": "wordplate/plate",
@@ -1679,6 +1727,62 @@
                 "wordpress"
             ],
             "time": "2017-05-03T14:04:55+00:00"
+        },
+        {
+            "name": "wordplate/polylang",
+            "version": "3.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/wordplate/polylang.git",
+                "reference": "08c0cb5d6f60abc202a6d7e0d74c7118efb00285"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/wordplate/polylang/zipball/08c0cb5d6f60abc202a6d7e0d74c7118efb00285",
+                "reference": "08c0cb5d6f60abc202a6d7e0d74c7118efb00285",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.0",
+                "wpackagist-plugin/polylang": "^2.2"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^6.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.0-dev"
+                }
+            },
+            "autoload": {
+                "files": [
+                    "src/helpers.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Vincent Klaiber",
+                    "email": "hello@vinkla.com",
+                    "homepage": "https://vinkla.com"
+                },
+                {
+                    "name": "Chris Andersson",
+                    "email": "hello@puredazzle.se",
+                    "homepage": "https://puredazzle.se"
+                }
+            ],
+            "description": "A Polylang helper for WordPlate",
+            "keywords": [
+                "polylang",
+                "wordplate",
+                "wordpress"
+            ],
+            "time": "2017-09-19T09:36:55+00:00"
         },
         {
             "name": "wpackagist-plugin/better-wp-security",
@@ -1759,13 +1863,53 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/normalizer/"
+        },
+        {
+            "name": "wpackagist-plugin/polylang",
+            "version": "2.2.4",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/polylang/",
+                "reference": "tags/2.2.4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/polylang.2.2.4.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/polylang/"
+        },
+        {
+            "name": "wpackagist-plugin/wp-migrate-db",
+            "version": "1.0.1",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/wp-migrate-db/",
+                "reference": "tags/1.0.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/wp-migrate-db.1.0.1.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/wp-migrate-db/"
         }
     ],
     "packages-dev": [],
     "aliases": [],
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "stability-flags": [],
-    "prefer-stable": true,
+    "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
         "php": "^7.0"

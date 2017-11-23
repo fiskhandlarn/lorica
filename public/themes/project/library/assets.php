@@ -19,7 +19,20 @@ function require_image($imagePath)
     if (defined('WP_DEBUG') &&  WP_DEBUG) {
         echo '<!-- '.esc_html(image_path($imagePath)).' -->'.PHP_EOL;
     }
-    require image_path($imagePath);
+
+    require_svg(image_path($imagePath));
+}
+
+// require svg with unique "cls-" class names
+function require_svg($imagePath)
+{
+
+    $image = file_get_contents($imagePath);
+
+    $hash = md5($imagePath);
+    $image = str_replace('cls-', 'cls-' . $hash . '-', $image);
+
+    echo $image;
 }
 
 function filemtime_base36($path)
@@ -41,23 +54,25 @@ add_action('wp_enqueue_scripts', function () {
         'wordplate',
         mix('styles/app.css'),
         FALSE,
-        filemtime_base36(asset('styles/app.css')),
+        filemtime_base36(get_stylesheet_directory() . '/assets/styles/app.css'),
         FALSE
     );
 
-    // wp_enqueue_script(
-    //     'modernizr',
-    //     get_stylesheet_directory_uri().'/assets/scripts/modernizr.js',
-    //     FALSE,
-    //     filemtime_base36(get_stylesheet_directory().'/assets/scripts/modernizr.js'),
-    //     FALSE
-    // );
+    /*
+    wp_enqueue_script(
+        'modernizr',
+        get_stylesheet_directory_uri().'/assets/scripts/modernizr.js',
+        FALSE,
+        filemtime_base36(get_stylesheet_directory().'/assets/scripts/modernizr.js'),
+        FALSE
+    );
+    */
 
     wp_enqueue_script(
         'wordplate',
         mix('scripts/app.js'),
         FALSE,
-        filemtime_base36(asset('styles/scripts/app.js')),
+        filemtime_base36(get_stylesheet_directory() . '/assets/scripts/app.js'),
         TRUE
     );
 });

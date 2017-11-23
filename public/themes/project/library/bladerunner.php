@@ -11,3 +11,19 @@ add_filter('bladerunner/template/bladepath', function ($paths) {
     $paths[] = ABSPATH . '../../resources/views';
     return $paths;
 });
+
+add_filter('bladerunner/cache/path', function($path) {
+	return ABSPATH . '../../storage/views';
+});
+
+add_filter('bladerunner/cache/make', function() {
+    return false;
+});
+
+// add_filter('bladerunner/controller/paths', function ($paths) {
+//     if (!is_array($paths)) {
+//         $paths = [$paths];
+//     }
+//     $paths[] = ABSPATH . '../../resources/controllers';
+//     return $paths;
+// });

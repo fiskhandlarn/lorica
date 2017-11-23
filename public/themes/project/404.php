@@ -2,4 +2,4 @@
 
 declare(strict_types=1);
 
-bladerunner('base.index');
+bladerunner('base.404');

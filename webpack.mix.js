@@ -4,6 +4,8 @@ const styleLintPlugin = require('stylelint-webpack-plugin');
 require('dotenv').config();
 const imageminPlugin = require('imagemin-webpack-plugin').default;
 const copyWebpackPlugin = require('copy-webpack-plugin');
+const modernizrWebpackPlugin = require('modernizr-webpack-plugin');
+const modernizrSettings = require('./modernizr.json');
 
 /*
  |--------------------------------------------------------------------------
@@ -25,8 +27,6 @@ mix.setPublicPath(assetsRoot);
 mix.js('resources/assets/scripts/app.js', 'scripts');
 mix.sass('resources/assets/styles/app.scss', 'styles');
 
-//https://laravel.com/docs/5.5/mix#copying-files-and-directories
-mix.copyDirectory('resources/assets/fonts', `${assetsRoot}/fonts`);
 
 mix.webpackConfig({
   module: {
@@ -54,8 +54,13 @@ mix.webpackConfig({
       glob: 'resources/assets/styles/**/*.s?(a|c)ss',
     }),
     new styleLintPlugin({
-      context: 'resources/assets/styles/'
+      context: 'resources/assets/styles/',
     }),
+    // Copy the fonts folder
+    new copyWebpackPlugin([{
+      from: 'resources/assets/fonts/',
+      to: 'fonts'
+    }]),
     // Copy the images folder and optimize all the images
     new copyWebpackPlugin([{
       from: 'resources/assets/images/',
@@ -65,10 +70,21 @@ mix.webpackConfig({
       test: /\.svg$/i,
       svgo: {
         plugins: [
-          {removeTitle: true}
+          {
+            removeTitle: true,
+            removeStyleElement: true
+          }
         ]
       }
-    })
+    }),
+    new modernizrWebpackPlugin(
+      Object.assign(
+        {
+          filename: 'scripts/modernizr.js'
+        },
+        modernizrSettings
+      )
+    )
   ]
 });
 

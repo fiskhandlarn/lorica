@@ -6,9 +6,24 @@ declare(strict_types=1);
 require_once template_path('library/assets.php');
 require_once template_path('library/better-wp-security.php');
 require_once template_path('library/bladerunner.php');
+require_once template_path('library/cookie-bar.php');
+require_once template_path('library/no-touch.php');
 require_once template_path('library/normalizer.php');
+require_once template_path('library/pixel.php');
 require_once template_path('library/plate.php');
+require_once template_path('library/polylang.php');
 require_once template_path('library/soil.php');
+require_once template_path('library/svg.php');
+
+if (function_exists('pll_register_string')) {
+    require_once get_stylesheet_directory().'/includes/translations.php';
+}
+require_once get_stylesheet_directory().'/includes/image-sizes.php';
+
+require base_path('vendor/johnbillion/extended-cpts/extended-cpts.php');
+
+//pixel_deploy(env("PIXEL_ID"));
+
 
 // Set theme defaults.
 add_action('after_setup_theme', function () {

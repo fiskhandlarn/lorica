@@ -6,7 +6,7 @@ rules:
   # Extends
   extends-before-mixins: 2
   extends-before-declarations: 2
-  placeholder-in-extend: 2
+  placeholder-in-extend: 0
 
   # Mixins
   mixins-before-declarations: 2

@@ -6,7 +6,7 @@ if (!defined('ABSPATH')) { exit(); }
 
 function image_path($path)
 {
-    return get_stylesheet_directory().'/assets/images/'.$path;
+    return stylesheet_path('/assets/images/'.$path);
 }
 
 function image_url($url)
@@ -20,16 +20,16 @@ function require_image($imagePath)
         echo '<!-- '.esc_html(image_path($imagePath)).' -->'.PHP_EOL;
     }
 
-    require_svg(image_path($imagePath));
+    require_svg($imagePath);
 }
 
+// expexts $imagePath relative to theme/assets/images/
 // require svg with unique "cls-" class names
 function require_svg($imagePath)
 {
+    $image = file_get_contents(image_path($imagePath));
 
-    $image = file_get_contents($imagePath);
-
-    $hash = md5($imagePath);
+    $hash = md5(image_path($imagePath));
     $image = str_replace('cls-', 'cls-' . $hash . '-', $image);
 
     echo $image;
@@ -54,7 +54,7 @@ add_action('wp_enqueue_scripts', function () {
         'wordplate',
         mix('styles/app.css'),
         FALSE,
-        filemtime_base36(get_stylesheet_directory() . '/assets/styles/app.css'),
+        filemtime_base36(stylesheet_path('/assets/styles/app.css')),
         FALSE
     );
 
@@ -63,7 +63,7 @@ add_action('wp_enqueue_scripts', function () {
         'modernizr',
         get_stylesheet_directory_uri().'/assets/scripts/modernizr.js',
         FALSE,
-        filemtime_base36(get_stylesheet_directory().'/assets/scripts/modernizr.js'),
+        filemtime_base36(stylesheet_path('/assets/scripts/modernizr.js')),
         FALSE
     );
     */
@@ -72,7 +72,7 @@ add_action('wp_enqueue_scripts', function () {
         'wordplate',
         mix('scripts/app.js'),
         FALSE,
-        filemtime_base36(get_stylesheet_directory() . '/assets/scripts/app.js'),
+        filemtime_base36(stylesheet_path('/assets/scripts/app.js')),
         TRUE
     );
 });

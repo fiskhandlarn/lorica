@@ -1,4 +1,3 @@
-404
 @extends('layouts.default')
 
 @section('main')

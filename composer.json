@@ -29,7 +29,8 @@
         "wpackagist-plugin/fly-dynamic-image-resizer": "^2.0",
         "wpackagist-plugin/normalizer": "^1.0",
         "wpackagist-plugin/wp-migrate-db": "^1.0",
-        "koodimonni-language/core-sv_se": "^4.8"
+        "koodimonni-language/core-sv_se": "^4.8",
+        "cweagans/composer-patches": "^1.6"
     },
     "autoload": {
         "psr-4": {
@@ -90,6 +91,11 @@
             "public/languages/themes/": [
                 "vendor:koodimonni-theme-language"
             ]
+        },
+        "patches": {
+          "wpackagist-plugin/wp-migrate-db": {
+            "Patch WP Migrate DB plugin url path": "composer-patches/wpackagist-plugin/wp-migrate-db.patch"
+          }
         }
     }
 }

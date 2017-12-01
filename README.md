@@ -52,11 +52,11 @@ Do not click the ''Log in'' button in the final step, instead use the URL `/word
 
 Add languages for Polylang in wp-admin (*Languages* in the side menu) so you can start using the [wordplate/translator](https://github.com/wordplate/translator) functions, or remove `wordplate/translator` from composer if your project is monolingual (optionally remove `koodimonni-language` packages if not needed).
 
-Read [TODO.md](./TODO.md) so you now what must be done before launching your project.
+Read [TODO.md](./TODO.md) so you what must be done before launching your project.
 
 Change "domain.tld" in this README.md below to reflect your project's name and domain name.
 
-Setup done! Remove everything in this README.md above this line:
+Setup done! Remove everything in this README.md above and including this line:
 
 ----
 

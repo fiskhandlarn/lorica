@@ -16,7 +16,7 @@
         "wordplate/framework": "^6.0",
         "wordplate/mail": "^2.1",
         "wordplate/polylang": "^3.0",
-        "advanced-custom-fields/advanced-custom-fields-pro": "5.6.4",
+        "advanced-custom-fields/advanced-custom-fields-pro": "5.6.7",
         "ekandreas/bladerunner": "dev-master",
         "johnbillion/extended-cpts": "^4.1",
         "roots/soil": "^3.7",
@@ -50,11 +50,11 @@
             "type": "package",
             "package": {
                 "name": "advanced-custom-fields/advanced-custom-fields-pro",
-                "version": "5.6.4",
+                "version": "5.6.7",
                 "type": "wordpress-plugin",
                 "dist": {
                     "type": "zip",
-                    "url": "https://connect.advancedcustomfields.com/index.php?p=pro&a=download&k=b3JkZXJfaWQ9MTIwMDg1fHR5cGU9ZGV2ZWxvcGVyfGRhdGU9MjAxNy0xMi0wNCAxMjozNzoxMA%3D%3D&t=5.6.4"
+                    "url": "https://connect.advancedcustomfields.com/index.php?p=pro&a=download&k=b3JkZXJfaWQ9MTIwMDg1fHR5cGU9ZGV2ZWxvcGVyfGRhdGU9MjAxNy0xMi0wNCAxMjozNzoxMA%3D%3D&t=5.6.7"
                 }
             }
         }
@@ -93,9 +93,9 @@
             ]
         },
         "patches": {
-          "wpackagist-plugin/wp-migrate-db": {
-            "Patch WP Migrate DB plugin url path": "composer-patches/wpackagist-plugin/wp-migrate-db.patch"
-          }
+            "wpackagist-plugin/wp-migrate-db": {
+                "Patch WP Migrate DB plugin url path": "composer-patches/wpackagist-plugin/wp-migrate-db.patch"
+            }
         }
     }
 }

@@ -21,8 +21,7 @@ const modernizrSettings = require('./modernizr.json');
 const theme = process.env.WP_THEME;
 
 mix.setResourceRoot('../');
-const assetsRoot = path.normalize(`public/themes/${theme}/assets`);
-mix.setPublicPath(assetsRoot);
+mix.setPublicPath(`public/themes/${theme}/assets`);
 
 mix.js('resources/assets/scripts/app.js', 'scripts');
 mix.sass('resources/assets/styles/app.scss', 'styles');

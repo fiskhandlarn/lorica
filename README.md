@@ -58,7 +58,7 @@ Add languages for Polylang in wp-admin (*Languages* in the side menu) so you can
 
 Read [TODO.md](./TODO.md) so you know what must be done before launching your project.
 
-Change "domain.tld" in this README.md below to reflect your project's name and domain name.
+Change "Project", [DeployBot](https://deploybot.com/) URL and "domain.tld" in this README.md below to reflect your project's name and domain name.
 
 Setup done! Remove everything in this README.md above and including this line:
 
@@ -112,7 +112,7 @@ $ npm run prod
 
 ## Deploy
 
-Deploy with [Envoyer](https://envoyer.io/projects/NNNNN) to:
+Deploy with [DeployBot](https://sot.deploybot.com/NNNNNN-NNNNN-project/) to:
 
 * [d.domain.tld](http://d.domain.tld)
 * [q.domain.tld](http://q.domain.tld)

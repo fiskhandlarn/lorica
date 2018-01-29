@@ -10,8 +10,10 @@ require_once stylesheet_path('/includes/image-sizes.php');
 
 require base_path('vendor/johnbillion/extended-cpts/extended-cpts.php');
 
-//pixel_deploy(env("PIXEL_ID"));
-
+add_action('after_setup_theme', function () {
+    //pixel_deploy(env("PIXEL_ID"));
+    //google_analytics_deploy(env("GOOGLE_ANALYTICS_ID"));
+});
 
 // Set theme defaults.
 add_action('after_setup_theme', function () {

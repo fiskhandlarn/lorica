@@ -8,5 +8,5 @@ These items must be done before launching project:
 * Disable all permalinks the site doesn't need (`/attachment`, `/author` and so on)
 * Change `theme-color` meta value in `public/themes/project/header.php`
 * Create a user for the client with the user role **editor** or lower
-* Set [Google Analytics](https://analytics.google.com/) Tracking ID (see call to `soil-google-analytics` in [library/soil.php](./public/themes/project/library/soil.php))
+* Set [Google Analytics](https://analytics.google.com/) Tracking ID (see call to `google_analytics_deploy` in [functions.php](./public/themes/project/functions.php))
 * Set [Facebook Pixel](https://www.facebook.com/business/a/facebook-pixel) Tracking ID (see call to `pixel_deploy` in [functions.php](./public/themes/project/functions.php))

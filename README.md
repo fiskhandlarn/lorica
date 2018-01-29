@@ -48,11 +48,15 @@ Visit your project in the browser and run the WordPress installation wizard with
 * *Your Email*: service@sot.se
 * *Search Engine Visibility*: <unchecked>
 
-Do not click the ''Log in'' button in the final step, instead use the URL `/wordpress/sot-admin' to log into wp-admin. Send the login url and credentials to the 1password administrator.
+Save the login url and credentials in Sot's shared KeePass file.
+
+Do not click the ''Log in'' button in the final step, instead use the URL `/wordpress/sot-admin` to log into wp-admin. If you get a 404 for that URL it's probably because [iThemes Security](./PLUGINS.md) has removed or changed [.htaccess](./public/.htaccess). If `.htaccess` is marked as changed, revert it and try again.
+
+If you get an error message from `mu-plugins/better-wp-security/core/modules/hide-backend/validator.php`, comment out the referenced line, reload the site and restore that line.
 
 Add languages for Polylang in wp-admin (*Languages* in the side menu) so you can start using the [wordplate/translator](https://github.com/wordplate/translator) functions, or remove `wordplate/translator` from composer if your project is monolingual (optionally remove `koodimonni-language` packages if not needed).
 
-Read [TODO.md](./TODO.md) so you what must be done before launching your project.
+Read [TODO.md](./TODO.md) so you know what must be done before launching your project.
 
 Change "domain.tld" in this README.md below to reflect your project's name and domain name.
 

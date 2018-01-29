@@ -2,7 +2,7 @@
 
 These items must be done before launching project:
 
-* Set ekandreas/bladerunner to non-dev version as soon as it's released
+* Remove `minimum-stability` from `composer.json` as soon as [ekandreas/bladerunner](https://github.com/ekandreas/bladerunner) is released with [the features we need](https://github.com/ekandreas/bladerunner/pull/63)
 * Change `public/favicon.ico` (or remove it and use icons from [RealFaviconGenerator](https://realfavicongenerator.net/))
 * Make sure the site sends emails, preferably by adding a new domain to [Mailgun](https://www.mailgun.com/) and use Mailgun's SMTP credentials in your `.env` file
 * Disable all permalinks the site doesn't need (`/attachment`, `/author` and so on)

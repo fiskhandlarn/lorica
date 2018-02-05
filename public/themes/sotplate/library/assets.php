@@ -4,14 +4,24 @@ declare(strict_types=1);
 
 if (!defined('ABSPATH')) { exit(); }
 
+function asset_path($path)
+{
+    return stylesheet_path('/assets/'.$path);
+}
+
+function asset_url($url)
+{
+    return get_stylesheet_directory_uri().'/assets/'.$url;
+}
+
 function image_path($path)
 {
-    return stylesheet_path('/assets/images/'.$path);
+    return asset_path('images/'.$path);
 }
 
 function image_url($url)
 {
-    return get_stylesheet_directory_uri().'/assets/images/'.$url;
+    return asset_url('images/'.$url);
 }
 
 function require_image($imagePath)

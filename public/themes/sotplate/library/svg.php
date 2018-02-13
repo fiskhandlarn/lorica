@@ -10,7 +10,7 @@ add_filter('upload_mimes', function($mimes) {
 
 // optimize uploaded svg files with svgo
 use Spatie\ImageOptimizer\OptimizerChain;
-use NordeaMasters\Optimizers\CustomSvgo;
+use SotPlate\Optimizers\CustomSvgo;
 add_filter('wp_handle_upload_prefilter', function ( $file ) {
     if ($file['type'] !== 'image/svg+xml' ) {
         return $file;

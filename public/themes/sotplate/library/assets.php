@@ -34,10 +34,15 @@ function require_image($imagePath)
 }
 
 // expexts $imagePath relative to theme/assets/images/
-// require svg with unique "cls-" class names
 function require_svg($imagePath)
 {
-    $image = file_get_contents(image_path($imagePath));
+    require_svg_absolute(image_path($imagePath));
+}
+
+// require svg with unique "cls-" class names
+function require_svg_absolute($imagePath)
+{
+    $image = file_get_contents($imagePath);
 
     $hash = md5(image_path($imagePath));
     $image = str_replace('cls-', 'cls-' . $hash . '-', $image);

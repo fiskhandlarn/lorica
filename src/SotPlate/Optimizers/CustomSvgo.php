@@ -1,6 +1,6 @@
 <?php
 
-namespace NordeaMasters\Optimizers;
+namespace SotPlate\Optimizers;
 
 use Spatie\ImageOptimizer\Image;
 use Spatie\ImageOptimizer\Optimizers\Svgo;
@@ -17,12 +17,21 @@ class CustomSvgo extends Svgo
         '--enable=removeEmptyContainers',
     ];
 
+    public function __construct($options = [])
+    {
+        $this->setOptions($this->options);
+    }
+
     public function canHandle(Image $image): bool
     {
-        if ($image->extension() !== 'svg' && $image->extension() !== 'tmp') {
+        if (
+            $image->extension() !== 'svg'    // copied from Spatie\ImageOptimizer\Optimizers\Svgo
+            && $image->extension() !== 'tmp' // windows
+            && $image->extension() !== ''    // ubuntu
+        ) {
             return false;
         }
 
-        return $image->mime() === 'text/html';
+        return $image->mime() === 'text/html' || $image->mime() === 'image/svg+xml';
     }
 }

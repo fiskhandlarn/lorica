@@ -18,8 +18,10 @@ add_filter('wp_handle_upload_prefilter', function ( $file ) {
 
     // run svgo on uploaded file
     $svgo = new CustomSvgo();
-    $optimizerChain = (new OptimizerChain)->addOptimizer($svgo);
-    $optimizerChain->optimize($file["tmp_name"]);
+    $optimizerChain =
+                    (new OptimizerChain)
+                    ->addOptimizer($svgo)
+                    ->optimize($file["tmp_name"]);
 
     return $file;
 });

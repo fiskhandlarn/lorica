@@ -31,7 +31,8 @@
         "wpackagist-plugin/normalizer": "^1.0",
         "wpackagist-plugin/wp-migrate-db": "^1.0",
         "koodimonni-language/core-sv_se": "^4.8",
-        "cweagans/composer-patches": "^1.6"
+        "cweagans/composer-patches": "^1.6",
+        "symfony/process": "3.4.0"
     },
     "autoload": {
         "psr-4": {

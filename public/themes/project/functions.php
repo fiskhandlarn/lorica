@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+require_once template_path('library/disable-rest-api.php');
+
 require_once stylesheet_path('/includes/plate.php');
 if (function_exists('pll__')) {
     require_once stylesheet_path('/includes/translations.php');

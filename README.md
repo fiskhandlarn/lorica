@@ -34,6 +34,8 @@ Update `public/themes/your-project/style.css` with your project's name and descr
 
 Change `WP_THEME` and `BROWSER_SYNC_HOST` in `.env.example` to reflect your new theme/project name.
 
+Change `Project` in [resources/assets/styles/app.scss](./resources/assets/styles/app.scss) to your project's name.
+
 Update `advanced-custom-fields-pro` to the latest version:
 
 ```bash

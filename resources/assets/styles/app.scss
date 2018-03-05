@@ -6,7 +6,7 @@
 @import '../../../node_modules/bootstrap/scss/functions';
 @import '../../../node_modules/bootstrap/scss/variables';
 
-// Wangeskog: variables (which overrides bootstrap)
+// Project: variables (which overrides bootstrap)
 @import 'settings/*';
 
 // Bootstrap: mixins
@@ -54,7 +54,7 @@
 // TODO: Adjust utility classes margin-bottom, margin-top and padding-top to reflect design
 @import '../../../node_modules/bootstrap/scss/utilities';
 
-// Wangeskog
+// Project
 //@import 'base/*';
 //@import 'components/*';
 

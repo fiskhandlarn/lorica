@@ -7,8 +7,6 @@
   <!-- Disable tap highlight on IE -->
   <meta name="msapplication-tap-highlight" content="no">
 
-  <link rel="stylesheet" href="{{ info('stylesheet_url') }}">
-
   @php wp_head() @endphp
 </head>
 <body @php body_class() @endphp>

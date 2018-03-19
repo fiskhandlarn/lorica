@@ -2,7 +2,9 @@
 
 declare(strict_types=1);
 
-if (!defined('ABSPATH')) { exit(); }
+if (!defined('ABSPATH')) {
+    exit();
+}
 
 function asset_path($path)
 {
@@ -54,11 +56,11 @@ function filemtime_base36($path)
 {
     if (file_exists($path)) {
         $mtime = filemtime($path);
-        if ($mtime !== FALSE) {
-           return base_convert($mtime, 10, 36);
+        if ($mtime !== false) {
+            return base_convert($mtime, 10, 36);
         }
     }
-    return FALSE;
+    return false;
 }
 
 // Enqueue and register scripts the right way.
@@ -68,9 +70,9 @@ add_action('wp_enqueue_scripts', function () {
     wp_enqueue_style(
         'wordplate',
         mix('styles/app.css'),
-        FALSE,
+        false,
         filemtime_base36(stylesheet_path('/assets/styles/app.css')),
-        FALSE
+        false
     );
 
     /*
@@ -86,8 +88,8 @@ add_action('wp_enqueue_scripts', function () {
     wp_enqueue_script(
         'wordplate',
         mix('scripts/app.js'),
-        FALSE,
+        false,
         filemtime_base36(stylesheet_path('/assets/scripts/app.js')),
-        TRUE
+        true
     );
 });

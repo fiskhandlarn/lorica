@@ -128,3 +128,8 @@ if (class_exists('ITSEC_Modules')) {
     ITSEC_Modules::get_instance()->set_setting('hide-backend', 'slug', 'sot-admin');
     ITSEC_Modules::get_instance()->set_setting('hide-backend', 'theme_compat', FALSE);
 }
+
+if (class_exists('Bugsnag_Wordpress')) {
+    update_site_option('bugsnag_api_key', '72cb4d1571eadf6cbb78edc9205985dd');
+    update_site_option('bugsnag_notify_severities', 'fatal,error,warning');
+}

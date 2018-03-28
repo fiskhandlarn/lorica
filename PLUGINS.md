@@ -4,6 +4,10 @@
 
 Our go-to solution for adding fields to post, pages, settings pages and so on. Safe to remove if not used or replace with [free version](https://wordpress.org/plugins/advanced-custom-fields/) if pro features are not needed. If removed the [wordplate/acf](https://github.com/wordplate/acf/) helper can be removed as well.
 
+## [Bugsnag](https://wordpress.org/support/plugin/bugsnag)
+
+Send all crashes, errors and warnings to [Bugsnag](https://app.bugsnag.com/sot/). Should not be removed.
+
 ## [Disable Embeds](https://wordpress.org/plugins/disable-embeds/)
 
 Prevents others from embedding our site. Remove only if site should be embeddable by others.

@@ -8,12 +8,12 @@ if (!defined('ABSPATH')) {
 
 function asset_path($path)
 {
-    return stylesheet_path('/assets/'.$path);
+    return stylesheet_path('assets/'.$path);
 }
 
 function asset_url($url)
 {
-    return asset('/assets/'.$url);
+    return asset('assets/'.$url);
 }
 
 function image_path($path)
@@ -71,7 +71,7 @@ add_action('wp_enqueue_scripts', function () {
         'wordplate',
         mix('styles/app.css'),
         false,
-        filemtime_base36(stylesheet_path('assets/styles/app.css')),
+        filemtime_base36(asset_path('styles/app.css')),
         false
     );
 
@@ -80,7 +80,7 @@ add_action('wp_enqueue_scripts', function () {
         'modernizr',
         asset('assets/scripts/modernizr.js'),
         FALSE,
-        filemtime_base36(stylesheet_path('assets/scripts/modernizr.js')),
+        filemtime_base36(asset_path('scripts/modernizr.js')),
         FALSE
     );
     */
@@ -89,7 +89,7 @@ add_action('wp_enqueue_scripts', function () {
         'wordplate',
         mix('scripts/app.js'),
         false,
-        filemtime_base36(stylesheet_path('assets/scripts/app.js')),
+        filemtime_base36(asset_path('scripts/app.js')),
         true
     );
 });

@@ -13,7 +13,7 @@ function asset_path($path)
 
 function asset_url($url)
 {
-    return get_stylesheet_directory_uri().'/assets/'.$url;
+    return asset('/assets/'.$url);
 }
 
 function image_path($path)

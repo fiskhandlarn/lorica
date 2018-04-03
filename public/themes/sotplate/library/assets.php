@@ -71,16 +71,16 @@ add_action('wp_enqueue_scripts', function () {
         'wordplate',
         mix('styles/app.css'),
         false,
-        filemtime_base36(stylesheet_path('/assets/styles/app.css')),
+        filemtime_base36(stylesheet_path('assets/styles/app.css')),
         false
     );
 
     /*
     wp_enqueue_script(
         'modernizr',
-        get_stylesheet_directory_uri().'/assets/scripts/modernizr.js',
+        asset('assets/scripts/modernizr.js'),
         FALSE,
-        filemtime_base36(stylesheet_path('/assets/scripts/modernizr.js')),
+        filemtime_base36(stylesheet_path('assets/scripts/modernizr.js')),
         FALSE
     );
     */
@@ -89,7 +89,7 @@ add_action('wp_enqueue_scripts', function () {
         'wordplate',
         mix('scripts/app.js'),
         false,
-        filemtime_base36(stylesheet_path('/assets/scripts/app.js')),
+        filemtime_base36(stylesheet_path('assets/scripts/app.js')),
         true
     );
 });

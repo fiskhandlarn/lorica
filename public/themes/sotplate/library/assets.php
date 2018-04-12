@@ -28,7 +28,7 @@ function image_url($url)
 
 function require_image($imagePath)
 {
-    if (defined('WP_DEBUG') &&  WP_DEBUG) {
+    if (defined('WP_DEBUG') && WP_DEBUG) {
         echo '<!-- '.esc_html(image_path($imagePath)).' -->'.PHP_EOL;
     }
 
@@ -74,6 +74,16 @@ add_action('wp_enqueue_scripts', function () {
         filemtime_base36(asset_path('styles/app.css')),
         false
     );
+
+    if (defined('WP_DEBUG') && WP_DEBUG) {
+        wp_enqueue_style(
+            'revenge.css',
+            mix('styles/revenge.css'),
+            false,
+            filemtime_base36(asset_path('styles/revenge.css')),
+            false
+        );
+    }
 
     /*
     wp_enqueue_script(

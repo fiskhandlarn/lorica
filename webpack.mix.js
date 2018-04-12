@@ -19,13 +19,16 @@ const modernizrSettings = require('./modernizr.json');
  */
 
 const theme = process.env.WP_THEME;
+const publicPath = `public/themes/${theme}/assets`;
 
 mix.setResourceRoot('../');
-mix.setPublicPath(`public/themes/${theme}/assets`);
+mix.setPublicPath(publicPath);
 
 mix.js('resources/assets/scripts/app.js', 'scripts');
 mix.sass('resources/assets/styles/app.scss', 'styles');
 
+// prepare for REVENGE (only included by theme if WP_DEBUG is true)
+mix.copy('vendor/heydon/revenge.css/revenge.css', `${publicPath}/styles`);
 
 mix.webpackConfig({
   module: {

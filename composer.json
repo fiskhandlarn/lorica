@@ -15,6 +15,7 @@
         "advanced-custom-fields/advanced-custom-fields-pro": "5.6.10",
         "cweagans/composer-patches": "^1.6",
         "ekandreas/bladerunner": "^1.7.5",
+        "heydon/revenge.css": "master",
         "hoy/polylang": "^4.0",
         "johnbillion/extended-cpts": "^4.1",
         "koodimonni-language/core-sv_se": "^4.8",
@@ -59,6 +60,18 @@
                 "dist": {
                     "type": "zip",
                     "url": "https://connect.advancedcustomfields.com/index.php?p=pro&a=download&k=b3JkZXJfaWQ9MTIwMDg1fHR5cGU9ZGV2ZWxvcGVyfGRhdGU9MjAxNy0xMi0wNCAxMjozNzoxMA%3D%3D&t=5.6.10"
+                }
+            }
+        },
+        {
+            "type":"package",
+            "package": {
+                "name": "heydon/revenge.css",
+                "version":"master",
+                "source": {
+                    "url": "https://github.com/Heydon/REVENGE.CSS.git",
+                    "type": "git",
+                    "reference":"master"
                 }
             }
         }

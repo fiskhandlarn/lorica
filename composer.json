@@ -12,7 +12,7 @@
     "minimum-stability": "dev",
     "require": {
         "php": "^7.0",
-        "advanced-custom-fields/advanced-custom-fields-pro": "5.6.7",
+        "advanced-custom-fields/advanced-custom-fields-pro": "5.6.10",
         "cweagans/composer-patches": "^1.6",
         "ekandreas/bladerunner": "^1.7.5",
         "hoy/polylang": "^4.0",
@@ -54,11 +54,11 @@
             "type": "package",
             "package": {
                 "name": "advanced-custom-fields/advanced-custom-fields-pro",
-                "version": "5.6.7",
+                "version": "5.6.10",
                 "type": "wordpress-plugin",
                 "dist": {
                     "type": "zip",
-                    "url": "https://connect.advancedcustomfields.com/index.php?p=pro&a=download&k=b3JkZXJfaWQ9MTIwMDg1fHR5cGU9ZGV2ZWxvcGVyfGRhdGU9MjAxNy0xMi0wNCAxMjozNzoxMA%3D%3D&t=5.6.7"
+                    "url": "https://connect.advancedcustomfields.com/index.php?p=pro&a=download&k=b3JkZXJfaWQ9MTIwMDg1fHR5cGU9ZGV2ZWxvcGVyfGRhdGU9MjAxNy0xMi0wNCAxMjozNzoxMA%3D%3D&t=5.6.10"
                 }
             }
         }

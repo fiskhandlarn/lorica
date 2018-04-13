@@ -12,22 +12,20 @@ require_once stylesheet_path('/includes/image-sizes.php');
 
 require base_path('vendor/johnbillion/extended-cpts/extended-cpts.php');
 
-add_action('after_setup_theme', function () {
-    add_theme_support('sotplate-deregister-jquery');
-    add_theme_support('sotplate-enqueue-app-css');
-    //add_theme_support('sotplate-enqueue-modernizr');
-    add_theme_support('sotplate-enqueue-app-js');
+// request support for sotplate features
+add_theme_support('sotplate-deregister-jquery');
+add_theme_support('sotplate-enqueue-app-css');
+//add_theme_support('sotplate-enqueue-modernizr');
+add_theme_support('sotplate-enqueue-app-js');
+add_theme_support('sotplate-bladerunner');
+add_theme_support('sotplate-cookie-bar');
+add_theme_support('sotplate-no-touch');
+//add_theme_support('sotplate-pixel');
+add_theme_support('sotplate-polylang');
+add_theme_support('sotplate-soil');
+add_theme_support('sotplate-svg');
 
-    add_theme_support('sotplate-bladerunner');
-    add_theme_support('sotplate-cookie-bar');
-    add_theme_support('sotplate-no-touch');
-    //add_theme_support('sotplate-pixel');
-    add_theme_support('sotplate-polylang');
-    add_theme_support('sotplate-soil');
-    add_theme_support('sotplate-svg');
-
-}, 9); // bladerunner also uses 'after_setup_theme' to setup it's paths, let's do this before that
-
+// do this after sotplate has been loaded
 add_action('after_setup_theme', function () {
     //pixel_deploy(env("PIXEL_ID"));
     //google_analytics_deploy(env("GOOGLE_ANALYTICS_ID"));

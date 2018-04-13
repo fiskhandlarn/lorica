@@ -1,9 +1,16 @@
 <?php
 
+declare(strict_types=1);
+
+if (!defined('ABSPATH')) {
+    exit();
+}
+
 function pixel_deploy($trackingID)
 {
-    if (!defined('WP_DEBUG') || !WP_DEBUG) {
-        add_action('wp_head', function () use ($trackingID) {
+    if ($trackingID) {
+        if (!defined('WP_DEBUG') || !WP_DEBUG) {
+            add_action('wp_head', function () use ($trackingID) {
             ?>
 <!-- Facebook Pixel Code -->
 <script>
@@ -25,6 +32,7 @@ src="https://www.facebook.com/tr?id=<?php echo $trackingID; ?>&ev=PageView
 </noscript>
 <!-- End Facebook Pixel Code -->
 <?php
-        }, 1000);
+            }, 1000);
+        }
     }
 }

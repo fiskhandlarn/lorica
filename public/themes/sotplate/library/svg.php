@@ -2,6 +2,10 @@
 
 declare(strict_types=1);
 
+if (!defined('ABSPATH')) {
+    exit();
+}
+
 // https://css-tricks.com/snippets/wordpress/allow-svg-through-wordpress-media-uploader/
 add_filter('upload_mimes', function ($mimes) {
     $mimes['svg'] = 'image/svg+xml';

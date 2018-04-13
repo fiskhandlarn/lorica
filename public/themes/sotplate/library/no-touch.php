@@ -1,5 +1,11 @@
 <?php
 
+declare(strict_types=1);
+
+if (!defined('ABSPATH')) {
+    exit();
+}
+
 // start with assuming no support for touch
 add_filter('body_class', function ($classes) {
     $classes[] = "no-touch";

@@ -65,16 +65,21 @@ function filemtime_base36($path)
 
 // Enqueue and register scripts the right way.
 add_action('wp_enqueue_scripts', function () {
-    wp_deregister_script('jquery');
+    if (get_theme_support('sotplate-deregister-jquery')) {
+        wp_deregister_script('jquery');
+    }
 
-    wp_enqueue_style(
-        'wordplate',
-        mix('styles/app.css'),
-        false,
-        filemtime_base36(asset_path('styles/app.css')),
-        false
-    );
+    if (get_theme_support('sotplate-enqueue-app-css')) {
+        wp_enqueue_style(
+            'wordplate',
+            mix('styles/app.css'),
+            false,
+            filemtime_base36(asset_path('styles/app.css')),
+            false
+        );
+    }
 
+    // Add https://github.com/Heydon/REVENGE.CSS when developing
     if (defined('WP_DEBUG') && WP_DEBUG) {
         wp_enqueue_style(
             'revenge.css',
@@ -85,21 +90,23 @@ add_action('wp_enqueue_scripts', function () {
         );
     }
 
-    /*
-    wp_enqueue_script(
-        'modernizr',
-        asset('assets/scripts/modernizr.js'),
-        FALSE,
-        filemtime_base36(asset_path('scripts/modernizr.js')),
-        FALSE
-    );
-    */
+    if (get_theme_support('sotplate-enqueue-modernizr')) {
+        wp_enqueue_script(
+            'modernizr',
+            asset('assets/scripts/modernizr.js'),
+            FALSE,
+            filemtime_base36(asset_path('scripts/modernizr.js')),
+            FALSE
+        );
+    }
 
-    wp_enqueue_script(
-        'wordplate',
-        mix('scripts/app.js'),
-        false,
-        filemtime_base36(asset_path('scripts/app.js')),
-        true
-    );
+    if (get_theme_support('sotplate-enqueue-app-js')) {
+        wp_enqueue_script(
+            'wordplate',
+            mix('scripts/app.js'),
+            false,
+            filemtime_base36(asset_path('scripts/app.js')),
+            true
+        );
+    }
 });

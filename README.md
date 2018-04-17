@@ -56,7 +56,7 @@ Do not click the ''Log in'' button in the final step, instead use the URL `/word
 
 If you get an error message from `mu-plugins/better-wp-security/core/modules/hide-backend/validator.php`, comment out the referenced line, reload the site and restore that line.
 
-Add languages for Polylang in wp-admin (*Languages* in the side menu) so you can start using the [wordplate/translator](https://github.com/wordplate/translator) functions, or remove `wordplate/translator` from composer if your project is monolingual (optionally remove `koodimonni-language` packages if not needed).
+Add languages for Polylang in wp-admin (*Languages* in the side menu) so you can start using the [hoy/polylang](https://github.com/hoymultimedia/polylang) functions, or remove `hoy/polylang` and `wpackagist-plugin/polylang` from composer if your project is monolingual (optionally remove `koodimonni-language` packages if not needed).
 
 Read [TODO.md](./TODO.md) so you know what must be done before launching your project.
 

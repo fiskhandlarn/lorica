@@ -6,21 +6,21 @@ if (!defined('ABSPATH')) {
     exit();
 }
 
-// Make bladerunner look in resources/ instead of in the theme folder (Laravel style)
+// Add custom template views directory path to Bladerunner.
 add_filter('bladerunner/template/bladepath', function ($paths) {
-    if (!is_array($paths)) {
-        $paths = [$paths];
-    }
+    $paths = array_wrap($paths);
+
     $paths[] = base_path('resources/views');
+
     return $paths;
 });
 
-// Make bladerunner save cached files in storage/ instead of in the theme folder (Laravel style)
-add_filter('bladerunner/cache/path', function ($path) {
+// Add custom cache directory path to Bladerunner.
+add_filter('bladerunner/cache/path', function () {
     return base_path('storage/views');
 });
 
-// Don't create the cache directory (this should instead be handled via storage/views/.gitignore)
+// Don't create the cache directory (this could instead be handled with a .gitignore file)
 add_filter('bladerunner/cache/make', function () {
     return false;
 });

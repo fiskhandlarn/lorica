@@ -1,4 +1,4 @@
-# Empty Wordplate starter
+# SotPlate starter
 
 Sot's boilerplate for WordPress sites, based on [WordPlate](https://github.com/wordplate/wordplate).
 
@@ -17,11 +17,11 @@ Static resources (JavaScript, CSS, images, fonts etc) is added to the `resources
 Merge this repo into your own:
 
 ```bash
-$ git remote add wordplate-empty {clone-url}
-$ git pull wordplate-empty master
+$ git remote add sotplate {clone-url}
+$ git pull sotplate master
 ```
 
-(where `{clone-url}` is something like https://user@bitbucket.org/sotdigital/wordplate-empty.git)
+(where `{clone-url}` is something like https://user@bitbucket.org/sotdigital/sotplate.git)
 
 Open `composer.json` and change the `name` and `description` properties.
 

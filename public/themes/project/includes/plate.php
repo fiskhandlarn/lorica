@@ -18,8 +18,7 @@ declare(strict_types=1);
 add_theme_support('plate-menu', [
     'edit-comments.php', // comments
     'index.php', // dashboard
-    'link-manager.php', // links
-    'themes.php', // appearance
+    //'themes.php', // appearance
 ]);
 
 // Remove meta boxes in post editor.

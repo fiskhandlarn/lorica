@@ -74,6 +74,10 @@ If the site needs to have a grid system, please use the one provided in [Bootstr
 }
 ```
 
+### Browser support
+
+All CSS is run through `autoprefixer` with the [browserslist defaults](https://github.com/browserslist/browserslist#queries): `> 0.5%, last 2 versions, Firefox ESR, not dead`. If you wan't to override this, please add [.browserslistrc](https://github.com/browserslist/browserslist#config-file) to the repo root.
+
 ## Images
 
 SVG images should

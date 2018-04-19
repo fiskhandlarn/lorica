@@ -88,8 +88,7 @@ $ composer install
 2: Install the node dependencies and build the resources:
 
 ```bash
-$ npm install
-$ npm run dev
+$ npm install && npm run dev
 ```
 
 3: Configure your web server setting the web root to the `public/` folder or configure Valet.

@@ -44,6 +44,10 @@ Simplifies hiding and customizing in wp-admin. Safe to remove if not used.
 
 Our go-to solution for multilingual sites. Safe to remove if not used.
 
+## [Simple History](https://wordpress.org/plugins/simple-history/)
+
+Keeps a log of everything done in wp-admin. Especially useful when we let clients into wp-admin. Save to remove if not used.
+
 ## [The SEO Framework](https://wordpress.org/plugins/autodescription/)
 
 "Easy SEO for beginners, an awesome API for experts." Our go-to solution for SEO optimizations and for setting OG meta etc.

@@ -44,6 +44,12 @@ $ composer update-acf-plugin
 
 Follow the *Install* instructions below.
 
+Add `composer.lock` and `package-lock.json` to your git repo to ensure that the same package versions are used by other contributors and on the servers:
+
+```bash
+$ git add composer.lock package-lock.json
+```
+
 Visit your project in the browser and run the WordPress installation wizard with these values:
 
 * *Username*: sot

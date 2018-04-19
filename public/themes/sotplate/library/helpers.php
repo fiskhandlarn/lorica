@@ -27,6 +27,19 @@ if (!function_exists('debuglog')) {
     }
 }
 
+if (!function_exists('force_404')) {
+    // https://wordpress.stackexchange.com/a/92176
+    function force_404()
+    {
+        global $wp_query;
+        $wp_query->set_404();
+        status_header(404);
+        nocache_headers();
+        get_template_part("404");
+        die();
+    }
+}
+
 if (!function_exists('get_current_slug')) {
     function get_current_slug()
     {

@@ -1,2 +1,2 @@
-<footer class="site-footer">
+<footer class="site-footer" role="contentinfo">
 </footer><!-- /footer -->

@@ -11,7 +11,7 @@ function pixel_deploy($trackingID)
     if ($trackingID) {
         if (!defined('WP_DEBUG') || !WP_DEBUG) {
             add_action('wp_head', function () use ($trackingID) {
-            ?>
+                ?>
 <!-- Facebook Pixel Code -->
 <script>
 !function(f,b,e,v,n,t,s)

@@ -94,9 +94,9 @@ add_action('wp_enqueue_scripts', function () {
         wp_enqueue_script(
             'modernizr',
             asset('assets/scripts/modernizr.js'),
-            FALSE,
+            false,
             filemtime_base36(asset_path('scripts/modernizr.js')),
-            FALSE
+            false
         );
     }
 

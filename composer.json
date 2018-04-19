@@ -35,6 +35,7 @@
         "wpackagist-plugin/fly-dynamic-image-resizer": "^2.0",
         "wpackagist-plugin/normalizer": "^1.0",
         "wpackagist-plugin/polylang": "^2.3",
+        "wpackagist-plugin/simple-history": "^2.20",
         "wpackagist-plugin/wp-migrate-db": "^1.0"
     },
     "autoload": {

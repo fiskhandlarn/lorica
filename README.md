@@ -97,6 +97,8 @@ $ npm install && npm run dev
 
 5: Edit the `.env` file with your database and mail credentials, and [WordPress salts](https://wordplate.github.io/salt/).
 
+6: Use the URL `/wordpress/sot-admin` to log into wp-admin.
+
 ## Develop
 
 Build CSS & JS files one time:

@@ -1,0 +1,34 @@
+// stylelint-disable
+
+@mixin btn {
+  @extend .btn;
+  @include button-variant(transparent, $color-black, $color-black, $color-black, $color-black-black, $color-black-black);
+
+  @include hover {
+    color: $color-white;
+  }
+
+  cursor: pointer;
+
+  color: $color-black;
+
+  font-weight: $font-weight-semibold;
+
+  $btn-height: $btn-border-width * 2 + $btn-padding-y * 2 + $line-height-base * rem(16px);
+  height: $btn-height;
+  border-radius: $btn-height / 2;
+
+  // reset a
+  text-decoration: none;
+
+  &%-white {
+    @include button-variant(transparent, $color-white, $color-white, $color-white, $color-white, $color-white);
+    color: $color-white;
+  }
+
+  &%-red {
+    @include button-variant($color-red, $color-red, $color-black-black, $color-black-black, $color-black-black, $color-black-black);
+    color: $color-white;
+  }
+
+}

@@ -1,0 +1,25 @@
+// stylelint-disable
+
+@mixin hover-no-touch {
+  .no-touch & {
+    @include hover {
+      @content;
+    }
+  }
+}
+
+@mixin focus-no-touch {
+  .no-touch & {
+    &:focus {
+      @content;
+    }
+  }
+}
+
+@mixin hover-focus-no-touch {
+  .no-touch & {
+    @include hover-focus {
+      @content;
+    }
+  }
+}

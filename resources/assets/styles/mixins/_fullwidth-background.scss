@@ -1,0 +1,33 @@
+// stylelint-disable
+
+@mixin fullwidth-background($background) {
+  position: relative; // anchor for ::before
+
+  &::before {
+    display: block;
+    content: '';
+    background: $background;
+
+    width: 100vw;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: -50vw;
+
+    margin-left: 50%;
+
+    z-index: -1;
+
+    @each $breakpoint, $container-max-width in $container-max-widths {
+      @include media-breakpoint-up($breakpoint, $grid-breakpoints) {
+        margin-left: rem($container-max-width / 2);
+      }
+    }
+  }
+
+  @at-root {
+    body {
+      overflow-x: hidden; // hide .site-footer::before
+    }
+  }
+}

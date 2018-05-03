@@ -1,0 +1,24 @@
+// stylelint-disable
+
+// fix font weights on macos
+// https://css-tricks.com/forums/topic/font-appears-a-lot-bolder-on-mac-than-pc/#post-79767
+body {
+  -webkit-font-smoothing: antialiased;
+}
+
+svg,
+img {
+  max-width: 100%;
+  height: auto;
+  max-height: 100%;
+}
+
+svg {
+  display: block;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: $font-weight-bold;
+}

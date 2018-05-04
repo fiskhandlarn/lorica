@@ -1,0 +1,8 @@
+.info-bar-container {
+  z-index: $z-index-info-bar-container;
+
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+}

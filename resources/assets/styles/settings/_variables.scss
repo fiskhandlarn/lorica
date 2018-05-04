@@ -1,7 +1,16 @@
-//$z-index-info-bar-container: 1000;
+$z-index-info-bar-container: 1000;
 
-//$info-bar-padding: 15px;
-//$info-bar-background-color: #000;
-//$info-bar-foreground-color: #fff;
-//$info-bar-button-height: 40px;
-//$info-bar-sm-button-width: 200px;
+$info-bar-padding: $grid-gutter-width / 2;
+$info-bar-background-color: #000;
+$info-bar-foreground-color: #fff;
+$md-info-bar-button-width: rem(200px);
+$info-bar-message-font-size: rem(12px);
+$info-bar-message-line-height: (14 / 12);
+$md-info-bar-message-font-size: rem(16px);
+$md-info-bar-message-line-height: $line-height-base;
+
+// Bootstrap overrides
+
+// TODO: place overridden Bootstrap variables here
+
+// /Bootstrap overrides

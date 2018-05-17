@@ -17,7 +17,7 @@ if (!function_exists('array_move_element')) {
 if (!function_exists('debuglog')) {
     function debuglog($message, $forcePrintR = false)
     {
-        if (WP_DEBUG === true) {
+        if (defined('WP_DEBUG') && WP_DEBUG) {
             if ($forcePrintR || is_array($message) || is_object($message)) {
                 error_log(print_r($message, true) . "\n");
             } else {

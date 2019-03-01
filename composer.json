@@ -1,123 +1,123 @@
 {
-    "name": "sotdigital/sotplate",
-    "description": "SotPlate starter",
-    "keywords": [
-        "wordplate",
-        "wordpress",
-        "boilerplate",
-        "plate"
-    ],
-    "license": "MIT",
-    "prefer-stable": true,
-    "minimum-stability": "dev",
-    "require": {
+  "name": "sotdigital/sotplate",
+  "description": "SotPlate starter",
+  "keywords": [
+    "wordplate",
+    "wordpress",
+    "boilerplate",
+    "plate"
+  ],
+  "license": "MIT",
+  "prefer-stable": true,
+  "minimum-stability": "dev",
+  "require": {
 
-        "vlucas/phpdotenv": "2.6.1",
-        "illuminate/support": "5.7",
+    "vlucas/phpdotenv": "2.6.1",
+    "illuminate/support": "5.7",
 
-        "php": "^7.1.3",
-        "advanced-custom-fields/advanced-custom-fields-pro": "5.6.10",
-        "cweagans/composer-patches": "^1.6",
-        "ekandreas/bladerunner": "^1.7.5",
-        "heydon/revenge.css": "master",
-        "hoy/polylang": "^4.0",
-        "johnbillion/extended-cpts": "^4.1",
-        "koodimonni-language/core-sv_se": "^4.8",
-        "roots/soil": "^3.7",
-        "spatie/image-optimizer": "^1.0",
-        "symfony/process": "3.4.0",
-        "wordplate/acf": "^3.0",
-        "wordplate/framework": "^6.3",
-        "wordplate/mail": "^4.0",
-        "wordplate/plate": "^4.0",
-        "wpackagist-plugin/autodescription": "^2.9.4",
-        "wpackagist-plugin/better-wp-security": "^6.6",
-        "wpackagist-plugin/disable-embeds": "^1.4.0",
-        "wpackagist-plugin/disable-emojis": "^1.7.2",
-        "wpackagist-plugin/disable-feeds": "^1.4.4",
-        "wpackagist-plugin/fly-dynamic-image-resizer": "^2.0.5",
-        "wpackagist-plugin/normalizer": "^1.0",
-        "wpackagist-plugin/polylang": "^2.5.2",
-        "wpackagist-plugin/simple-history": "^2.29.2",
-        "wpackagist-plugin/wp-migrate-db": "^1.0.10"
-    },
-    "autoload": {
-        "psr-4": {
-            "SotPlate\\": "src/SotPlate/"
-        }
-    },
-    "repositories": [
-        {
-            "type": "composer",
-            "url": "https://wpackagist.org"
-        },
-        {
-            "type": "composer",
-            "url": "https://wp-languages.github.io"
-        },
-        {
-            "type": "package",
-            "package": {
-                "name": "advanced-custom-fields/advanced-custom-fields-pro",
-                "version": "5.6.10",
-                "type": "wordpress-plugin",
-                "dist": {
-                    "type": "zip",
-                    "url": "https://connect.advancedcustomfields.com/index.php?p=pro&a=download&k=b3JkZXJfaWQ9MTIwMDg1fHR5cGU9ZGV2ZWxvcGVyfGRhdGU9MjAxNy0xMi0wNCAxMjozNzoxMA%3D%3D&t=5.6.10"
-                }
-            }
-        },
-        {
-            "type":"package",
-            "package": {
-                "name": "heydon/revenge.css",
-                "version":"master",
-                "source": {
-                    "url": "https://github.com/Heydon/REVENGE.CSS.git",
-                    "type": "git",
-                    "reference":"master"
-                }
-            }
-        }
-    ],
-    "scripts": {
-        "post-install-cmd": [
-            "php -r \"file_exists('.env') || copy('.env.example', '.env');\""
-        ],
-        "update-acf-plugin": [
-            "php -r \"file_exists('composer/update-acf-plugin.php') && require 'composer/update-acf-plugin.php';\""
-        ]
-    },
-    "config": {
-        "sort-packages": true,
-        "preferred-install": "dist"
-    },
-    "extra": {
-        "installer-paths": {
-            "public/mu-plugins/{$name}": [
-                "type:wordpress-muplugin",
-                "type:wordpress-plugin"
-            ],
-            "public/themes/{$name}": [
-                "type:wordpress-theme"
-            ]
-        },
-        "wordpress-install-dir": "public/wordpress",
-        "dropin-paths": {
-            "public/languages/": [
-                "vendor:koodimonni-language"
-            ],
-            "public/languages/plugins/": [
-                "vendor:koodimonni-plugin-language"
-            ],
-            "public/languages/themes/": [
-                "vendor:koodimonni-theme-language"
-            ]
-        },
-        "patches": {
-            "wpackagist-plugin/wp-migrate-db": {
-                "Patch WP Migrate DB plugin url path": "composer-patches/wpackagist-plugin/wp-migrate-db.patch"
-            }
-        }
+    "php": "^7.1.3",
+    "advanced-custom-fields/advanced-custom-fields-pro": "5.7.12",
+    "cweagans/composer-patches": "^1.6",
+    "ekandreas/bladerunner": "^1.7.5",
+    "heydon/revenge.css": "master",
+    "hoy/polylang": "^4.0",
+    "johnbillion/extended-cpts": "^4.1",
+    "koodimonni-language/core-sv_se": "^4.8",
+    "roots/soil": "^3.7",
+    "spatie/image-optimizer": "^1.0",
+    "symfony/process": "3.4.0",
+    "wordplate/acf": "^6.0",
+    "wordplate/framework": "^6.3",
+    "wordplate/mail": "^4.0",
+    "wordplate/plate": "^4.0",
+    "wpackagist-plugin/autodescription": "^2.9.4",
+    "wpackagist-plugin/better-wp-security": "^6.6",
+    "wpackagist-plugin/disable-embeds": "^1.4.0",
+    "wpackagist-plugin/disable-emojis": "^1.7.2",
+    "wpackagist-plugin/disable-feeds": "^1.4.4",
+    "wpackagist-plugin/fly-dynamic-image-resizer": "^2.0.5",
+    "wpackagist-plugin/normalizer": "^1.0",
+    "wpackagist-plugin/polylang": "^2.5.2",
+    "wpackagist-plugin/simple-history": "^2.29.2",
+    "wpackagist-plugin/wp-migrate-db": "^1.0.10"
+  },
+  "autoload": {
+    "psr-4": {
+      "SotPlate\\": "src/SotPlate/"
     }
+  },
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://wpackagist.org"
+    },
+    {
+      "type": "composer",
+      "url": "https://wp-languages.github.io"
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "advanced-custom-fields/advanced-custom-fields-pro",
+        "version": "5.7.12",
+        "type": "wordpress-plugin",
+        "dist": {
+          "type": "zip",
+          "url": "https://connect.advancedcustomfields.com/index.php?p=pro&a=download&k=b3JkZXJfaWQ9MTIwMDg1fHR5cGU9ZGV2ZWxvcGVyfGRhdGU9MjAxNy0xMi0wNCAxMjozNzoxMA%3D%3D&t=5.7.12"
+        }
+      }
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "heydon/revenge.css",
+        "version": "master",
+        "source": {
+          "url": "https://github.com/Heydon/REVENGE.CSS.git",
+          "type": "git",
+          "reference": "master"
+        }
+      }
+    }
+  ],
+  "scripts": {
+    "post-install-cmd": [
+      "php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+    ],
+    "update-acf-plugin": [
+      "php -r \"file_exists('composer/update-acf-plugin.php') && require 'composer/update-acf-plugin.php';\""
+    ]
+  },
+  "config": {
+    "sort-packages": true,
+    "preferred-install": "dist"
+  },
+  "extra": {
+    "installer-paths": {
+      "public/mu-plugins/{$name}": [
+        "type:wordpress-muplugin",
+        "type:wordpress-plugin"
+      ],
+      "public/themes/{$name}": [
+        "type:wordpress-theme"
+      ]
+    },
+    "wordpress-install-dir": "public/wordpress",
+    "dropin-paths": {
+      "public/languages/": [
+        "vendor:koodimonni-language"
+      ],
+      "public/languages/plugins/": [
+        "vendor:koodimonni-plugin-language"
+      ],
+      "public/languages/themes/": [
+        "vendor:koodimonni-theme-language"
+      ]
+    },
+    "patches": {
+      "wpackagist-plugin/wp-migrate-db": {
+        "Patch WP Migrate DB plugin url path": "composer-patches/wpackagist-plugin/wp-migrate-db.patch"
+      }
+    }
+  }
 }

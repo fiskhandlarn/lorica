@@ -1,6 +1,7 @@
 <?php
 if (!function_exists('wp_install_defaults')) {
-    function wp_install_defaults($user_id) {
+    function wp_install_defaults($user_id)
+    {
         global $wpdb, $wp_rewrite, $table_prefix;
 
         // Default category
@@ -9,9 +10,9 @@ if (!function_exists('wp_install_defaults')) {
         $cat_slug = sanitize_title(_x('Uncategorized', 'Default category slug'));
 
         if (global_terms_enabled()) {
-            $cat_id = $wpdb->get_var( $wpdb->prepare("SELECT cat_ID FROM {$wpdb->sitecategories} WHERE category_nicename = %s", $cat_slug ));
+            $cat_id = $wpdb->get_var($wpdb->prepare("SELECT cat_ID FROM {$wpdb->sitecategories} WHERE category_nicename = %s", $cat_slug));
             if ($cat_id == null) {
-                $wpdb->insert( $wpdb->sitecategories, [
+                $wpdb->insert($wpdb->sitecategories, [
                     'cat_ID' => 0,
                     'cat_name' => $cat_name,
                     'category_nicename' => $cat_slug,
@@ -50,7 +51,7 @@ if (!function_exists('wp_install_defaults')) {
 
         if (!is_multisite()) {
             update_user_meta($user_id, 'show_welcome_panel', 1);
-        } else if (!is_super_admin($user_id) && ! metadata_exists('user', $user_id, 'show_welcome_panel')) {
+        } elseif (!is_super_admin($user_id) && ! metadata_exists('user', $user_id, 'show_welcome_panel')) {
             update_user_meta($user_id, 'show_welcome_panel', 2);
         }
 
@@ -80,56 +81,33 @@ if (class_exists('ITSEC_Modules')) {
     // thus breaking declare(strict_types=1); .
     // also, DISALLOW_FILE_EDIT is already handled by WordPlate, so let's disable
     // better-wp-security handling this:
-    ITSEC_Modules::get_instance()->set_setting('wordpress-tweaks', 'file_editor', FALSE);
+    ITSEC_Modules::get_instance()->set_setting('wordpress-tweaks', 'file_editor', false);
 
 
 
     // default values
     ITSEC_Modules::get_instance()->deactivate('backup');
 
-    ITSEC_Modules::get_instance()->set_setting('global', 'notification_email', 'tech@sot.se');
-    ITSEC_Modules::get_instance()->set_setting('global', 'backup_email', 'tech@sot.se');
-    ITSEC_Modules::get_instance()->set_setting('global', 'lockout_white_list', ['213.136.62.178'] ); // sot office ip
-
-    ITSEC_Modules::get_instance()->set_setting('global', 'email_notifications', FALSE);
+    ITSEC_Modules::get_instance()->set_setting('global', 'lockout_white_list', ['213.136.62.178']); // sot office ip
 
     ITSEC_Modules::get_instance()->activate('404-detection');
 
-    ITSEC_Modules::get_instance()->set_setting('ban-users', 'default', TRUE);
+    ITSEC_Modules::get_instance()->set_setting('ban-users', 'default', true);
 
     ITSEC_Modules::get_instance()->activate('file-change');
-    ITSEC_Modules::get_instance()->set_setting(
-        'file-change',
-        'types',
-        [
-            '.jpg',
-            '.jpeg',
-            '.png',
-            '.log',
-            '.mo',
-            '.po',
-            '.pdf',
-        ]
-    );
-    ITSEC_Modules::get_instance()->set_setting('file-change', 'email', FALSE);
 
     ITSEC_Modules::get_instance()->set_setting('network-brute-force', 'api_key', 'pBY304rg8Fqg7JWIT6SL1576MHX1PaIK');
     ITSEC_Modules::get_instance()->set_setting('network-brute-force', 'api_secret', '3G52yVN4u7Ytb8EK9562vyBPGUFrdpV5i248317L3S78p4xcut25kO8j6986Y119Vs3t4fVV8q3C60j4U9DZku2fr9n78SlhKZJFbupl936lj4HT0yobw06iI520u89c');
-    ITSEC_Modules::get_instance()->set_setting('network-brute-force', 'api_nag', FALSE);
+    ITSEC_Modules::get_instance()->set_setting('network-brute-force', 'api_nag', false);
 
     ITSEC_Modules::get_instance()->activate('system-tweaks');
-    ITSEC_Modules::get_instance()->set_setting('system-tweaks', 'protect_files', TRUE);
-    ITSEC_Modules::get_instance()->set_setting('system-tweaks', 'directory_browsing', TRUE);
-    ITSEC_Modules::get_instance()->set_setting('system-tweaks', 'suspicious_query_strings', TRUE);
-    ITSEC_Modules::get_instance()->set_setting('system-tweaks', 'write_permissions', TRUE);
-    ITSEC_Modules::get_instance()->set_setting('system-tweaks', 'uploads_php', TRUE);
+    ITSEC_Modules::get_instance()->set_setting('system-tweaks', 'protect_files', true);
+    ITSEC_Modules::get_instance()->set_setting('system-tweaks', 'directory_browsing', true);
+    ITSEC_Modules::get_instance()->set_setting('system-tweaks', 'suspicious_query_strings', true);
+    ITSEC_Modules::get_instance()->set_setting('system-tweaks', 'write_permissions', true);
+    ITSEC_Modules::get_instance()->set_setting('system-tweaks', 'uploads_php', true);
 
-    ITSEC_Modules::get_instance()->set_setting('hide-backend', 'enabled', TRUE);
+    ITSEC_Modules::get_instance()->set_setting('hide-backend', 'enabled', true);
     ITSEC_Modules::get_instance()->set_setting('hide-backend', 'slug', 'sot-admin');
-    ITSEC_Modules::get_instance()->set_setting('hide-backend', 'theme_compat', FALSE);
-}
-
-if (class_exists('Bugsnag_Wordpress')) {
-    update_site_option('bugsnag_api_key', '72cb4d1571eadf6cbb78edc9205985dd');
-    update_site_option('bugsnag_notify_severities', 'fatal,error,warning');
+    ITSEC_Modules::get_instance()->set_setting('hide-backend', 'theme_compat', false);
 }

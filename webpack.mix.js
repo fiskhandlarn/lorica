@@ -1,11 +1,12 @@
 const mix = require('laravel-mix');
-const sassLintPlugin = require('sasslint-webpack-plugin');
-const styleLintPlugin = require('stylelint-webpack-plugin');
-require('dotenv').config();
-const imageminPlugin = require('imagemin-webpack-plugin').default;
-const copyWebpackPlugin = require('copy-webpack-plugin');
-const modernizrWebpackPlugin = require('modernizr-webpack-plugin');
+const SassLintPlugin = require('sasslint-webpack-plugin');
+const StyleLintPlugin = require('stylelint-webpack-plugin');
+const ImageminPlugin = require('imagemin-webpack-plugin').default;
+const ModernizrWebpackPlugin = require('modernizr-webpack-plugin');
 const modernizrSettings = require('./modernizr.json');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+
+require('dotenv').config();
 
 /*
  |--------------------------------------------------------------------------
@@ -24,78 +25,96 @@ const publicPath = `public/themes/${theme}/assets`;
 mix.setResourceRoot('../');
 mix.setPublicPath(publicPath);
 
-mix.js('resources/assets/scripts/app.js', 'scripts');
-mix.sass('resources/assets/styles/app.scss', 'styles');
-
-// prepare for REVENGE (only included by theme if WP_DEBUG is true)
-mix.copy('vendor/heydon/revenge.css/revenge.css', `${publicPath}/styles`);
-
 mix.webpackConfig({
   module: {
-    rules: [{
-      test: /\.js?$/,
-      use: [
-        {
-          loader: 'babel-loader',
-          options: mix.config.babel(),
-        },
-        {
-          loader: 'eslint-loader',
-        },
-      ],
-    }],
-  },
-  module: {
-    rules: [{
-      test: /\.scss$/,
-      loader: 'import-glob-loader',
-    }],
+    rules: [
+      {
+        test: /\.js?$/,
+        exclude: /node_modules/,
+        use: [
+          {
+            loader: 'eslint-loader',
+          },
+        ],
+      },
+      {
+        test: /\.scss$/,
+        loader: 'import-glob-loader',
+      },
+      // {
+      //   test: /\.handlebars?$/,
+      //   loader: 'handlebars-loader',
+      // },
+    ],
   },
   plugins: [
-    new sassLintPlugin({
+    new SassLintPlugin({
       glob: 'resources/assets/styles/**/*.s?(a|c)ss',
     }),
-    new styleLintPlugin({
+    new StyleLintPlugin({
       context: 'resources/assets/styles/',
     }),
     // Copy the fonts folder
-    new copyWebpackPlugin([{
+    new CopyWebpackPlugin([{
       from: 'resources/assets/fonts/',
       to: 'fonts'
     }]),
     // Copy the images folder and optimize all the images
-    new copyWebpackPlugin([{
+    new CopyWebpackPlugin([{
       from: 'resources/assets/images/',
       to: 'images'
     }]),
-    new imageminPlugin({
+    new ImageminPlugin({
       test: /\.svg$/i,
       svgo: {
         plugins: [
           {
-            removeTitle: true,
+            removeTitle: true
+          },
+          {
             removeStyleElement: true
+          },
+          {
+            removeAttrs : {
+              attrs : [ "class", "style" ]
+            }
           }
         ]
       }
     }),
-    new modernizrWebpackPlugin(
+    new ModernizrWebpackPlugin(
       Object.assign(
         {
           filename: 'scripts/modernizr.js'
         },
         modernizrSettings
       )
-    )
-  ]
+    ),
+  ],
 });
 
-// versioning
-if (mix.config.inProduction) {
-  mix.version();
+// Compile javascript.
+mix.js('resources/assets/scripts/app.js', 'scripts');
+
+// Compile styles.
+mix.sass('resources/assets/styles/app.scss', 'styles', {
+  includePaths: ['node_modules'],
+});
+
+// Prepare for REVENGE (only included by theme if WP_DEBUG is true)
+mix.copy('vendor/heydon/revenge.css/revenge.css', `${publicPath}/styles`);
+
+// Versioning.
+mix.version();
+
+if (process.env.BROWSER_SYNC_HOST) {
+  // Browsersync.
+  mix.browserSync({
+    proxy: process.env.BROWSER_SYNC_HOST,
+    files: [
+      'resources/views/**/*.php',
+      `${publicPath}/**/*.js`,
+      `${publicPath}/**/*.css`,
+    ],
+  });
 }
-
-// Browsersync
-mix.browserSync({
-  proxy: process.env.BROWSER_SYNC_HOST,
-});

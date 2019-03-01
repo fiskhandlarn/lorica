@@ -51,9 +51,11 @@
 		RewriteRule ^wp-includes/[^/]+\.php$ - [F]
 		RewriteRule ^wp-includes/js/tinymce/langs/.+\.php - [F]
 		RewriteRule ^wp-includes/theme-compat/ - [F]
+		RewriteCond %{REQUEST_FILENAME} -f
+		RewriteRule (^|.*/)\.(git|svn)/.* - [F]
 
 		# Disable PHP in Uploads - Security > Settings > System Tweaks > PHP in Uploads
-		RewriteRule ^uploads/.*\.(?:php[1-7]?|pht|phtml?|phps)$ - [NC,F]
+		RewriteRule ^uploads/.*\.(?:php[1-7]?|pht|phtml?|phps)\.?$ - [NC,F]
 
 		# Filter Suspicious Query Strings in the URL - Security > Settings > System Tweaks > Suspicious Query Strings
 		RewriteCond %{QUERY_STRING} \.\.\/ [OR]
@@ -67,8 +69,8 @@
 		RewriteCond %{QUERY_STRING} base64_decode\( [NC,OR]
 		RewriteCond %{QUERY_STRING} %24&x [NC,OR]
 		RewriteCond %{QUERY_STRING} 127\.0 [NC,OR]
-		RewriteCond %{QUERY_STRING} (globals|encode|localhost|loopback) [NC,OR]
-		RewriteCond %{QUERY_STRING} (request|concat|insert|union|declare) [NC,OR]
+		RewriteCond %{QUERY_STRING} (^|\W)(globals|encode|localhost|loopback)($|\W) [NC,OR]
+		RewriteCond %{QUERY_STRING} (^|\W)(concat|insert|union|declare)($|\W) [NC,OR]
 		RewriteCond %{QUERY_STRING} %[01][0-9A-F] [NC]
 		RewriteCond %{QUERY_STRING} !^loggedout=true
 		RewriteCond %{QUERY_STRING} !^action=jetpack-sso
@@ -234,7 +236,6 @@
 	RewriteCond %{HTTP_USER_AGENT} "PleaseCrawl" [NC,OR]
 	RewriteCond %{HTTP_USER_AGENT} "SBIder" [NC,OR]
 	RewriteCond %{HTTP_USER_AGENT} "SearchmetricsBot" [NC,OR]
-	RewriteCond %{HTTP_USER_AGENT} "SeznamBot" [NC,OR]
 	RewriteCond %{HTTP_USER_AGENT} "Snoopy" [NC,OR]
 	RewriteCond %{HTTP_USER_AGENT} "Steeler" [NC,OR]
 	RewriteCond %{HTTP_USER_AGENT} "URI\:\:Fetch" [NC,OR]
@@ -267,4 +268,5 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule . /index.php [L]
 </IfModule>
+
 # END WordPress

@@ -31,7 +31,7 @@
     "wordplate/mail": "^4.0",
     "wordplate/plate": "^4.0",
     "wpackagist-plugin/autodescription": "^3.2.3",
-    "wpackagist-plugin/better-wp-security": "^6.6",
+    "wpackagist-plugin/better-wp-security": "^7.3.1",
     "wpackagist-plugin/disable-embeds": "^1.4.0",
     "wpackagist-plugin/disable-emojis": "^1.7.2",
     "wpackagist-plugin/disable-feeds": "^1.4.4",

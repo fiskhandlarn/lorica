@@ -60,7 +60,7 @@ Save the login url and credentials in Sot's shared KeePass file.
 
 Do not click the ''Log in'' button in the final step, instead use the URL `/wordpress/sot-admin` to log into wp-admin. If you get a 404 for that URL it's probably because [iThemes Security](./PLUGINS.md) has removed or changed [.htaccess](./public/.htaccess). If `.htaccess` is marked as changed, revert it and try again.
 
-If you get an error message from `mu-plugins/better-wp-security/core/modules/hide-backend/validator.php`, comment out the referenced line, reload the site and restore that line.
+If you get error messages, reload `/wordpress/sot-admin` until all error messages has disappeared.
 
 Add languages for Polylang in wp-admin (*Languages* in the side menu) so you can start using the [hoy/polylang](https://github.com/hoymultimedia/polylang) functions, or remove `hoy/polylang` and `wpackagist-plugin/polylang` from composer if your project is monolingual (optionally remove `koodimonni-language` packages if not needed).
 

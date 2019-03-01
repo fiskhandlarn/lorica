@@ -1,3 +1,3 @@
 import 'babel-polyfill';
 
-//console.log('!');
+// console.log('!');

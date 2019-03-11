@@ -2,6 +2,8 @@
 
 declare(strict_types=1);
 
+require_if_theme_supports('sotplate-bugsnag', template_path('library/bugsnag.php'));
+
 // Register plugin helpers.
 require_once template_path('library/assets.php');
 require_once template_path('library/better-wp-security.php');

@@ -32,6 +32,7 @@
     "wordplate/plate": "^4.0",
     "wpackagist-plugin/autodescription": "^3.2.3",
     "wpackagist-plugin/better-wp-security": "^7.3.1",
+    "wpackagist-plugin/bugsnag": "1.3.1",
     "wpackagist-plugin/disable-embeds": "^1.4.0",
     "wpackagist-plugin/disable-emojis": "^1.7.2",
     "wpackagist-plugin/disable-feeds": "^1.4.4",
@@ -117,6 +118,9 @@
     "patches": {
       "wpackagist-plugin/wp-migrate-db": {
         "Patch WP Migrate DB plugin url path": "composer-patches/wpackagist-plugin/wp-migrate-db.patch"
+      },
+      "wpackagist-plugin/bugsnag": {
+        "Patch Bugsnag plugin url path": "composer-patches/wpackagist-plugin/bugsnag.patch"
       }
     }
   }

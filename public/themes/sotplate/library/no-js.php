@@ -18,7 +18,7 @@ add_filter(class_exists('Roots\Soil\Options') ? 'soil/language_attributes' : 'la
 
 // Remove <html class="no-js"> & set <html class="js"> if browser support javascript.
 add_action('wp_head', function () {
-    ?>
-    <script type="text/javascript">(function (d){d.className=d.className.replace(/\bno-js\b/, 'js')})(document.documentElement)</script>
+    ?>
+    <script type="text/javascript">(function (d){d.className=d.className.replace(/\bno-js\b/, 'js')})(document.documentElement)</script>
 <?php
 });

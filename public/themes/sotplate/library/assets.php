@@ -110,3 +110,14 @@ add_action('wp_enqueue_scripts', function () {
         );
     }
 });
+
+if (get_theme_support('sotplate-enqueue-modernizr')) {
+    // https://wordpress.stackexchange.com/a/19309/144404
+    add_filter(class_exists('Roots\Soil\Options') ? 'soil/language_attributes' : 'language_attributes', function ($output) {
+        if (strpos($output, ' class="no-js"') === false) {
+            return $output . ' class="no-js"';
+        }
+
+        return $output;
+    });
+}

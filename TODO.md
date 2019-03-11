@@ -12,3 +12,4 @@ These items must be done before launching project:
 * Set [Google Analytics](https://analytics.google.com/) Tracking ID (see call to `google_analytics_deploy` in [functions.php](./public/themes/project/functions.php))
 * Set [Facebook Pixel](https://www.facebook.com/business/a/facebook-pixel) Tracking ID (see call to `pixel_deploy` in [functions.php](./public/themes/project/functions.php))
 * Configure [Bugsnag](/wordpress/wp-admin/options-general.php?page=bugsnag) with the API key and set **Notify Bugsnag About** to "Crashes, errors & warnings" and remove `DISABLE_BUGSNAG` from deploy `.env` files
+* Define browser support in [.browserslistrc](./.browserslistrc)

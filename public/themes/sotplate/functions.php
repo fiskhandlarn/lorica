@@ -12,6 +12,7 @@ require_once template_path('library/normalizer.php');
 require_if_theme_supports('sotplate-bladerunner', template_path('library/bladerunner.php'));
 require_if_theme_supports('sotplate-cookie-bar', template_path('library/cookie-bar.php'));
 require_if_theme_supports('sotplate-helpers', template_path('library/helpers.php'));
+require_if_theme_supports('sotplate-no-js', template_path('library/no-js.php'));
 require_if_theme_supports('sotplate-no-touch', template_path('library/no-touch.php'));
 require_if_theme_supports('sotplate-pixel', template_path('library/pixel.php'));
 require_if_theme_supports('sotplate-polylang', template_path('library/polylang.php'));

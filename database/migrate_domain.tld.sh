@@ -1,4 +1,5 @@
 #!/bin/bash
 SOURCEDIR="$( cd "$( dirname "$0" )" && pwd )"
 
-$SOURCEDIR/_migrate.sh project https://project.test https://domain.tld
+cd "$SOURCEDIR"
+"./_migrate.sh" domain.tld https://$(wp eval "echo env('BROWSER_SYNC_HOST');") https://domain.tld

@@ -34,4 +34,13 @@ class CustomSvgo extends Svgo
 
         return $image->mime() === 'text/html' || $image->mime() === 'image/svg+xml';
     }
+
+    public function getCommand(): string
+    {
+        $optionString = implode(' ', $this->options);
+
+        return "{$this->binaryPath}{$this->binaryName} {$optionString}"
+            .' --input='.escapeshellarg($this->imagePath)
+            .' --output='.escapeshellarg($this->imagePath);
+    }
 }

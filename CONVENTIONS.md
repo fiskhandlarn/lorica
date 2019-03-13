@@ -27,7 +27,7 @@ SCSS should
 
 * use multiples of Bootstrap's `$spacer` or `$grid-gutter-width` instead of fixed pixel values for `padding`/`margin`/`position` rather than trying to achieve "pixel perfection" (sometimes the design is sloppy, but by using these variables we hopefully achieve something more pleasant for the human eye)
 * use variables for CSS transitions to ensure the same experience for the whole site, for example: `transition: opacity $transition-duration-hover $transition-easing-default;`
-* use Bootstrap's [flex extends](https://getbootstrap.com/docs/4.1/utilities/flex/) whenever possible
+* use Bootstrap's [flex extends](https://getbootstrap.com/docs/4.3/utilities/flex/) whenever possible
 * define and use color variables and *not* rely on Bootstrap's color variables (for example, define and use `$color-white` instead of `$white`)
 * use Bootstrap's `make-container` and `make-container-max-widths` mixins for container components (this trumps the rule below for margins/dimensions in rscss)
 * define `line-height` as a simple fraction instead of a decimal fraction (for example, for a text with font-size set to 28px and line-height set to 34px the `line-height` should be declared as `(34 / 28)` instead of `1.21`)
@@ -62,7 +62,7 @@ Only write **one** media query for each screen width in each rscss component, pl
 
 (The `sass-lint:disable-line` directives are sometimes needed for the lint to work.)
 
-If the site needs to have a grid system, please use the one provided in [Bootstrap 4](https://getbootstrap.com/docs/4.1/layout/grid/) (included by default in [app.css](./resources/assets/styles/app.scss#app.scss-23)).
+If the site needs to have a grid system, please use the one provided in [Bootstrap 4](https://getbootstrap.com/docs/4.3/layout/grid/) (included by default in [app.css](./resources/assets/styles/app.scss#app.scss-23)).
 
 ### Lint errors/warnings
 

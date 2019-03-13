@@ -7,18 +7,23 @@ then
   old=$2
   new=${3:-ROOTURL} # https://stackoverflow.com/a/2013589/1109380
 
+  # Use wp-cli from local composer
+  wp="$SOURCEDIR/../vendor/wp-cli/wp-cli/bin/wp"
+
+  "$wp" cli version
+
   cd "$SOURCEDIR"
 
   echo ""
   echo "Replacing $old to $new in database"
-  wp search-replace $old $new --all-tables --report-changed-only
+  "$wp" search-replace $old $new --all-tables --report-changed-only
 
   echo "Cleaning up"
-  wp db query < cleanup.sql
+  "$wp" db query < cleanup.sql
 
   echo ""
   echo "Exporting database to $DESTINATION_SQL"
-  wp db export "$DESTINATION_SQL"
+  "$wp" db export "$DESTINATION_SQL"
 
   echo ""
   echo "Add newlines in $DESTINATION_SQL"
@@ -34,7 +39,7 @@ then
 
   echo ""
   echo "Restoring $new to $old in database"
-  wp search-replace $new $old --all-tables --report-changed-only
+  "$wp" search-replace $new $old --all-tables --report-changed-only
 else
   echo "Expected at least two parameters";
 fi

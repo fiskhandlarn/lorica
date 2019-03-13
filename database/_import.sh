@@ -7,25 +7,30 @@ then
   old=${3:-ROOTURL} # https://stackoverflow.com/a/2013589/1109380
   new=$2
 
-  echo ""
   echo -n "Are you sure? [Y/n] "
 
   read addAuth
   if [ "$addAuth" == "y" ] || [ "$addAuth" == "Y" ] || [ "$addAuth" == "" ]; then
     cd "$SOURCEDIR"
 
+    # Use wp-cli from local composer
+    wp="$SOURCEDIR/../vendor/wp-cli/wp-cli/bin/wp"
+
+    echo ""
+    "$wp" cli version
+
     echo ""
     echo "Clear database"
-    wp db drop --yes
-    wp db reset --yes
+    "$wp" db drop --yes
+    "$wp" db reset --yes
 
     echo ""
     echo "Importing database from $SOURCE_SQL"
-    wp db import "$SOURCE_SQL"
+    "$wp" db import "$SOURCE_SQL"
 
     echo ""
     echo "Replacing $old to $new in database"
-    wp search-replace $old $new --all-tables --report-changed-only
+    "$wp" search-replace $old $new --all-tables --report-changed-only
   fi
 else
   echo "Expected at least two parameters";

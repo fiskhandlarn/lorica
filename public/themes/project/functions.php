@@ -23,7 +23,7 @@ add_theme_support('sotplate-bugsnag');
 add_theme_support('sotplate-cookie-bar');
 add_theme_support('sotplate-helpers');
 //add_theme_support('sotplate-no-js');
-//add_theme_support('sotplate-no-touch');
+add_theme_support('sotplate-no-touch'); // a prerequisite for /resources/assets/styles/mixins/_no-touch.scss mixins
 //add_theme_support('sotplate-pixel');
 add_theme_support('sotplate-polylang');
 add_theme_support('sotplate-soil');

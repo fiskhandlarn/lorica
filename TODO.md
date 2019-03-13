@@ -5,7 +5,13 @@ These items must be done before launching project:
 * Remove `minimum-stability` from `composer.json` as soon as [ekandreas/bladerunner](https://github.com/ekandreas/bladerunner) is released with [the features we need](https://github.com/ekandreas/bladerunner/pull/63)
 * Change `public/favicon.ico` (or remove it and use icons from [RealFaviconGenerator](https://realfavicongenerator.net/))
 * Make sure the site sends emails, preferably by adding a new domain to [Mailgun](https://www.mailgun.com/) and use Mailgun's SMTP credentials in your `.env` file
-* Disable all permalinks the site doesn't need (`/attachment`, `/author` and so on)
+* Disable all permalinks the site doesn't need (`/attachment`, `/author` and so on). One way to do this is putting this in the theme's [index.php](./public/themes/project/index.php):
+```php
+// disable permalinks without page templates (/author, /attachment and so on)
+if (!is_home()) {
+    wp_redirect(home_url('/'));
+}
+```
 * Generate new favicons with [Favicon Generator](https://realfavicongenerator.net/), place them in [resources/assets/images/favicons](./resources/assets/images/favicons) and update theme paths in [browserconfig.xml](./resources/assets/images/favicons/browserconfig.xml) and [site.webmanifest](./resources/assets/images/favicons/site.webmanifest)
 * Generate new [favicon.admin.png](./resources/assets/images/favicons/favicon.admin.png) (tip: `magick favicon.ico -channel RGB -negate favicon.admin.png`)
 * Change or remove `theme-color` meta value in [header.blade.php](./resources/views/base/header.blade.php)

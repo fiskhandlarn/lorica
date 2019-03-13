@@ -1,6 +1,8 @@
 #!/bin/bash
 SOURCEDIR="$( cd "$( dirname "$0" )" && pwd )"
 
+cd "$SOURCEDIR"
+
 database=$(wp eval "echo env('DB_NAME');")
 url=$(wp eval "echo env('BROWSER_SYNC_HOST');")
 
@@ -9,6 +11,5 @@ if [ "$database" = "" ]; then
 elif [ "$url" = "" ]; then
   echo "BROWSER_SYNC_HOST not set in .env"
 else
-  cd "$SOURCEDIR"
   "./_import.sh" "$database.sql" "https://$url"
 fi

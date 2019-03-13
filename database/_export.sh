@@ -7,13 +7,13 @@ then
   old=$2
   new=${3:-ROOTURL} # https://stackoverflow.com/a/2013589/1109380
 
+  cd "$SOURCEDIR"
+
   # Use wp-cli from local composer
   wp="$SOURCEDIR/../vendor/wp-cli/wp-cli/bin/wp"
 
   echo "Using $wp:"
   "$wp" cli version
-
-  cd "$SOURCEDIR"
 
   echo ""
   echo "Replacing $old to $new in database"

@@ -5,8 +5,12 @@ These items must be done before launching project:
 * Remove `minimum-stability` from `composer.json` as soon as [ekandreas/bladerunner](https://github.com/ekandreas/bladerunner) is released with [the features we need](https://github.com/ekandreas/bladerunner/pull/63)
 * Change `public/favicon.ico` (or remove it and use icons from [RealFaviconGenerator](https://realfavicongenerator.net/))
 * Make sure the site sends emails, preferably by adding a new domain to [Mailgun](https://www.mailgun.com/) and use Mailgun's SMTP credentials in your `.env` file
-* Disable all permalinks the site doesn't need (`/attachment`, `/author` and so on). One way to do this is putting this in the theme's [index.php](./public/themes/project/index.php):
+* Disable all permalinks the site doesn't need (`/attachment`, `/author` and so on). One way to do this is by creating `public/themes/project/index.php` with the following content:
 ```php
+<?php
+
+declare(strict_types=1);
+
 // disable permalinks without page templates (/author, /attachment and so on)
 if (!is_home()) {
     wp_redirect(home_url('/'));

@@ -6,6 +6,11 @@ Make sure your editor respects `.editorconfig`.
 
 JavaScript should be written in EcmaScript 6 and is then automatically linted via npm.
 
+Please think twice before using JavaScript for things that can be made with CSS instead (CSS is loaded in `<head>` and is therefore executed faster than JavaScript). Good resources:
+
+* http://youmightnotneedjs.com/
+* https://github.com/you-dont-need/You-Dont-Need-JavaScript
+
 ## CSS
 
 CSS should

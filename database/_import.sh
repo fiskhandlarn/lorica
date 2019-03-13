@@ -17,6 +17,7 @@ then
     wp="$SOURCEDIR/../vendor/wp-cli/wp-cli/bin/wp"
 
     echo ""
+    echo "Using $wp:"
     "$wp" cli version
 
     echo ""

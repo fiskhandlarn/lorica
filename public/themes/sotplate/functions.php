@@ -9,6 +9,7 @@ require_once template_path('library/assets.php');
 require_once template_path('library/better-wp-security.php');
 require_once template_path('library/normalizer.php');
 
+require_if_theme_supports('sotplate-admin-favicon', template_path('library/admin-favicon.php'));
 require_if_theme_supports('sotplate-bladerunner', template_path('library/bladerunner.php'));
 require_if_theme_supports('sotplate-cookie-bar', template_path('library/cookie-bar.php'));
 require_if_theme_supports('sotplate-helpers', template_path('library/helpers.php'));

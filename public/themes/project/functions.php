@@ -17,6 +17,7 @@ add_theme_support('sotplate-deregister-jquery');
 add_theme_support('sotplate-enqueue-app-css');
 //add_theme_support('sotplate-enqueue-modernizr');
 add_theme_support('sotplate-enqueue-app-js');
+add_theme_support('sotplate-admin-favicon');
 add_theme_support('sotplate-bladerunner');
 add_theme_support('sotplate-bugsnag');
 add_theme_support('sotplate-cookie-bar');

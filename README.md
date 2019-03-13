@@ -126,3 +126,5 @@ Deploy with [DeployBot](https://sot.deploybot.com/NNNNNN-NNNNN-project/) to:
 * [d.domain.tld](http://d.domain.tld)
 * [q.domain.tld](http://q.domain.tld)
 * [domain.tld](http://domain.tld)
+
+Tip: Use `composer run activate-maintenance` in DeployBot's ''Run commands after new version becomes active'' to deploy whilst keeping the site non-public.

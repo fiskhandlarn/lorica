@@ -32,6 +32,7 @@ SCSS should
 * use Bootstrap's `make-container` and `make-container-max-widths` mixins for container components (this trumps the rule below for margins/dimensions in rscss)
 * define `line-height` as a simple fraction instead of a decimal fraction (for example, for a text with font-size set to 28px and line-height set to 34px the `line-height` should be declared as `(34 / 28)` instead of `1.21`)
 * use variables for font-weight to ensure that the loaded weights are used (also see *Fonts* below)
+* never use `:hover` or `:focus`, but instead use mixins from [_no-touch.scss](./resources/assets/styles/mixins/_no-touch.scss) (or Bootstrap's mixins if touch screens should have hover/focus effects)
 
 ### rscss
 

@@ -8,7 +8,7 @@
     "import/extensions": [".js"],
     "import/resolver": {
       "webpack": {
-          "config": "webpack.config.js"
+          "config": "webpack.mix.js"
       }
     }
   },

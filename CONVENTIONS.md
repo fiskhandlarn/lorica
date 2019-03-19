@@ -50,25 +50,22 @@ Only write **one** media query for each screen width in each rscss component, pl
 .a-component {
   background: #f00;
 
-  @include media-breakpoint-up(md) { // sass-lint:disable-line mixins-before-declarations
+  @include media-breakpoint-up(md) {
     background: #0f0;
   }
 
-  @include media-breakpoint-up(lg) { // sass-lint:disable-line mixins-before-declarations
+  @include media-breakpoint-up(lg) {
     background: #00f;
   }
 }
 ```
 
-(The `sass-lint:disable-line` directives are sometimes needed for the lint to work.)
-
 If the site needs to have a grid system, please use the one provided in [Bootstrap 4](https://getbootstrap.com/docs/4.3/layout/grid/) (included by default in [app.css](./resources/assets/styles/app.scss#app.scss-23)).
 
 ### Lint errors/warnings
 
-`stylelint-rscss` and `sass-lint` sometimes generates somewhat unclear errors/warnings:
+`stylelint-rscss` sometimes generates somewhat unclear errors/warnings:
 
-* `@include media-breakpoint-up()` sometimes triggers a "Mixins should come before declarations" error, use `// sass-lint:disable-line mixins-before-declarations` to circumvent this (see [Responsive design](#Responsive design) below)
 * too deep nesting sometimes triggers a "Component too deep" error, either rewrite your SCSS as [recommended by rscss](http://rscss.io/css-structure.html#avoid-over-nesting) or (if you for example are using Bootstrap's grid and thus must declare `> .row > .col`) use `// stylelint-disable-line rscss/class-format` to circumvent this
 * `// stylelint-disable-line` directives on multiline declarations [triggers an error](https://github.com/stylelint/stylelint/issues/3111), disable the line like this instead:
 ```scss

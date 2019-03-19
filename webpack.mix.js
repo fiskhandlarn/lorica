@@ -1,5 +1,4 @@
 const mix = require('laravel-mix');
-const SassLintPlugin = require('sasslint-webpack-plugin');
 const StyleLintPlugin = require('stylelint-webpack-plugin');
 const ImageminPlugin = require('imagemin-webpack-plugin').default;
 const ModernizrWebpackPlugin = require('modernizr-webpack-plugin');
@@ -48,11 +47,9 @@ mix.webpackConfig({
     ],
   },
   plugins: [
-    new SassLintPlugin({
-      glob: 'resources/assets/styles/**/*.s?(a|c)ss',
-    }),
     new StyleLintPlugin({
-      context: 'resources/assets/styles/',
+      context: '// resources/assets/styles doesnt work o_O',
+      context: 'resources',
     }),
     // Copy the fonts folder
     new CopyWebpackPlugin([{

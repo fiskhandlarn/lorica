@@ -12,6 +12,9 @@
 // Bootstrap: mixins
 @import '../../../node_modules/bootstrap/scss/mixins';
 
+// Bootstrap: Theming https://getbootstrap.com/docs/4.3/getting-started/theming/
+//@import '../../../node_modules/bootstrap/scss/root';
+
 // Bootstrap: Reset and dependencies
 //@import '../../../node_modules/bootstrap/scss/print';
 @import '../../../node_modules/bootstrap/scss/reboot';
@@ -43,6 +46,8 @@
 //@import '../../../node_modules/bootstrap/scss/media';
 //@import '../../../node_modules/bootstrap/scss/list-group';
 //@import '../../../node_modules/bootstrap/scss/close';
+//@import '../../../node_modules/bootstrap/scss/toasts';
+//@import '../../../node_modules/bootstrap/scss/spinners';
 
 // Bootstrap: Components w/ JavaScript
 //@import '../../../node_modules/bootstrap/scss/modal';

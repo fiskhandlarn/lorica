@@ -20,6 +20,10 @@ Removes WordPress emoji support and it's bloating in `<head>`. Remove only if th
 
 Removes WordPress atom/rss feeds. Remove only if the site needs to have feeds.
 
+## [ekandreas/bladerunner](https://github.com/ekandreas/bladerunner)
+
+Blade support for templates.
+
 ## [Fly Dynamic Image Resizer](https://wordpress.org/plugins/fly-dynamic-image-resizer/)
 
 Helper for easily setting custom image sizes.
@@ -44,6 +48,10 @@ Simplifies hiding and customizing in wp-admin. Safe to remove if not used.
 
 Our go-to solution for multilingual sites. Safe to remove if not used.
 
+## [roots/soil](https://github.com/roots/soil/)
+
+"WordPress plugin which contains a collection of modules to apply theme-agnostic front-end modifications". Cleans up head and adds Google Analytics tracking code. Please see [library/soil.php](./public/themes/project/library/soil.php).
+
 ## [Simple History](https://wordpress.org/plugins/simple-history/)
 
 Keeps a log of everything done in wp-admin. Especially useful when we let clients into wp-admin. Save to remove if not used.
@@ -58,17 +66,9 @@ Simplifies database migration between live, stage and development servers. Save 
 
 # Composer packages
 
-## [ekandreas/bladerunner](https://github.com/ekandreas/bladerunner)
-
-Blade support for templates.
-
 ## [johnbillion/extended-cpts](https://github.com/johnbillion/extended-cpts)
 
 "A library which provides extended functionality to WordPress custom post types and taxonomies." Highly recommended if you're using custom post types and taxonomies.
-
-## [roots/soil](https://github.com/roots/soil/)
-
-"WordPress plugin which contains a collection of modules to apply theme-agnostic front-end modifications". Cleans up head and adds Google Analytics tracking code. Please see [library/soil.php](./public/themes/project/library/soil.php).
 
 ## [spatie/image-optimizer](https://github.com/spatie/image-optimizer)
 

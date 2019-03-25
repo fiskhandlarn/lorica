@@ -31,7 +31,9 @@ add_filter('wp_handle_upload_prefilter', function ($file) {
 
     // "WordPress now requires us to have the <xml> tag in our SVG files before uploading."
     // https://wordpress.org/plugins/svg-support/
-    file_put_contents($file["tmp_name"], '<?xml version="1.0" encoding="utf-8"?>' . file_get_contents($file["tmp_name"]));
+    if (strpos(file_get_contents($file["tmp_name"]), '<?xml') === false) {
+        file_put_contents($file["tmp_name"], '<?xml version="1.0" encoding="utf-8"?>' . file_get_contents($file["tmp_name"]));
+    }
 
     return $file;
 });

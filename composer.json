@@ -15,10 +15,10 @@
     "vlucas/phpdotenv": "2.6.1",
     "illuminate/support": "5.7",
 
-    "php": "^7.1.3",
+    "php": "^7.2",
     "advanced-custom-fields/advanced-custom-fields-pro": "5.7.12",
     "cweagans/composer-patches": "^1.6",
-    "ekandreas/bladerunner": "^1.7.5",
+    "fiskhandlarn/blade": "^0.3",
     "heydon/revenge.css": "master",
     "hoy/polylang": "^4.0",
     "johnbillion/extended-cpts": "^4.1",

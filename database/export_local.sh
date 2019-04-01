@@ -10,5 +10,5 @@ if [ "$database" = "" ]; then
 elif [ "$url" = "" ]; then
   echo "BROWSER_SYNC_HOST not set in .env"
 else
-  "./_export.sh" "$database.sql" "https://$url"
+  "./_export.sh" "$database.sql" "$url"
 fi

@@ -20,6 +20,7 @@ CSS should
 * not be written inline in HTML
 * not set fixed `height` for inline elements containing text (since text can change in length/size depending on database content, screen widths and browser zoom)
 * not use `padding-top` for vertically centering inline elements containing text, please use [other methods for centering](https://css-tricks.com/centering-css-complete-guide/)
+* be written so that nothing in [REVENGE.CSS](http://heydonworks.com/revenge_css_bookmarklet/) is triggered (this can be hidden by disabling `WP_DEBUG_DISPLAY` in your `.env` file)
 
 ### SCSS
 

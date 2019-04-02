@@ -79,17 +79,6 @@ add_action('wp_enqueue_scripts', function () {
         );
     }
 
-    // Add https://github.com/Heydon/REVENGE.CSS when developing
-    if (defined('WP_DEBUG_DISPLAY') && WP_DEBUG_DISPLAY) {
-        wp_enqueue_style(
-            'revenge.css',
-            mix('styles/revenge.css'),
-            false,
-            filemtime_base36(asset_path('styles/revenge.css')),
-            false
-        );
-    }
-
     if (get_theme_support('sotplate-enqueue-modernizr')) {
         wp_enqueue_script(
             'modernizr',

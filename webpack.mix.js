@@ -98,8 +98,9 @@ mix.sass('resources/assets/styles/app.scss', 'styles', {
   includePaths: ['node_modules'],
 });
 
-// Prepare for REVENGE (only included by theme if WP_DEBUG is true)
-mix.copy('vendor/heydon/revenge.css/revenge.css', `${publicPath}/styles`);
+if (process.env.WP_DEBUG_DISPLAY == "true") {
+  mix.styles([`${publicPath}/styles/app.css`, 'node_modules/revenge.css/revenge.css'], `${publicPath}/styles/app.css`);
+}
 
 // Versioning.
 mix.version();

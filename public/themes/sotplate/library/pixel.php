@@ -9,7 +9,7 @@ if (!defined('ABSPATH')) {
 function pixel_deploy($trackingID)
 {
     if ($trackingID) {
-        if (!defined('WP_DEBUG') || !WP_DEBUG) {
+        if (!defined('WP_DEBUG_DISPLAY') || !WP_DEBUG_DISPLAY) {
             add_action('wp_head', function () use ($trackingID) {
                 ?>
 <!-- Facebook Pixel Code -->

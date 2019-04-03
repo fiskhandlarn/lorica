@@ -23,7 +23,7 @@ function google_analytics_deploy($trackingID)
         _doing_it_wrong(__FUNCTION__, __("This should be called from the '$correct_action' action"), "0.2");
     }
 
-    if (!defined('WP_DEBUG') || !WP_DEBUG) {
+    if (!defined('WP_DEBUG_DISPLAY') || !WP_DEBUG_DISPLAY) {
         add_theme_support('soil-google-analytics', $trackingID, 'wp_head');
     }
 }

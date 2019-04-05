@@ -66,4 +66,7 @@
 
 body {
   padding: rem(100px);
+
+  // test resolve-url-loader
+  background: url('../images/favicons/android-chrome-256x256.png') no-repeat 50% fixed;
 }

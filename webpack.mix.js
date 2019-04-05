@@ -105,7 +105,7 @@ if (process.env.WP_DEBUG_DISPLAY == "true") {
 // Versioning.
 mix.version();
 
-if (process.env.BROWSER_SYNC_HOST) {
+if (process.env.BROWSER_SYNC_HOST && process.env.BROWSER_SYNC_DISABLE != "true") {
   // Browsersync.
   mix.browserSync({
     proxy: process.env.BROWSER_SYNC_HOST,

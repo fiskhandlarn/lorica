@@ -8,6 +8,10 @@ Our go-to solution for adding fields to post, pages, settings pages and so on. S
 
 Send all crashes, errors and warnings to [Bugsnag](https://app.bugsnag.com/sot/). Should not be removed.
 
+## [Classic Editor](https://wordpress.org/plugins/classic-editor/)
+
+Disables the Gutenberg editor. Safe to remove.
+
 ## [Disable Embeds](https://wordpress.org/plugins/disable-embeds/)
 
 Prevents others from embedding our site. Remove only if site should be embeddable by others.

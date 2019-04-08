@@ -7,6 +7,7 @@ require_if_theme_supports('sotplate-bugsnag', template_path('library/bugsnag.php
 // Register plugin helpers.
 require_once template_path('library/assets.php');
 require_once template_path('library/better-wp-security.php');
+require_once template_path('library/classic-editor.php');
 require_once template_path('library/normalizer.php');
 
 require_if_theme_supports('sotplate-admin-favicon', template_path('library/admin-favicon.php'));

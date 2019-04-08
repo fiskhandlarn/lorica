@@ -76,6 +76,14 @@
     "shorthand-property-no-redundant-values": true,
     "declaration-block-no-duplicate-properties": [true, {
       "ignore": ["consecutive-duplicates-with-different-values"]
-    }]
+    }],
+
+    "rscss/class-format": [
+      true,
+      {
+        "element": "// https://github.com/rstacruz/stylelint-rscss/issues/9#issuecomment-357462211",
+        "element": "^([a-z][a-z0-9]*)(-[a-z0-9]+)*$"
+      }
+    ]
   }
 }

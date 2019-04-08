@@ -9,10 +9,6 @@
   ],
   "license": "MIT",
   "require": {
-
-    "vlucas/phpdotenv": "2.6.1",
-    "illuminate/support": "5.7",
-
     "php": "^7.2",
     "advanced-custom-fields/advanced-custom-fields-pro": "5.7.12",
     "cweagans/composer-patches": "^1.6",
@@ -23,7 +19,7 @@
     "roots/soil": "^3.7",
     "spatie/image-optimizer": "^1.1.4",
     "wordplate/acf": "^6.0",
-    "wordplate/framework": "^6.3",
+    "wordplate/framework": "^7.1.0",
     "wordplate/mail": "^4.0",
     "wordplate/plate": "^4.0",
     "wp-cli/wp-cli-bundle": "^2.1",

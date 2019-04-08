@@ -1,114 +1,114 @@
 {
-  "name": "sotdigital/sotplate",
-  "description": "SotPlate starter",
-  "keywords": [
-    "wordplate",
-    "wordpress",
-    "boilerplate",
-    "plate"
-  ],
-  "license": "MIT",
-  "require": {
-    "php": "^7.2",
-    "advanced-custom-fields/advanced-custom-fields-pro": "5.7.12",
-    "cweagans/composer-patches": "^1.6",
-    "fiskhandlarn/blade": "^0.4.1",
-    "hoy/polylang": "^4.0",
-    "johnbillion/extended-cpts": "^4.1",
-    "koodimonni-language/core-sv_se": "^4.9",
-    "roots/soil": "^3.7",
-    "spatie/image-optimizer": "^1.1.4",
-    "wordplate/acf": "^6.0",
-    "wordplate/framework": "^7.1.0",
-    "wordplate/mail": "^4.0",
-    "wordplate/plate": "^4.0",
-    "wp-cli/wp-cli-bundle": "^2.1",
-    "wpackagist-plugin/autodescription": "^3.2.3",
-    "wpackagist-plugin/better-wp-security": "^7.3.1",
-    "wpackagist-plugin/bugsnag": "1.3.1",
-    "wpackagist-plugin/disable-embeds": "^1.4.0",
-    "wpackagist-plugin/disable-emojis": "^1.7.2",
-    "wpackagist-plugin/disable-feeds": "^1.4.4",
-    "wpackagist-plugin/fly-dynamic-image-resizer": "^2.0.5",
-    "wpackagist-plugin/normalizer": "^1.0",
-    "wpackagist-plugin/polylang": "^2.5.2",
-    "wpackagist-plugin/simple-history": "^2.29.2",
-    "wpackagist-plugin/wp-migrate-db": "^1.0.10"
-  },
-  "autoload": {
-    "psr-4": {
-      "SotPlate\\": "src/SotPlate/"
-    }
-  },
-  "repositories": [
-    {
-      "type": "composer",
-      "url": "https://wpackagist.org"
+    "name": "sotdigital/sotplate",
+    "description": "SotPlate starter",
+    "keywords": [
+        "wordplate",
+        "wordpress",
+        "boilerplate",
+        "plate"
+    ],
+    "license": "MIT",
+    "require": {
+        "php": "^7.2",
+        "advanced-custom-fields/advanced-custom-fields-pro": "5.7.13",
+        "cweagans/composer-patches": "^1.6",
+        "fiskhandlarn/blade": "^0.4.1",
+        "hoy/polylang": "^4.0",
+        "johnbillion/extended-cpts": "^4.1",
+        "koodimonni-language/core-sv_se": "^4.9",
+        "roots/soil": "^3.7",
+        "spatie/image-optimizer": "^1.1.4",
+        "wordplate/acf": "^6.0",
+        "wordplate/framework": "^7.1.0",
+        "wordplate/mail": "^4.0",
+        "wordplate/plate": "^4.0",
+        "wp-cli/wp-cli-bundle": "^2.1",
+        "wpackagist-plugin/autodescription": "^3.2.3",
+        "wpackagist-plugin/better-wp-security": "^7.3.1",
+        "wpackagist-plugin/bugsnag": "1.3.1",
+        "wpackagist-plugin/disable-embeds": "^1.4.0",
+        "wpackagist-plugin/disable-emojis": "^1.7.2",
+        "wpackagist-plugin/disable-feeds": "^1.4.4",
+        "wpackagist-plugin/fly-dynamic-image-resizer": "^2.0.5",
+        "wpackagist-plugin/normalizer": "^1.0",
+        "wpackagist-plugin/polylang": "^2.5.2",
+        "wpackagist-plugin/simple-history": "^2.29.2",
+        "wpackagist-plugin/wp-migrate-db": "^1.0.10"
     },
-    {
-      "type": "composer",
-      "url": "https://wp-languages.github.io"
-    },
-    {
-      "type": "package",
-      "package": {
-        "name": "advanced-custom-fields/advanced-custom-fields-pro",
-        "version": "5.7.12",
-        "type": "wordpress-plugin",
-        "dist": {
-          "type": "zip",
-          "url": "https://connect.advancedcustomfields.com/index.php?p=pro&a=download&k=b3JkZXJfaWQ9MTIwMDg1fHR5cGU9ZGV2ZWxvcGVyfGRhdGU9MjAxNy0xMi0wNCAxMjozNzoxMA%3D%3D&t=5.7.12"
+    "autoload": {
+        "psr-4": {
+            "SotPlate\\": "src/SotPlate/"
         }
-      }
-    }
-  ],
-  "scripts": {
-    "post-install-cmd": [
-      "php -r \"file_exists('.env') || copy('.env.example', '.env');\""
-    ],
-    "update-acf-plugin": [
-      "php -r \"file_exists('composer/update-acf-plugin.php') && require 'composer/update-acf-plugin.php';\""
-    ],
-    "activate-maintenance": [
-      "php -r \"file_exists('composer/activate-maintenance.php') && require 'composer/activate-maintenance.php';\""
-    ],
-    "deactivate-maintenance": [
-      "php -r \"file_exists('composer/deactivate-maintenance.php') && require 'composer/deactivate-maintenance.php';\""
-    ]
-  },
-  "config": {
-    "sort-packages": true,
-    "preferred-install": "dist"
-  },
-  "extra": {
-    "installer-paths": {
-      "public/mu-plugins/{$name}": [
-        "type:wordpress-muplugin",
-        "type:wordpress-plugin"
-      ],
-      "public/themes/{$name}": [
-        "type:wordpress-theme"
-      ]
     },
-    "wordpress-install-dir": "public/wordpress",
-    "dropin-paths": {
-      "public/languages/": [
-        "vendor:koodimonni-language"
-      ],
-      "public/languages/plugins/": [
-        "vendor:koodimonni-plugin-language"
-      ],
-      "public/languages/themes/": [
-        "vendor:koodimonni-theme-language"
-      ]
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://wpackagist.org"
+        },
+        {
+            "type": "composer",
+            "url": "https://wp-languages.github.io"
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "advanced-custom-fields/advanced-custom-fields-pro",
+                "version": "5.7.13",
+                "type": "wordpress-plugin",
+                "dist": {
+                    "type": "zip",
+                    "url": "https://connect.advancedcustomfields.com/index.php?p=pro&a=download&k=b3JkZXJfaWQ9MTIwMDg1fHR5cGU9ZGV2ZWxvcGVyfGRhdGU9MjAxNy0xMi0wNCAxMjozNzoxMA%3D%3D&t=5.7.13"
+                }
+            }
+        }
+    ],
+    "scripts": {
+        "post-install-cmd": [
+            "php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+        ],
+        "update-acf-plugin": [
+            "php -r \"file_exists('composer/update-acf-plugin.php') && require 'composer/update-acf-plugin.php';\""
+        ],
+        "activate-maintenance": [
+            "php -r \"file_exists('composer/activate-maintenance.php') && require 'composer/activate-maintenance.php';\""
+        ],
+        "deactivate-maintenance": [
+            "php -r \"file_exists('composer/deactivate-maintenance.php') && require 'composer/deactivate-maintenance.php';\""
+        ]
     },
-    "patches": {
-      "wpackagist-plugin/wp-migrate-db": {
-        "Patch WP Migrate DB plugin url path": "composer-patches/wpackagist-plugin/wp-migrate-db.patch"
-      },
-      "wpackagist-plugin/bugsnag": {
-        "Patch Bugsnag plugin url path": "composer-patches/wpackagist-plugin/bugsnag.patch"
-      }
+    "config": {
+        "sort-packages": true,
+        "preferred-install": "dist"
+    },
+    "extra": {
+        "installer-paths": {
+            "public/mu-plugins/{$name}": [
+                "type:wordpress-muplugin",
+                "type:wordpress-plugin"
+            ],
+            "public/themes/{$name}": [
+                "type:wordpress-theme"
+            ]
+        },
+        "wordpress-install-dir": "public/wordpress",
+        "dropin-paths": {
+            "public/languages/": [
+                "vendor:koodimonni-language"
+            ],
+            "public/languages/plugins/": [
+                "vendor:koodimonni-plugin-language"
+            ],
+            "public/languages/themes/": [
+                "vendor:koodimonni-theme-language"
+            ]
+        },
+        "patches": {
+            "wpackagist-plugin/wp-migrate-db": {
+                "Patch WP Migrate DB plugin url path": "composer-patches/wpackagist-plugin/wp-migrate-db.patch"
+            },
+            "wpackagist-plugin/bugsnag": {
+                "Patch Bugsnag plugin url path": "composer-patches/wpackagist-plugin/bugsnag.patch"
+            }
+        }
     }
-  }
 }

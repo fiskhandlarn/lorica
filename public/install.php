@@ -96,9 +96,11 @@ if (class_exists('ITSEC_Modules')) {
 
     ITSEC_Modules::get_instance()->activate('file-change');
 
-    ITSEC_Modules::get_instance()->set_setting('network-brute-force', 'api_key', 'pBY304rg8Fqg7JWIT6SL1576MHX1PaIK');
-    ITSEC_Modules::get_instance()->set_setting('network-brute-force', 'api_secret', '3G52yVN4u7Ytb8EK9562vyBPGUFrdpV5i248317L3S78p4xcut25kO8j6986Y119Vs3t4fVV8q3C60j4U9DZku2fr9n78SlhKZJFbupl936lj4HT0yobw06iI520u89c');
-    ITSEC_Modules::get_instance()->set_setting('network-brute-force', 'api_nag', false);
+    if (env('ITSEC_NETWORK_BRUTE_FORCE_API_KEY') && env('ITSEC_NETWORK_BRUTE_FORCE_API_SECRET')) {
+        ITSEC_Modules::get_instance()->set_setting('network-brute-force', 'api_key', 'pBY304rg8Fqg7JWIT6SL1576MHX1PaIK');
+        ITSEC_Modules::get_instance()->set_setting('network-brute-force', 'api_secret', '3G52yVN4u7Ytb8EK9562vyBPGUFrdpV5i248317L3S78p4xcut25kO8j6986Y119Vs3t4fVV8q3C60j4U9DZku2fr9n78SlhKZJFbupl936lj4HT0yobw06iI520u89c');
+        ITSEC_Modules::get_instance()->set_setting('network-brute-force', 'api_nag', false);
+    }
 
     ITSEC_Modules::get_instance()->activate('system-tweaks');
     ITSEC_Modules::get_instance()->set_setting('system-tweaks', 'protect_files', true);

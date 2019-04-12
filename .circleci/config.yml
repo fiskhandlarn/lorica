@@ -28,8 +28,6 @@ jobs:
           command: |
             npm install
 
-      - run: docker run --rm -v $(pwd):/src backstopjs/backstopjs --version
-
       - run:
           name: run our tests
           command: |

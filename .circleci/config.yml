@@ -18,6 +18,11 @@ jobs:
       - checkout
 
       - run:
+          name: chrome
+          command: |
+            docker run -p 3000:3000 browserless/chrome
+
+      - run:
           name: install dependencies
           command: |
             npm install

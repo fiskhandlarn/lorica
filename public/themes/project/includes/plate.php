@@ -17,10 +17,7 @@ declare(strict_types=1);
 // Remove menu items.
 add_theme_support('plate-disable-menu', [
     'edit-comments.php', // comments
-
-    // temporarily enabling Dashboard so that Simple History can be found :(
-    //    'index.php', // dashboard
-
+    'index.php', // dashboard
     //'themes.php', // appearance
 ]);
 

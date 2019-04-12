@@ -2,8 +2,12 @@
 SOURCEDIR="$( cd "$( dirname "$0" )" && pwd )"
 
 cd "$SOURCEDIR"
-database=$(wp eval "echo env('DB_NAME');"|xargs) # https://stackoverflow.com/a/12973694
-url=$(wp eval "echo env('BROWSER_SYNC_HOST');"|xargs) # https://stackoverflow.com/a/12973694
+
+# Use wp-cli from local composer
+wp="$SOURCEDIR/../vendor/wp-cli/wp-cli/bin/wp"
+
+database=$("$wp" eval "echo env('DB_NAME');"|xargs) # https://stackoverflow.com/a/12973694
+url=$("$wp" eval "echo env('BROWSER_SYNC_HOST');"|xargs) # https://stackoverflow.com/a/12973694
 
 if [ "$database" = "" ]; then
   echo "DB_NAME not set in .env"

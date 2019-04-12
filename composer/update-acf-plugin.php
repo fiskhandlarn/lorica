@@ -41,7 +41,7 @@ if (file_exists($composer_file_path)) {
 
             $found_acf_repository = false;
             if (isset($composer_json['repositories'])) {
-                foreach($composer_json['repositories'] as $index => $repository) {
+                foreach ($composer_json['repositories'] as $index => $repository) {
                     if (
                         isset($repository['type'], $repository['package']['name']) &&
                         $repository['type'] === 'package' &&

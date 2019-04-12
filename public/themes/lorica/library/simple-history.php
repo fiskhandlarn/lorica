@@ -7,6 +7,6 @@ if (!defined('ABSPATH')) {
 }
 
 // place simple-history under tools instead
-add_filter('simple_history/admin_location', function() {
+add_filter('simple_history/admin_location', function () {
     return 'tools';
 });

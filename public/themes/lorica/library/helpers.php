@@ -146,9 +146,12 @@ if (!function_exists('shorten_text')) {
 
 if (!function_exists('usortstable')) {
     // http://www.php.net/manual/en/function.usort.php#38827
-    function usortstable(&$array, $cmp_function = 'strcmp') {
+    function usortstable(&$array, $cmp_function = 'strcmp')
+    {
         // Arrays of size < 2 require no action.
-        if (count($array) < 2) return;
+        if (count($array) < 2) {
+            return;
+        }
         // Split the array in half
         $halfway = intval(count($array) / 2);
         $array1 = array_slice($array, 0, $halfway);
@@ -167,14 +170,17 @@ if (!function_exists('usortstable')) {
         while ($ptr1 < count($array1) && $ptr2 < count($array2)) {
             if (call_user_func($cmp_function, $array1[$ptr1], $array2[$ptr2]) < 1) {
                 $array[] = $array1[$ptr1++];
-            }
-            else {
+            } else {
                 $array[] = $array2[$ptr2++];
             }
         }
         // Merge the remainder
-        while ($ptr1 < count($array1)) $array[] = $array1[$ptr1++];
-        while ($ptr2 < count($array2)) $array[] = $array2[$ptr2++];
+        while ($ptr1 < count($array1)) {
+            $array[] = $array1[$ptr1++];
+        }
+        while ($ptr2 < count($array2)) {
+            $array[] = $array2[$ptr2++];
+        }
         return;
     }
 }

@@ -2,6 +2,9 @@
 
 Boilerplate for WordPress sites, based on [WordPlate](https://github.com/wordplate/wordplate).
 
+[![StyleCI](https://github.styleci.io/repos/176697015/shield?branch=master)](https://github.styleci.io/repos/176697015)
+[![Latest Version](https://badgen.net/github/release/fiskhandlarn/lorica)](https://github.com/fiskhandlarn/lorica/releases)
+
 ## Structure
 
 The `public` folder is the web root. Most of the project's code will reside in your project [theme](https://codex.wordpress.org/Themes) in `public/themes`.

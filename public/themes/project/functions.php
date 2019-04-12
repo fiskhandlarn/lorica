@@ -26,6 +26,7 @@ add_theme_support('lorica-helpers');
 add_theme_support('lorica-no-touch'); // a prerequisite for /resources/assets/styles/mixins/_no-touch.scss mixins
 //add_theme_support('lorica-pixel');
 add_theme_support('lorica-polylang');
+add_theme_support('lorica-simple-history');
 add_theme_support('lorica-soil');
 add_theme_support('lorica-svg');
 

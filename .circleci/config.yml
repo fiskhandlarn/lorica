@@ -6,7 +6,8 @@ version: 2
 jobs:
   build:
     docker:
-      - image: quay.io/pantheon-public/build-tools-ci:1.x
+      - image: buildpack-deps:trusty # primary container
+      #- image: quay.io/pantheon-public/build-tools-ci:1.x
       # for screenshots
       - image: selenium/standalone-chrome:3
       # visual regression testing

@@ -1,6 +1,6 @@
 {
-    "name": "sotdigital/sotplate",
-    "description": "SotPlate starter",
+    "name": "fiskhandlar/lorica",
+    "description": "WordPlate starter",
     "keywords": [
         "wordplate",
         "wordpress",
@@ -38,7 +38,7 @@
     },
     "autoload": {
         "psr-4": {
-            "SotPlate\\": "src/SotPlate/"
+            "Lorica\\": "src/Lorica/"
         }
     },
     "repositories": [

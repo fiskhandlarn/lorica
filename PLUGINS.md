@@ -6,7 +6,7 @@ Our go-to solution for adding fields to post, pages, settings pages and so on. S
 
 ## [Bugsnag](https://wordpress.org/support/plugin/bugsnag)
 
-Send all crashes, errors and warnings to [Bugsnag](https://app.bugsnag.com/sot/). Should not be removed.
+Send all crashes, errors and warnings to [Bugsnag](https://app.bugsnag.com/). Should not be removed.
 
 ## [Classic Editor](https://wordpress.org/plugins/classic-editor/)
 

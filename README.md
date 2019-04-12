@@ -1,6 +1,6 @@
-# SotPlate starter
+# Lorica starter
 
-Sot's boilerplate for WordPress sites, based on [WordPlate](https://github.com/wordplate/wordplate).
+Boilerplate for WordPress sites, based on [WordPlate](https://github.com/wordplate/wordplate).
 
 ## Structure
 
@@ -17,11 +17,11 @@ Static resources (JavaScript, CSS, images, fonts etc) is added to the `resources
 Merge this repo into your own:
 
 ```bash
-$ git remote add sotplate {clone-url}
-$ git pull sotplate master
+$ git remote add lorica {clone-url}
+$ git pull lorica master
 ```
 
-(where `{clone-url}` is something like https://user@bitbucket.org/sotdigital/sotplate.git)
+(where `{clone-url}` is something like https://github.com/fiskhandlarn/lorica.git)
 
 Open `composer.json` and change the `name` and `description` properties.
 
@@ -52,15 +52,15 @@ $ git add composer.lock package-lock.json
 
 Visit your project in the browser and run the WordPress installation wizard with these values:
 
-* *Username*: sot
-* *Your Email*: service@sot.se
+* *Username*: sysop
+* *Your Email*: service@yourdomain.tld
 * *Search Engine Visibility*: <unchecked>
 
-Save the login url and credentials in Sot's shared KeePass file.
+Save the login url and credentials in your password file.
 
-Do not click the ''Log in'' button in the final step, instead use the URL `/wordpress/sot-admin` to log into wp-admin. If you get a 404 for that URL it's probably because [iThemes Security](./PLUGINS.md) has removed or changed [.htaccess](./public/.htaccess). If `.htaccess` is marked as changed, revert it and try again.
+Do not click the ''Log in'' button in the final step, instead use the URL `/wordpress/lorica-admin` to log into wp-admin. If you get a 404 for that URL it's probably because [iThemes Security](./PLUGINS.md) has removed or changed [.htaccess](./public/.htaccess). If `.htaccess` is marked as changed, revert it and try again.
 
-If you get error messages, reload `/wordpress/sot-admin` until all error messages has disappeared.
+If you get error messages, reload `/wordpress/lorica-admin` until all error messages has disappeared.
 
 Add languages for Polylang in wp-admin (*Languages* in the side menu) so you can start using the [hoy/polylang](https://github.com/hoymultimedia/polylang) functions, or remove `hoy/polylang` and `wpackagist-plugin/polylang` from composer if your project is monolingual (optionally remove `koodimonni-language` packages if not needed).
 
@@ -97,7 +97,7 @@ $ npm install && npm run dev
 
 5: Edit the `.env` file with your database and mail credentials, and [WordPress salts](https://wordplate.github.io/salt/).
 
-6: Use the URL `/wordpress/sot-admin` to log into wp-admin.
+6: Use the URL `/wordpress/lorica-admin` to log into wp-admin.
 
 ## Develop
 
@@ -121,7 +121,7 @@ $ npm run prod
 
 ## Deploy
 
-Deploy with [DeployBot](https://sot.deploybot.com/NNNNNN-NNNNN-project/) to:
+Deploy with [DeployBot](https://xxx.deploybot.com/NNNNNN-NNNNN-project/) to:
 
 * [d.domain.tld](http://d.domain.tld)
 * [q.domain.tld](http://q.domain.tld)

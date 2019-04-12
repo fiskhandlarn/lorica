@@ -87,11 +87,11 @@ All CSS is run through `autoprefixer` with the queries defined in [.browserslist
 SVG images should
 
 * be optimized with `svgo` before being added to the repo (easiest to achieve by copying the file optimized by npm from the [assets](./public/themes/project/assets) directory)
-* be included with [`require_image()`](./public/themes/sotplate/library/assets.php#assets.php-29) in the theme PHP
+* be included with [`require_image()`](./public/themes/lorica/library/assets.php#assets.php-29) in the theme PHP
 
 Other images should
 
-* be included with [`image_url()`](./public/themes/sotplate/library/assets.php#assets.php-24) in the theme PHP
+* be included with [`image_url()`](./public/themes/lorica/library/assets.php#assets.php-24) in the theme PHP
 
 ## Fonts
 
@@ -105,4 +105,4 @@ Fonts should
 Other assets should
 
 * be placed in relevant sub directories in [/resources/assets](./resources/assets) (`/resources/assets/videos` for example)
-* be included with [`asset_url()`](./public/themes/sotplate/library/assets.php#assets.php-14) in the theme PHP
+* be included with [`asset_url()`](./public/themes/lorica/library/assets.php#assets.php-14) in the theme PHP

@@ -1,85 +1,5 @@
 # BEGIN iThemes Security - Do not modify or remove this line
 # iThemes Security Config Details: 2
-	# Protect System Files - Security > Settings > System Tweaks > System Files
-	<files .htaccess>
-		<IfModule mod_authz_core.c>
-			Require all denied
-		</IfModule>
-		<IfModule !mod_authz_core.c>
-			Order allow,deny
-			Deny from all
-		</IfModule>
-	</files>
-	<files readme.html>
-		<IfModule mod_authz_core.c>
-			Require all denied
-		</IfModule>
-		<IfModule !mod_authz_core.c>
-			Order allow,deny
-			Deny from all
-		</IfModule>
-	</files>
-	<files readme.txt>
-		<IfModule mod_authz_core.c>
-			Require all denied
-		</IfModule>
-		<IfModule !mod_authz_core.c>
-			Order allow,deny
-			Deny from all
-		</IfModule>
-	</files>
-	<files wp-config.php>
-		<IfModule mod_authz_core.c>
-			Require all denied
-		</IfModule>
-		<IfModule !mod_authz_core.c>
-			Order allow,deny
-			Deny from all
-		</IfModule>
-	</files>
-
-	# Disable Directory Browsing - Security > Settings > System Tweaks > Directory Browsing
-	Options -Indexes
-
-	<IfModule mod_rewrite.c>
-		RewriteEngine On
-
-		# Protect System Files - Security > Settings > System Tweaks > System Files
-		RewriteRule ^wp-admin/install\.php$ - [F]
-		RewriteRule ^wp-admin/includes/ - [F]
-		RewriteRule !^wp-includes/ - [S=3]
-		RewriteRule ^wp-includes/[^/]+\.php$ - [F]
-		RewriteRule ^wp-includes/js/tinymce/langs/.+\.php - [F]
-		RewriteRule ^wp-includes/theme-compat/ - [F]
-		RewriteCond %{REQUEST_FILENAME} -f
-		RewriteRule (^|.*/)\.(git|svn)/.* - [F]
-
-		# Disable PHP in Uploads - Security > Settings > System Tweaks > PHP in Uploads
-		RewriteRule ^uploads/.*\.(?:php[1-7]?|pht|phtml?|phps)\.?$ - [NC,F]
-
-		# Filter Suspicious Query Strings in the URL - Security > Settings > System Tweaks > Suspicious Query Strings
-		RewriteCond %{QUERY_STRING} \.\.\/ [OR]
-		RewriteCond %{QUERY_STRING} \.(bash|git|hg|log|svn|swp|cvs) [NC,OR]
-		RewriteCond %{QUERY_STRING} etc/passwd [NC,OR]
-		RewriteCond %{QUERY_STRING} boot\.ini [NC,OR]
-		RewriteCond %{QUERY_STRING} ftp: [NC,OR]
-		RewriteCond %{QUERY_STRING} https?: [NC,OR]
-		RewriteCond %{QUERY_STRING} (<|%3C)script(>|%3E) [NC,OR]
-		RewriteCond %{QUERY_STRING} mosConfig_[a-zA-Z_]{1,21}(=|%3D) [NC,OR]
-		RewriteCond %{QUERY_STRING} base64_decode\( [NC,OR]
-		RewriteCond %{QUERY_STRING} %24&x [NC,OR]
-		RewriteCond %{QUERY_STRING} 127\.0 [NC,OR]
-		RewriteCond %{QUERY_STRING} (^|\W)(globals|encode|localhost|loopback)($|\W) [NC,OR]
-		RewriteCond %{QUERY_STRING} (^|\W)(concat|insert|union|declare)($|\W) [NC,OR]
-		RewriteCond %{QUERY_STRING} %[01][0-9A-F] [NC]
-		RewriteCond %{QUERY_STRING} !^loggedout=true
-		RewriteCond %{QUERY_STRING} !^action=jetpack-sso
-		RewriteCond %{QUERY_STRING} !^action=rp
-		RewriteCond %{HTTP_COOKIE} !wordpress_logged_in_
-		RewriteCond %{HTTP_REFERER} !^http://maps\.googleapis\.com
-		RewriteRule ^.* - [F]
-	</IfModule>
-
 	# Enable HackRepair.com's blacklist feature - Security > Settings > Banned Users > Default Blacklist
 	# Start HackRepair.com Blacklist
 	RewriteEngine on
@@ -257,6 +177,86 @@
 	# End Abuse HTTP Referrer Blocking
 	RewriteRule ^.* - [F,L]
 	# End HackRepair.com Blacklist, http://pastebin.com/u/hackrepair
+
+	# Protect System Files - Security > Settings > System Tweaks > System Files
+	<files .htaccess>
+		<IfModule mod_authz_core.c>
+			Require all denied
+		</IfModule>
+		<IfModule !mod_authz_core.c>
+			Order allow,deny
+			Deny from all
+		</IfModule>
+	</files>
+	<files readme.html>
+		<IfModule mod_authz_core.c>
+			Require all denied
+		</IfModule>
+		<IfModule !mod_authz_core.c>
+			Order allow,deny
+			Deny from all
+		</IfModule>
+	</files>
+	<files readme.txt>
+		<IfModule mod_authz_core.c>
+			Require all denied
+		</IfModule>
+		<IfModule !mod_authz_core.c>
+			Order allow,deny
+			Deny from all
+		</IfModule>
+	</files>
+	<files wp-config.php>
+		<IfModule mod_authz_core.c>
+			Require all denied
+		</IfModule>
+		<IfModule !mod_authz_core.c>
+			Order allow,deny
+			Deny from all
+		</IfModule>
+	</files>
+
+	# Disable Directory Browsing - Security > Settings > System Tweaks > Directory Browsing
+	Options -Indexes
+
+	<IfModule mod_rewrite.c>
+		RewriteEngine On
+
+		# Protect System Files - Security > Settings > System Tweaks > System Files
+		RewriteRule ^wp-admin/install\.php$ - [F]
+		RewriteRule ^wp-admin/includes/ - [F]
+		RewriteRule !^wp-includes/ - [S=3]
+		RewriteRule ^wp-includes/[^/]+\.php$ - [F]
+		RewriteRule ^wp-includes/js/tinymce/langs/.+\.php - [F]
+		RewriteRule ^wp-includes/theme-compat/ - [F]
+		RewriteCond %{REQUEST_FILENAME} -f
+		RewriteRule (^|.*/)\.(git|svn)/.* - [F]
+
+		# Disable PHP in Uploads - Security > Settings > System Tweaks > PHP in Uploads
+		RewriteRule ^uploads/.*\.(?:php[1-7]?|pht|phtml?|phps)\.?$ - [NC,F]
+
+		# Filter Suspicious Query Strings in the URL - Security > Settings > System Tweaks > Suspicious Query Strings
+		RewriteCond %{QUERY_STRING} \.\.\/ [OR]
+		RewriteCond %{QUERY_STRING} \.(bash|git|hg|log|svn|swp|cvs) [NC,OR]
+		RewriteCond %{QUERY_STRING} etc/passwd [NC,OR]
+		RewriteCond %{QUERY_STRING} boot\.ini [NC,OR]
+		RewriteCond %{QUERY_STRING} ftp: [NC,OR]
+		RewriteCond %{QUERY_STRING} https?: [NC,OR]
+		RewriteCond %{QUERY_STRING} (<|%3C)script(>|%3E) [NC,OR]
+		RewriteCond %{QUERY_STRING} mosConfig_[a-zA-Z_]{1,21}(=|%3D) [NC,OR]
+		RewriteCond %{QUERY_STRING} base64_decode\( [NC,OR]
+		RewriteCond %{QUERY_STRING} %24&x [NC,OR]
+		RewriteCond %{QUERY_STRING} 127\.0 [NC,OR]
+		RewriteCond %{QUERY_STRING} (^|\W)(globals|encode|localhost|loopback)($|\W) [NC,OR]
+		RewriteCond %{QUERY_STRING} (^|\W)(concat|insert|union|declare)($|\W) [NC,OR]
+		RewriteCond %{QUERY_STRING} %[01][0-9A-F] [NC]
+		RewriteCond %{QUERY_STRING} !^loggedout=true
+		RewriteCond %{QUERY_STRING} !^action=jetpack-sso
+		RewriteCond %{QUERY_STRING} !^action=rp
+		RewriteCond %{HTTP_COOKIE} !wordpress_logged_in_
+		RewriteCond %{HTTP_REFERER} !^http://maps\.googleapis\.com
+		RewriteRule ^.* - [F]
+	</IfModule>
 # END iThemes Security - Do not modify or remove this line
 
 # BEGIN WordPress

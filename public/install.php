@@ -88,7 +88,7 @@ if (class_exists('ITSEC_Modules')) {
     // default values
     ITSEC_Modules::get_instance()->deactivate('backup');
 
-    ITSEC_Modules::get_instance()->set_setting('global', 'lockout_white_list', ['213.136.62.178']); // sot office ip
+    ITSEC_Modules::get_instance()->set_setting('global', 'lockout_white_list', ['62.20.18.146']); // office ip
 
     ITSEC_Modules::get_instance()->activate('404-detection');
 
@@ -108,6 +108,6 @@ if (class_exists('ITSEC_Modules')) {
     ITSEC_Modules::get_instance()->set_setting('system-tweaks', 'uploads_php', true);
 
     ITSEC_Modules::get_instance()->set_setting('hide-backend', 'enabled', true);
-    ITSEC_Modules::get_instance()->set_setting('hide-backend', 'slug', 'sot-admin');
+    ITSEC_Modules::get_instance()->set_setting('hide-backend', 'slug', 'lorica-admin');
     ITSEC_Modules::get_instance()->set_setting('hide-backend', 'theme_compat', false);
 }

@@ -12,24 +12,24 @@ require_once stylesheet_path('/includes/image-sizes.php');
 
 require base_path('vendor/johnbillion/extended-cpts/extended-cpts.php');
 
-// request support for sotplate features
-add_theme_support('sotplate-deregister-jquery');
-add_theme_support('sotplate-enqueue-app-css');
-//add_theme_support('sotplate-enqueue-modernizr');
-add_theme_support('sotplate-enqueue-app-js');
-add_theme_support('sotplate-admin-favicon');
-add_theme_support('sotplate-blade');
-add_theme_support('sotplate-bugsnag');
-add_theme_support('sotplate-cookie-bar');
-add_theme_support('sotplate-helpers');
-//add_theme_support('sotplate-no-js');
-add_theme_support('sotplate-no-touch'); // a prerequisite for /resources/assets/styles/mixins/_no-touch.scss mixins
-//add_theme_support('sotplate-pixel');
-add_theme_support('sotplate-polylang');
-add_theme_support('sotplate-soil');
-add_theme_support('sotplate-svg');
+// request support for lorica features
+add_theme_support('lorica-deregister-jquery');
+add_theme_support('lorica-enqueue-app-css');
+//add_theme_support('lorica-enqueue-modernizr');
+add_theme_support('lorica-enqueue-app-js');
+add_theme_support('lorica-admin-favicon');
+add_theme_support('lorica-blade');
+add_theme_support('lorica-bugsnag');
+add_theme_support('lorica-cookie-bar');
+add_theme_support('lorica-helpers');
+//add_theme_support('lorica-no-js');
+add_theme_support('lorica-no-touch'); // a prerequisite for /resources/assets/styles/mixins/_no-touch.scss mixins
+//add_theme_support('lorica-pixel');
+add_theme_support('lorica-polylang');
+add_theme_support('lorica-soil');
+add_theme_support('lorica-svg');
 
-// do this after sotplate has been loaded
+// do this after lorica has been loaded
 add_action('after_setup_theme', function () {
     //pixel_deploy(env("PIXEL_ID"));
     //google_analytics_deploy(env("GOOGLE_ANALYTICS_ID"));

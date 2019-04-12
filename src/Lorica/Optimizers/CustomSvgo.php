@@ -1,6 +1,6 @@
 <?php
 
-namespace SotPlate\Optimizers;
+namespace Lorica\Optimizers;
 
 use Spatie\ImageOptimizer\Image;
 use Spatie\ImageOptimizer\Optimizers\Svgo;

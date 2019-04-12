@@ -65,11 +65,11 @@ function filemtime_base36($path)
 
 // Enqueue and register scripts the right way.
 add_action('wp_enqueue_scripts', function () {
-    if (get_theme_support('sotplate-deregister-jquery')) {
+    if (get_theme_support('lorica-deregister-jquery')) {
         wp_deregister_script('jquery');
     }
 
-    if (get_theme_support('sotplate-enqueue-app-css')) {
+    if (get_theme_support('lorica-enqueue-app-css')) {
         wp_enqueue_style(
             'wordplate',
             mix('styles/app.css'),
@@ -79,7 +79,7 @@ add_action('wp_enqueue_scripts', function () {
         );
     }
 
-    if (get_theme_support('sotplate-enqueue-modernizr')) {
+    if (get_theme_support('lorica-enqueue-modernizr')) {
         wp_enqueue_script(
             'modernizr',
             asset('assets/scripts/modernizr.js'),
@@ -89,7 +89,7 @@ add_action('wp_enqueue_scripts', function () {
         );
     }
 
-    if (get_theme_support('sotplate-enqueue-app-js')) {
+    if (get_theme_support('lorica-enqueue-app-js')) {
         wp_enqueue_script(
             'wordplate',
             mix('scripts/app.js'),
@@ -100,7 +100,7 @@ add_action('wp_enqueue_scripts', function () {
     }
 });
 
-if (get_theme_support('sotplate-enqueue-modernizr')) {
+if (get_theme_support('lorica-enqueue-modernizr')) {
     // https://wordpress.stackexchange.com/a/19309/144404
     add_filter(class_exists('Roots\Soil\Options') ? 'soil/language_attributes' : 'language_attributes', function ($output) {
         if (strpos($output, ' class="no-js"') === false) {

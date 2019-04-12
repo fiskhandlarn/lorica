@@ -1,5 +1,11 @@
 <?php
-define('ACF_KEY', 'b3JkZXJfaWQ9MTIwMDg1fHR5cGU9ZGV2ZWxvcGVyfGRhdGU9MjAxNy0xMi0wNCAxMjozNzoxMA%3D%3D');
+
+require 'vendor/autoload.php';
+use Dotenv\Dotenv;
+
+Dotenv::create('.')->safeLoad();
+
+define('ACF_KEY', env('ACF_KEY'));
 
 define('ACF_PACKAGE_NAME', 'advanced-custom-fields/advanced-custom-fields-pro');
 define('ACF_PACKAGE_TYPE', 'wordpress-plugin');

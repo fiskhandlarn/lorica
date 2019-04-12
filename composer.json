@@ -49,18 +49,6 @@
         {
             "type": "composer",
             "url": "https://wp-languages.github.io"
-        },
-        {
-            "type": "package",
-            "package": {
-                "name": "advanced-custom-fields/advanced-custom-fields-pro",
-                "version": "5.7.13",
-                "type": "wordpress-plugin",
-                "dist": {
-                    "type": "zip",
-                    "url": "https://connect.advancedcustomfields.com/index.php?p=pro&a=download&k=b3JkZXJfaWQ9MTIwMDg1fHR5cGU9ZGV2ZWxvcGVyfGRhdGU9MjAxNy0xMi0wNCAxMjozNzoxMA%3D%3D&t=5.7.13"
-                }
-            }
         }
     ],
     "scripts": {

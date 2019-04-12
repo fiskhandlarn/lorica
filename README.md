@@ -36,13 +36,13 @@ Change `WP_THEME` and `BROWSER_SYNC_HOST` in `.env.example` to reflect your new 
 
 Change `Project` in [resources/assets/styles/app.scss](./resources/assets/styles/app.scss) to your project's name.
 
-Update `advanced-custom-fields-pro` to the latest version:
+Follow the *Install* instructions below.
+
+Set your ACF license key as `ACF_KEY` in `.env` and update `advanced-custom-fields-pro` to the latest version:
 
 ```bash
 $ composer update-acf-plugin
 ```
-
-Follow the *Install* instructions below.
 
 Add `composer.lock` and `package-lock.json` to your git repo to ensure that the same package versions are used by other contributors and on the servers:
 

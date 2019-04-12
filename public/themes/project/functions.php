@@ -29,6 +29,7 @@ add_theme_support('lorica-polylang');
 add_theme_support('lorica-simple-history');
 add_theme_support('lorica-soil');
 add_theme_support('lorica-svg');
+add_theme_support('lorica-whoops');
 
 // do this after lorica has been loaded
 add_action('after_setup_theme', function () {

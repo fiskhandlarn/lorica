@@ -12,6 +12,7 @@
         "php": "^7.2",
         "advanced-custom-fields/advanced-custom-fields-pro": "5.7.13",
         "cweagans/composer-patches": "^1.6",
+        "filp/whoops": "^2.3",
         "fiskhandlarn/blade": "^0.4.1",
         "hoy/polylang": "^4.0",
         "johnbillion/extended-cpts": "^4.1",

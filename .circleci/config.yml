@@ -19,7 +19,11 @@ jobs:
             npm install backstopjs -G
 
       - run:
-          name: run our tests
+          name: build
           command: |
             npm run prod
+
+      - run:
+          name: run backstop
+          command: |
             backstop test

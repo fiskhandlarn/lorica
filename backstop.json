@@ -18,7 +18,7 @@
     {
       "label": "lorica",
       "cookiePath": "backstop_data/engine_scripts/cookies.json",
-      "url": "http://localhost/",
+      "url": "http://localhost:8080/",
       "referenceUrl": "",
       "readyEvent": "",
       "readySelector": "",

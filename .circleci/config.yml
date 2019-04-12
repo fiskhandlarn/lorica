@@ -18,13 +18,22 @@ jobs:
       - checkout
 
       - run:
-          name: chrome
-          command: |
-            docker run -p 3000:3000 browserless/chrome
+        name: chrome
+        command: |
+          git clone https://github.com/joelgriffith/browserless.git
+          cd browserless
+          npm install
+          npm run dev
+
+      # - run:
+      #     name: chrome
+      #     command: |
+      #       docker run -p 3000:3000 browserless/chrome
 
       - run:
           name: install dependencies
           command: |
+            cd
             npm install
 
       - run:

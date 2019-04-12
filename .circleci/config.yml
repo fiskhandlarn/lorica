@@ -32,4 +32,4 @@ jobs:
           name: run our tests
           command: |
             npm run prod
-            backstopjs test
+            ./node_modules/backstopjs/cli/index.js test

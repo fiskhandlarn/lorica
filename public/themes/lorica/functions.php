@@ -18,6 +18,7 @@ require_if_theme_supports('lorica-no-touch', template_path('library/no-touch.php
 require_if_theme_supports('lorica-pixel', template_path('library/pixel.php'));
 require_if_theme_supports('lorica-polylang', template_path('library/polylang.php'));
 require_if_theme_supports('lorica-simple-history', template_path('library/simple-history.php'));
+require_if_theme_supports('lorica-seo', template_path('library/seo.php'));
 require_if_theme_supports('lorica-soil', template_path('library/soil.php'));
 require_if_theme_supports('lorica-svg', template_path('library/svg.php'));
 require_if_theme_supports('lorica-whoops', template_path('library/whoops.php'));

@@ -27,6 +27,7 @@ add_theme_support('lorica-no-touch'); // a prerequisite for /resources/assets/st
 //add_theme_support('lorica-pixel');
 add_theme_support('lorica-polylang');
 add_theme_support('lorica-simple-history');
+add_theme_support('lorica-seo');
 add_theme_support('lorica-soil');
 add_theme_support('lorica-svg');
 add_theme_support('lorica-whoops');

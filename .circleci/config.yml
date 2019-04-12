@@ -10,17 +10,16 @@ jobs:
       # visual regression testing
       - image: backstopjs/backstopjs
 
-    working_directory: .
-
     steps:
       - checkout
       - run:
           name: install dependencies
           command: |
             npm install
+            npm install backstopjs -G
 
       - run:
           name: run our tests
           command: |
             npm run prod
-            ./node_modules/backstopjs/cli/index.js test
+            backstop test

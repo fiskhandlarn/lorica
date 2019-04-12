@@ -19,11 +19,11 @@ jobs:
 
       - run:
         name: chrome
-        command: |
-          git clone https://github.com/joelgriffith/browserless.git
-          cd browserless
-          npm install
-          npm run dev
+          command: |
+            git clone https://github.com/joelgriffith/browserless.git
+            cd browserless
+            npm install
+            npm run dev
 
       # - run:
       #     name: chrome

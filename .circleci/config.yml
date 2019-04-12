@@ -11,9 +11,8 @@ jobs:
           command: |
             npm install
             gem install percy-cli
-
-#      - run:
-#          name: run our tests
-#          command: |
-#            npm run build
-#            percy snapshot public
+      - run:
+          name: run our tests
+          command: |
+            npm run build
+            percy snapshot public

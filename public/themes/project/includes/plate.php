@@ -14,14 +14,14 @@ declare(strict_types=1);
 |
 */
 
-// Remove menu items.
+// Disable sidebar menu items.
 add_theme_support('plate-disable-menu', [
     'edit-comments.php', // comments
     'index.php', // dashboard
-    //'themes.php', // appearance
+    // 'upload.php', // media
 ]);
 
-// Remove meta boxes in post editor.
+// Disable meta boxes in editor.
 add_theme_support('plate-disable-editor', [
     'commentsdiv',
     'commentstatusdiv',
@@ -38,7 +38,7 @@ add_theme_support('plate-disable-editor', [
     //'tagsdiv-post_tag',
 ]);
 
-// Remove dashboard widgets.
+// Disable dashboard widgets.
 add_theme_support('plate-disable-dashboard', [
     'dashboard_activity',
     'dashboard_incoming_links',
@@ -51,8 +51,9 @@ add_theme_support('plate-disable-dashboard', [
     //'dashboard_right_now',
 ]);
 
-// Remove links from admin toolbar.
+// Disable links from admin toolbar.
 add_theme_support('plate-disable-toolbar', [
+    'archive',
     'comments',
     'wp-logo',
     'edit',
@@ -63,8 +64,8 @@ add_theme_support('plate-disable-toolbar', [
     'search',
 ]);
 
-// Remove dashboard tabs.
-add_theme_support('plate-disable-tabs', ['help', 'screen-options']);
+// Disable dashboard tabs.
+add_theme_support('plate-disable-tabs', ['help']);
 
 // Set custom permalink structure.
 add_theme_support('plate-permalink', '/%postname%/');
@@ -73,6 +74,7 @@ add_theme_support('plate-permalink', '/%postname%/');
 add_theme_support('plate-login-logo', asset('assets/images/favicons/android-chrome-192x192.png'));
 
 // Set custom footer text.
-//add_theme_support('plate-footer', 'Thank you for creating with <a href="https://wordplate.github.io" target="_blank">WordPlate</a>.');
+add_theme_support('plate-footer-text', 'Thank you for creating with <a href="https://github.com/fiskhandlarn/lorica">lorica</a>.');
 
+// Disable Gutenberg styles
 add_theme_support('plate-disable-gutenberg');

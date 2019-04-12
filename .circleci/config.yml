@@ -16,7 +16,7 @@ jobs:
           name: install dependencies
           command: |
             npm install
-            npm install backstopjs -G
+            npm install -g backstopjs
 
       - run:
           name: build

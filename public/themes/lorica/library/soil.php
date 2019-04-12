@@ -8,12 +8,26 @@ if (!defined('ABSPATH')) {
 
 // configure roots/soil
 // https://github.com/roots/soil
+
+// Cleanup WordPress default theme markup.
 add_theme_support('soil-clean-up');
+
+// Disable asset versioning.
+add_theme_support('soil-disable-asset-versioning');
+
+// Disable trackbacks.
 add_theme_support('soil-disable-trackbacks');
-//add_theme_support('soil-google-analytics', 'UA-XXXXX-Y', 'wp_head');
+
+// Move all JavaScript to the footer
 add_theme_support('soil-js-to-footer');
-//add_theme_support('soil-nav-walker');
+
+// Update search results from /?s=query to /search/query.
 add_theme_support('soil-nice-search');
+
+// Update absolute URLs with root relative URLs.
+//add_theme_support('soil-relative-urls');
+
+//add_theme_support('soil-nav-walker');
 
 function google_analytics_deploy($trackingID)
 {

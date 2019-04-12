@@ -16,7 +16,6 @@ jobs:
           name: install dependencies
           command: |
             npm install
-            npm install -g backstopjs
 
       - run:
           name: build
@@ -26,4 +25,4 @@ jobs:
       - run:
           name: run backstop
           command: |
-            backstop test
+            ./node_modules/backstopjs/cli/index.js test

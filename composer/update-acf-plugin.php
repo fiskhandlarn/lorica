@@ -14,7 +14,6 @@ $composer_file_path = sprintf('%s/composer.json', dirname(__DIR__));
 if (file_exists($composer_file_path)) {
     $composer_json = @json_decode(@file_get_contents($composer_file_path), true);
     if ($composer_json) {
-
         $acf_get_info_url = 'https://connect.advancedcustomfields.com/v2/plugins/get-info?p=pro';
         $acf_json = @json_decode(@file_get_contents($acf_get_info_url), true);
         if ($acf_json && !empty($acf_json['version'])) {

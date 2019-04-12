@@ -10,6 +10,8 @@ jobs:
       # visual regression testing
       - image: backstopjs/backstopjs
 
+    working_directory: .
+
     steps:
       - checkout
       - run:

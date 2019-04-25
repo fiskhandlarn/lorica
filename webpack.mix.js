@@ -4,6 +4,7 @@ const ImageminPlugin = require('imagemin-webpack-plugin').default;
 const ModernizrWebpackPlugin = require('modernizr-webpack-plugin');
 const modernizrSettings = require('./modernizr.json');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const WebappWebpackPlugin = require('webapp-webpack-plugin');
 
 require('dotenv').config();
 
@@ -47,6 +48,24 @@ mix.webpackConfig({
     ],
   },
   plugins: [
+    new WebappWebpackPlugin({
+      logo: './resources/assets/images/favicon.svg',
+      outputPath: 'images/favicons',
+      inject: true,
+      favicons: {
+        background: '#000000',
+        icons: {
+          android: true,
+          appleIcon: true,
+          appleStartup: false,
+          coast: true,
+          favicons: true,
+          firefox: true,
+          windows: true,
+          yandex: true,
+        },
+      },
+    }),
     new StyleLintPlugin({
       context: '// resources/assets/styles doesnt work o_O',
       context: 'resources',

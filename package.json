@@ -47,7 +47,8 @@
     "stylelint-rscss": "^0.4.0",
     "stylelint-scss": "^3.5.4",
     "stylelint-webpack-plugin": "^0.10.5",
-    "vue-template-compiler": "^2.6.10"
+    "vue-template-compiler": "^2.6.10",
+    "webapp-webpack-plugin": "^2.7.0"
   },
   "dependencies": {
     "svgo": "^1.2.1"

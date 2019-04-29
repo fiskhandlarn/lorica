@@ -16,7 +16,6 @@ if (!is_home()) {
 ```
 * Configure which favicons and what background color should be generated in [webpack.mix.js](./webpack.mix.js)
 * Change `msapplication-TileColor` in [favicons.blade.php](./resources/views/partials/favicons.blade.php) if needed
-Generate new favicons with [Favicon Generator](https://realfavicongenerator.net/), place them in [resources/assets/images/favicons](./resources/assets/images/favicons) and update theme paths in [browserconfig.xml](./resources/assets/images/favicons/browserconfig.xml) and [site.webmanifest](./resources/assets/images/favicons/site.webmanifest)
 * Generate new [favicon.admin.png](./resources/assets/images/favicons/favicon.admin.png) (tip: `magick favicon.ico -channel RGB -negate favicon.admin.png`)
 * Change or remove `theme-color` meta value in [header.blade.php](./resources/views/base/header.blade.php)
 * Make sure `/sitemap.xml` contains valid content/URL's (this is controlled by [The SEO Framework](./PLUGINS.md) and can be configured in `wp-admin`)

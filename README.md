@@ -94,7 +94,7 @@ $ composer install
 $ npm install && npm run dev
 ```
 
-3: Configure your web server setting the web root to the `public/` folder or configure Valet.
+3: Configure your web server setting the web root to the `public/` folder, configure Valet or use Docker (see below):
 
 4: If you want to use a custom domain you should update your `/etc/hosts` file.
 
@@ -121,6 +121,20 @@ Build minified CSS & JS files one time:
 ```bash
 $ npm run prod
 ```
+
+## Docker
+
+Use this database host:
+```env
+DB_HOST=db:3306
+```
+
+Start Docker:
+```bash
+$ docker-compose up -d
+```
+
+See also: [database/README.md](./database/README.md).
 
 ## Deploy
 

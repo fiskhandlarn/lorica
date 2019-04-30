@@ -126,13 +126,15 @@ $ npm run prod
 
 Use this database host:
 ```env
-DB_HOST=db:3306
+DB_HOST=mysql
 ```
 
 Start Docker:
 ```bash
 $ docker-compose up -d
 ```
+
+Access the site via http://localhost:8080/ and phpMyAdmin via http://localhost:8082/.
 
 See also: [database/README.md](./database/README.md).
 

@@ -27,6 +27,8 @@ mysql:
     - "3306:3306"
   environment:
     - MYSQL_ROOT_PASSWORD=password
+  volumes:
+    - ./.mysql-data:/var/lib/mysql
 
 phpmyadmin:
   container_name: phpmyadmin

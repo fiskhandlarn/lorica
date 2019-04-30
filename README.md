@@ -39,7 +39,7 @@ Change `WP_THEME` and `BROWSER_SYNC_HOST` in `.env.example` to reflect your new 
 
 Change `Project` in [resources/assets/styles/app.scss](./resources/assets/styles/app.scss) to your project's name.
 
-Follow the *Install* instructions below.
+Follow the [Install](#install) instructions.
 
 Set your ACF license key as `ACF_KEY` in `.env` and update `advanced-custom-fields-pro` to the latest version:
 
@@ -94,7 +94,7 @@ $ composer install
 $ npm install && npm run dev
 ```
 
-3: Configure your web server setting the web root to the `public/` folder, configure Valet or use Docker (see below):
+3: Configure your web server setting the web root to the `public/` folder, configure Valet or use [Docker](#docker).
 
 4: If you want to use a custom domain you should update your `/etc/hosts` file.
 

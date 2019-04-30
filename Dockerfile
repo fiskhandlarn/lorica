@@ -1,3 +1,5 @@
+# From https://gist.github.com/michaelneu/2ca7987ef00fa3fbe4fd7b9c07834cc7
+
 # see https://github.com/cmaessen/docker-php-sendmail for more information
 
 FROM php:7-fpm

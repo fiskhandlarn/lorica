@@ -129,12 +129,19 @@ Use this database host:
 DB_HOST=mysql
 ```
 
+Create SSL certificate:
+```bash
+$ mkdir .ssl
+$ cd .ssl
+$ openssl req -x509 -nodes -days 3650 -newkey rsa:2048 -keyout server.key -out server.pem
+```
+
 Start Docker:
 ```bash
 $ docker-compose up -d
 ```
 
-Access the site via http://localhost:8080/ and phpMyAdmin via http://localhost:8082/.
+Access the site via https://localhost:3000/ and phpMyAdmin via http://localhost:8082/.
 
 See also: [database/README.md](./database/README.md).
 

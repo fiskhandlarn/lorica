@@ -13,8 +13,13 @@ then
   if [ "$addAuth" == "y" ] || [ "$addAuth" == "Y" ] || [ "$addAuth" == "" ]; then
     cd "$SOURCEDIR"
 
-    # Use wp-cli from local composer
-    wp="$SOURCEDIR/../vendor/wp-cli/wp-cli/bin/wp"
+    # https://stackoverflow.com/a/25518345/1109380
+    if [ -f /.dockerenv ]; then
+      wp="wp"
+    else
+      # Use wp-cli from local composer
+      wp="$SOURCEDIR/../vendor/wp-cli/wp-cli/bin/wp"
+    fi
 
     echo ""
     echo "Using $wp:"

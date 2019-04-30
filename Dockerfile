@@ -22,11 +22,3 @@ RUN echo "[Date]" >> /usr/local/etc/php/conf.d/php-sendmail.ini \
     && echo "date.timezone = Europe/Amsterdam" >> /usr/local/etc/php/conf.d/php-sendmail.ini
 
 RUN echo "localhost localhost.localdomain" >> /etc/hosts
-
-#RUN mysql -u root -ppassword -e "ALTER USER root IDENTIFIED WITH mysql_native_password BY 'password';"
-
-# docker run --name mysql -e MYSQL_ROOT_PASSWORD=PASSWORD -e MYSQL_ROOT_HOST=% -p 3306:3306 -d mysql/mysql-server:latest
-# docker exec -it mysql sed -i -e 's/# default-authentication-plugin=mysql_native_password/default-authentication-plugin=mysql_native_password/g' /etc/my.cnf
-# docker exec -it mysql mysql -u root -pPASSWORD -e "ALTER USER root IDENTIFIED WITH mysql_native_password BY 'PASSWORD';"
-# docker stop mysql; docker start mysql
-# docker run --name phpmyadmin -d --link mysql:db -p 8080:80 phpmyadmin/phpmyadmin:latest

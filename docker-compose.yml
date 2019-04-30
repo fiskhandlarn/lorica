@@ -1,4 +1,5 @@
 web:
+  container_name: web
   image: nginx:latest
   ports:
     - "8080:80"
@@ -9,6 +10,7 @@ web:
     - php
 
 php:
+  container_name: php-fpm
   image: nanoninja/php-fpm:latest
   volumes:
     - ./:/lorica
@@ -19,6 +21,7 @@ php:
     - maildev
 
 mysql:
+  container_name: mysql
   image: mysql:5.7
   ports:
     - "3306:3306"
@@ -26,7 +29,8 @@ mysql:
     - MYSQL_ROOT_PASSWORD=password
 
 phpmyadmin:
-  image: phpmyadmin/phpmyadmin
+  container_name: phpmyadmin
+  image: phpmyadmin/phpmyadmin:latest
   links:
     - mysql:db
   ports:
@@ -37,6 +41,18 @@ phpmyadmin:
     - PHP_UPLOAD_MAX_FILESIZE=100MB
 
 maildev:
+  container_name: maildev
   image: djfarrelly/maildev
   ports:
    - "8081:80"
+
+wpcli:
+  container_name: wpcli
+  image: fiskhandlarn/wpcli
+  volumes:
+    - ./:/lorica
+    - ./:/var/www/html
+  links:
+    - mysql:db
+  environment:
+    WORDPRESS_DB_PASSWORD: password

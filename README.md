@@ -131,8 +131,8 @@ DB_HOST=mysql
 
 Create SSL certificate:
 ```bash
-$ mkdir .ssl
-$ cd .ssl
+$ mkdir .docker .docker/.ssl
+$ cd .docker/.ssl
 $ openssl req -x509 -nodes -days 3650 -newkey rsa:2048 -keyout server.key -out server.pem
 ```
 

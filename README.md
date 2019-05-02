@@ -20,7 +20,7 @@ Static resources (JavaScript, CSS, images, fonts etc) is added to the `resources
 Merge this repo into your own:
 
 ```bash
-$ git remote add lorica {clone-url}
+$ git remote add lorica https://github.com/fiskhandlarn/lorica.git
 $ git pull lorica master
 ```
 

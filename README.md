@@ -24,8 +24,6 @@ $ git remote add lorica https://github.com/fiskhandlarn/lorica.git
 $ git pull lorica master
 ```
 
-(where `{clone-url}` is something like https://github.com/fiskhandlarn/lorica.git)
-
 Open `composer.json` and change the `name` and `description` properties.
 
 Rename the example theme and use it as the base for your project's theme:

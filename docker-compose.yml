@@ -48,7 +48,6 @@ wpcli:
   image: fiskhandlarn/wpcli
   volumes:
     - ./:/lorica
-    - ./:/var/www/html
   links:
     - mysql:db
   environment:

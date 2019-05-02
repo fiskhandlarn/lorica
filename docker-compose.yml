@@ -20,7 +20,6 @@ php:
     XDEBUG_CONFIG: remote_host=host.docker.internal
   links:
     - mysql
-    - maildev
 
 mysql:
   container_name: mysql
@@ -43,12 +42,6 @@ phpmyadmin:
     - PMA_USER=root
     - PMA_PASSWORD=password
     - PHP_UPLOAD_MAX_FILESIZE=100MB
-
-maildev:
-  container_name: maildev
-  image: djfarrelly/maildev
-  ports:
-   - "8081:80"
 
 wpcli:
   container_name: wpcli

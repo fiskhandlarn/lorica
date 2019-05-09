@@ -57,6 +57,8 @@ Add `composer.lock` and `package-lock.json` to your git repo to ensure that the 
 $ git add composer.lock package-lock.json
 ```
 
+Set your `ITSEC_NETWORK_BRUTE_FORCE_API_KEY` and `ITSEC_NETWORK_BRUTE_FORCE_API_SECRET` in the `.env` file.
+
 Visit your project in the browser and run the WordPress installation wizard with these values:
 
 * *Username*: sysop

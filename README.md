@@ -71,7 +71,7 @@ Do not click the ''Log in'' button in the final step, instead use the URL `/word
 
 If you get error messages, reload `/wordpress/lorica-admin` until all error messages has disappeared.
 
-Add languages for Polylang in wp-admin (*Languages* in the side menu) so you can start using the [hoy/polylang](https://github.com/hoymultimedia/polylang) functions, or remove `hoy/polylang` and `wpackagist-plugin/polylang` from composer if your project is monolingual (optionally remove `koodimonni-language` packages if not needed).
+Add languages for Polylang in wp-admin (*Languages* in the side menu) so you can start using the [hoy/polylang](https://github.com/hoymultimedia/polylang) functions, or remove `hoy/polylang` and `wpackagist-plugin/polylang` from composer if your project is monolingual (optionally remove `koodimonni-language` packages if not needed). If you disable **Hide URL language information for default language** in Polylang settings make sure that you add at least one page or post to avoid redirect loop on the site root URL.
 
 Read [TODO.md](./TODO.md) so you know what must be done before launching your project.
 

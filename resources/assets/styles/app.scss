@@ -9,8 +9,50 @@
 // Project: variables (which overrides bootstrap)
 @import 'settings/*';
 
+// Use native CSS grid instead of Bootstrap's grid
+@import '@fiskhandlarn/css-bootstrap-like-grid';
+
 // Bootstrap: mixins
-@import 'bootstrap/scss/mixins';
+@import 'bootstrap/scss/vendor/rfs';
+
+// Bootstrap: mixins/Deprecate
+@import 'bootstrap/scss/mixins/deprecate';
+
+// Bootstrap: mixins/Utilities
+@import 'bootstrap/scss/mixins/breakpoints';
+@import 'bootstrap/scss/mixins/hover';
+// @import 'bootstrap/scss/mixins/image';
+// @import 'bootstrap/scss/mixins/badge';
+// @import 'bootstrap/scss/mixins/resize';
+@import 'bootstrap/scss/mixins/screen-reader';
+// @import 'bootstrap/scss/mixins/size';
+// @import 'bootstrap/scss/mixins/reset-text';
+@import 'bootstrap/scss/mixins/text-emphasis';
+@import 'bootstrap/scss/mixins/text-hide';
+@import 'bootstrap/scss/mixins/text-truncate';
+// @import 'bootstrap/scss/mixins/visibility';
+
+// Bootstrap: mixins/Components
+// @import 'bootstrap/scss/mixins/alert';
+@import 'bootstrap/scss/mixins/buttons';
+// @import 'bootstrap/scss/mixins/caret';
+// @import 'bootstrap/scss/mixins/pagination';
+@import 'bootstrap/scss/mixins/lists';
+// @import 'bootstrap/scss/mixins/list-group';
+// @import 'bootstrap/scss/mixins/nav-divider';
+// @import 'bootstrap/scss/mixins/forms';
+// @import 'bootstrap/scss/mixins/table-row';
+
+// Bootstrap: mixins/Skins
+@import 'bootstrap/scss/mixins/background-variant';
+@import 'bootstrap/scss/mixins/border-radius';
+@import 'bootstrap/scss/mixins/box-shadow';
+@import 'bootstrap/scss/mixins/gradients';
+@import 'bootstrap/scss/mixins/transition';
+
+// Bootstrap: mixins/Layout
+@import 'bootstrap/scss/mixins/clearfix';
+// @import 'bootstrap/scss/mixins/float';
 
 // Bootstrap: Theming https://getbootstrap.com/docs/4.3/getting-started/theming/
 //@import 'bootstrap/scss/root';
@@ -23,7 +65,7 @@
 @import 'bootstrap/scss/type';
 //@import 'bootstrap/scss/images';
 //@import 'bootstrap/scss/code';
-@import 'bootstrap/scss/grid';
+//@import 'bootstrap/scss/grid';
 //@import 'bootstrap/scss/tables';
 //@import 'bootstrap/scss/forms';
 @import 'bootstrap/scss/buttons';
@@ -57,7 +99,23 @@
 
 // Bootstrap: Utility classes
 // TODO: Adjust utility classes margin-bottom, margin-top and padding-top to reflect design
-@import 'bootstrap/scss/utilities';
+@import 'bootstrap/scss/utilities/align';
+@import 'bootstrap/scss/utilities/background';
+@import 'bootstrap/scss/utilities/borders';
+@import 'bootstrap/scss/utilities/clearfix';
+@import 'bootstrap/scss/utilities/display';
+@import 'bootstrap/scss/utilities/embed';
+@import 'bootstrap/scss/utilities/flex';
+@import 'bootstrap/scss/utilities/float';
+@import 'bootstrap/scss/utilities/overflow';
+@import 'bootstrap/scss/utilities/position';
+@import 'bootstrap/scss/utilities/screenreaders';
+@import 'bootstrap/scss/utilities/shadows';
+@import 'bootstrap/scss/utilities/sizing';
+@import 'bootstrap/scss/utilities/stretched-link';
+@import 'bootstrap/scss/utilities/spacing';
+@import 'bootstrap/scss/utilities/text';
+@import 'bootstrap/scss/utilities/visibility';
 
 // Project
 //@import 'base/*';

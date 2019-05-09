@@ -36,7 +36,7 @@
     "laravel-mix": "^4.0.15",
     "modernizr-webpack-plugin": "^1.0.7",
     "pkg-dir": "^4.1.0",
-    "resolve-url-loader": "^3.1.0",
+    "resolve-url-loader": "^2.3.2",
     "revenge.css": "github:fiskhandlarn/REVENGE.CSS",
     "sass": "^1.20.1",
     "sass-lint": "^1.13.1",

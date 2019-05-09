@@ -2,7 +2,7 @@
     <?php the_post(); ?>
 
     <header>
-        <h1>{{ $title or get_the_title() }}</h1>
+        <h1>{{ $title ?? get_the_title() }}</h1>
     </header>
 
     <?php the_content(); ?>

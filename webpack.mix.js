@@ -49,7 +49,7 @@ mix.webpackConfig({
   },
   plugins: [
     new WebappWebpackPlugin({
-      logo: './resources/assets/images/favicon.svg',
+      logo: './resources/assets/images/favicons/favicon.svg',
       outputPath: 'images/favicons',
       inject: true,
       favicons: {

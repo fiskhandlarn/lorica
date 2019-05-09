@@ -3,6 +3,7 @@
 .env
 .idea
 .vagrant
+backstop_data
 Homestead.json
 Homestead.yaml
 node_modules

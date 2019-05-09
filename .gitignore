@@ -1,3 +1,4 @@
+.docker
 .DS_Store
 .env
 .idea
@@ -8,4 +9,3 @@ node_modules
 npm-debug.log
 Vagrantfile
 vendor
-/.docker

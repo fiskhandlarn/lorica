@@ -10,6 +10,7 @@
     "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
     "svgo": "cross-env NODE_ENV=production node_modules/svgo/bin/svgo"
   },
+  "//": "Use old version of resolve-url-loader for now: https://github.com/bholloway/resolve-url-loader/issues/107",
   "devDependencies": {
     "@babel/core": "^7.4.4",
     "@babel/plugin-proposal-class-properties": "^7.4.4",

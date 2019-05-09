@@ -48,7 +48,7 @@ $ composer update-acf-plugin
 Install ACF pro:
 
 ```bash
-$ composer install advanced-custom-fields/advanced-custom-fields-pro
+$ composer require advanced-custom-fields/advanced-custom-fields-pro
 ```
 
 Add `composer.lock` and `package-lock.json` to your git repo to ensure that the same package versions are used by other contributors and on the servers:

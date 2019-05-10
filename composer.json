@@ -1,103 +1,104 @@
 {
-    "name": "fiskhandlarn/lorica",
-    "description": "WordPlate starter",
-    "keywords": [
-        "wordplate",
-        "wordpress",
-        "boilerplate",
-        "plate"
-    ],
-    "license": "MIT",
-    "require": {
-        "php": "^7.2",
-        "cweagans/composer-patches": "^1.6.5",
-        "filp/whoops": "^2.3.1",
-        "fiskhandlarn/blade": "^0.4.1",
-        "hoy/polylang": "^4.0",
-        "johnbillion/extended-cpts": "^4.2.3",
-        "koodimonni-language/core-sv_se": "^5.2",
-        "roots/soil": "^3.7.3",
-        "spatie/image-optimizer": "^1.1.5",
-        "wordplate/acf": "^6.0.0",
-        "wordplate/framework": "^7.1.0",
-        "wordplate/mail": "^4.0.0",
-        "wordplate/plate": "^4.1.0",
-        "wp-cli/wp-cli-bundle": "^2.2.0",
-        "wpackagist-plugin/autodescription": "^3.2.4",
-        "wpackagist-plugin/better-wp-security": "^7.3.3",
-        "wpackagist-plugin/bugsnag": "1.3.1",
-        "wpackagist-plugin/classic-editor": "^1.5",
-        "wpackagist-plugin/disable-embeds": "^1.4.0",
-        "wpackagist-plugin/disable-emojis": "^1.7.2",
-        "wpackagist-plugin/disable-feeds": "^1.4.4",
-        "wpackagist-plugin/fly-dynamic-image-resizer": "^2.0.5",
-        "wpackagist-plugin/normalizer": "^1.0.0",
-        "wpackagist-plugin/polylang": "^2.5.3",
-        "wpackagist-plugin/simple-history": "^2.30",
-        "wpackagist-plugin/wp-migrate-db": "^1.0.11"
-    },
-    "autoload": {
-        "psr-4": {
-            "Lorica\\": "src/Lorica/"
-        }
-    },
-    "repositories": [
-        {
-            "type": "composer",
-            "url": "https://wpackagist.org"
-        },
-        {
-            "type": "composer",
-            "url": "https://wp-languages.github.io"
-        }
-    ],
-    "scripts": {
-        "post-install-cmd": [
-            "php -r \"file_exists('.env') || copy('.env.example', '.env');\""
-        ],
-        "update-acf-plugin": [
-            "php -r \"file_exists('composer/update-acf-plugin.php') && require 'composer/update-acf-plugin.php';\""
-        ],
-        "activate-maintenance": [
-            "php -r \"file_exists('composer/activate-maintenance.php') && require 'composer/activate-maintenance.php';\""
-        ],
-        "deactivate-maintenance": [
-            "php -r \"file_exists('composer/deactivate-maintenance.php') && require 'composer/deactivate-maintenance.php';\""
-        ]
-    },
-    "config": {
-        "sort-packages": true,
-        "preferred-install": "dist"
-    },
-    "extra": {
-        "installer-paths": {
-            "public/mu-plugins/{$name}": [
-                "type:wordpress-muplugin",
-                "type:wordpress-plugin"
-            ],
-            "public/themes/{$name}": [
-                "type:wordpress-theme"
-            ]
-        },
-        "wordpress-install-dir": "public/wordpress",
-        "dropin-paths": {
-            "public/languages/": [
-                "vendor:koodimonni-language"
-            ],
-            "public/languages/plugins/": [
-                "vendor:koodimonni-plugin-language"
-            ],
-            "public/languages/themes/": [
-                "vendor:koodimonni-theme-language"
-            ]
-        },
-        "patches": {
-            "wpackagist-plugin/wp-migrate-db": {
-                "Patch WP Migrate DB plugin url path": "composer-patches/wpackagist-plugin/wp-migrate-db.patch"
-            },
-            "wpackagist-plugin/bugsnag": {
-                "Patch Bugsnag plugin url path": "composer-patches/wpackagist-plugin/bugsnag.patch"
-            }
-        }
+  "name": "fiskhandlarn/lorica",
+  "description": "WordPlate starter",
+  "keywords": [
+    "wordplate",
+    "wordpress",
+    "boilerplate",
+    "plate"
+  ],
+  "license": "MIT",
+  "require": {
+    "php": "^7.2",
+    "cweagans/composer-patches": "^1.6.5",
+    "filp/whoops": "^2.3.1",
+    "fiskhandlarn/blade": "^0.4.1",
+    "hoy/polylang": "^4.0",
+    "johnbillion/extended-cpts": "^4.2.3",
+    "koodimonni-language/core-sv_se": "^5.2",
+    "roots/soil": "^3.7.3",
+    "spatie/image-optimizer": "^1.1.5",
+    "wordplate/acf": "^6.0.0",
+    "wordplate/framework": "^7.1.0",
+    "wordplate/mail": "^4.0.0",
+    "wordplate/plate": "^4.1.0",
+    "wp-cli/wp-cli-bundle": "^2.2.0",
+    "wpackagist-plugin/autodescription": "^3.2.4",
+    "wpackagist-plugin/better-wp-security": "^7.3.3",
+    "wpackagist-plugin/bugsnag": "1.3.1",
+    "wpackagist-plugin/classic-editor": "^1.5",
+    "wpackagist-plugin/disable-embeds": "^1.4.0",
+    "wpackagist-plugin/disable-emojis": "^1.7.2",
+    "wpackagist-plugin/disable-feeds": "^1.4.4",
+    "wpackagist-plugin/fly-dynamic-image-resizer": "^2.0.5",
+    "wpackagist-plugin/normalizer": "^1.0.0",
+    "wpackagist-plugin/polylang": "^2.5.3",
+    "wpackagist-plugin/simple-history": "^2.30",
+    "wpackagist-plugin/wp-migrate-db": "^1.0.11"
+  },
+  "autoload": {
+    "psr-4": {
+      "Lorica\\": "src/Lorica/"
     }
+  },
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://wpackagist.org"
+    },
+    {
+      "type": "composer",
+      "url": "https://wp-languages.github.io"
+    }
+  ],
+  "scripts": {
+    "post-install-cmd": [
+      "php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+    ],
+    "update-acf-plugin": [
+      "php -r \"file_exists('composer/update-acf-plugin.php') && require 'composer/update-acf-plugin.php';\""
+    ],
+    "activate-maintenance": [
+      "php -r \"file_exists('composer/activate-maintenance.php') && require 'composer/activate-maintenance.php';\""
+    ],
+    "deactivate-maintenance": [
+      "php -r \"file_exists('composer/deactivate-maintenance.php') && require 'composer/deactivate-maintenance.php';\""
+    ]
+  },
+  "config": {
+    "sort-packages": true,
+    "preferred-install": "dist"
+  },
+  "extra": {
+    "installer-paths": {
+      "public/mu-plugins/{$name}": [
+        "type:wordpress-muplugin",
+        "type:wordpress-plugin"
+      ],
+      "public/themes/{$name}": [
+        "type:wordpress-theme"
+      ]
+    },
+    "wordpress-install-dir": "public/wordpress",
+    "dropin-paths": {
+      "public/languages/": [
+        "vendor:koodimonni-language"
+      ],
+      "public/languages/plugins/": [
+        "vendor:koodimonni-plugin-language"
+      ],
+      "public/languages/themes/": [
+        "vendor:koodimonni-theme-language"
+      ]
+    },
+    "patches": {
+      "wpackagist-plugin/wp-migrate-db": {
+        "Patch WP Migrate DB plugin url path": "composer-patches/wpackagist-plugin/wp-migrate-db.patch"
+      },
+      "wpackagist-plugin/bugsnag": {
+        "Patch Bugsnag plugin url path": "composer-patches/wpackagist-plugin/bugsnag.patch",
+        "Patch Bugsnag plugin settings form": "composer-patches/wpackagist-plugin/bugsnag-settings.patch"
+      }
+    }
+  }
 }

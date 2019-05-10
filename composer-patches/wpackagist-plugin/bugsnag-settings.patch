@@ -1,0 +1,10 @@
+--- views/settings.php	Fri May 10 10:58:36 2019
++++ views/settings-patch.php	Fri May 10 10:44:25 2019
+@@ -10,6 +10,6 @@
+   <?php if (function_exists('is_plugin_active_for_network') && is_plugin_active_for_network($this->pluginBase)) { ?>
+   <form method='post'>
+   <?php } else { ?>
+-  <form method="post" action="options.php">
++  <form method="post">
+   <?php } ?>
+     <?php if(empty($this->apiKey)) { ?>

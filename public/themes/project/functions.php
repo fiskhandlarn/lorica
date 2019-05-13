@@ -10,8 +10,6 @@ if (function_exists('pll__')) {
 }
 require_once stylesheet_path('/includes/image-sizes.php');
 
-require base_path('vendor/johnbillion/extended-cpts/extended-cpts.php');
-
 // request support for lorica features
 add_theme_support('lorica-deregister-jquery');
 add_theme_support('lorica-enqueue-app-css');

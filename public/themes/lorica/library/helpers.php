@@ -184,3 +184,12 @@ if (!function_exists('usortstable')) {
         return;
     }
 }
+
+if (!function_exists('wpautop_class')) {
+    // https://codex.wordpress.org/Function_Reference/wpautop but with added class
+    function wpautop_class(string $pee, string $class, bool $br = true):string
+    {
+        // https://stackoverflow.com/a/45937558/1109380
+        return str_replace('<p>', '<p class="' . $class . '">', wpautop($pee, $br));
+    }
+}

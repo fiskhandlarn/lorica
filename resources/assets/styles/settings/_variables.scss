@@ -13,4 +13,21 @@ $md-info-bar-message-line-height: $line-height-base;
 
 // TODO: place overridden Bootstrap variables here
 
+$grid-breakpoints: (
+  xs: rem(0),
+  sm: rem(576px),
+  md: rem(768px),
+  lg: rem(992px),
+  xl: rem(1200px)
+);
+
+$container-max-widths: (
+  sm: rem(540px),
+  md: rem(720px),
+  lg: rem(960px),
+  xl: rem(1140px)
+);
+
+$grid-gutter-width: rem(30px);
+
 // /Bootstrap overrides

@@ -55,6 +55,9 @@
     "post-install-cmd": [
       "php -r \"file_exists('.env') || copy('.env.example', '.env');\""
     ],
+    "post-autoload-dump": [
+        "rm -rf public/wordpress/wp-content"
+    ],
     "update-acf-plugin": [
       "php -r \"file_exists('composer/update-acf-plugin.php') && require 'composer/update-acf-plugin.php';\""
     ],

@@ -71,7 +71,7 @@ add_action('wp_enqueue_scripts', function () {
 
     if (get_theme_support('lorica-enqueue-app-css')) {
         wp_enqueue_style(
-            'wordplate',
+            'lorica',
             mix('styles/app.css'),
             false,
             filemtime_base36(asset_path('styles/app.css')),
@@ -91,7 +91,7 @@ add_action('wp_enqueue_scripts', function () {
 
     if (get_theme_support('lorica-enqueue-app-js')) {
         wp_enqueue_script(
-            'wordplate',
+            'lorica',
             mix('scripts/app.js'),
             false,
             filemtime_base36(asset_path('scripts/app.js')),

@@ -61,7 +61,7 @@ add_action('after_setup_theme', function () {
     ]);
 
     // Add primary WordPress menu.
-    register_nav_menu('primary-menu', __('Primary Menu', 'wordplate'));
+    register_nav_menu('primary-menu', __('Primary Menu', 'lorica'));
 });
 
 // // Remove JPEG compression.

@@ -15,11 +15,11 @@ if (!function_exists('array_move_element')) {
 }
 
 if (!function_exists('debuglog')) {
-    function debuglog($message, $forcePrintR = false)
+    function debuglog($message, $forceVarExport = false)
     {
         if (defined('WP_DEBUG') && WP_DEBUG) {
-            if ($forcePrintR || is_array($message) || is_object($message)) {
-                error_log(print_r($message, true) . "\n");
+            if ($forceVarExport || is_array($message) || is_object($message)) {
+                error_log(var_export($message, true) . "\n");
             } else {
                 error_log($message . "\n");
             }

@@ -88,7 +88,7 @@ if (class_exists('ITSEC_Modules')) {
     // default values
     ITSEC_Modules::get_instance()->deactivate('backup');
 
-    ITSEC_Modules::get_instance()->set_setting('global', 'lockout_white_list', ['62.20.18.146']); // office ip
+    ITSEC_Modules::get_instance()->set_setting('global', 'lockout_white_list', ['127.0.0.1', '62.20.18.146']); // office ip
 
     ITSEC_Modules::get_instance()->activate('404-detection');
 

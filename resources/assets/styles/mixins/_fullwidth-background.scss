@@ -30,4 +30,19 @@
       overflow-x: hidden; // hide .site-footer::before
     }
   }
+
+  &%-left {
+    &::before {
+      left: auto;
+      right: 0;
+      margin-left: 0;
+    }
+  }
+
+  &%-right {
+    &::before {
+      left: 0;
+      margin-left: 0;
+    }
+  }
 }

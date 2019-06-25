@@ -1,0 +1,4 @@
+@function spacer($value) {
+  // round to .25, .5, .75 or 1
+  @return round(strip-unit($value / $rem-baseline) * $spacer * 4) / 4;
+}

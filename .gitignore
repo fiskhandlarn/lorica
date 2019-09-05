@@ -1,4 +1,5 @@
 .docker
+!.docker/nginx.conf
 .DS_Store
 .env
 .idea

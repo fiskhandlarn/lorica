@@ -138,8 +138,13 @@ DB_HOST=mysql
 Create SSL certificate:
 ```bash
 $ mkdir -p .docker/.ssl
-$ cd .docker/.ssl
-$ openssl req -x509 -nodes -days 3650 -newkey rsa:2048 -keyout server.key -out server.pem
+$ openssl req -x509 -nodes -days 3650 -newkey rsa:2048 -keyout .docker/.ssl/server.key -out .docker/.ssl/server.pem
+```
+
+or
+
+```bash
+make ssl:create
 ```
 
 Start Docker:
@@ -147,7 +152,24 @@ Start Docker:
 $ docker-compose up -d
 ```
 
+or
+
+```bash
+make up
+```
+
 Access the site via https://localhost:3000/ and phpMyAdmin via http://localhost:8082/.
+
+Stop Docker:
+```bash
+$ docker-compose down
+```
+
+or
+
+```bash
+$ make down
+```
 
 See also: [database/README.md](./database/README.md).
 

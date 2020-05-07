@@ -77,7 +77,7 @@ Read [TODO.md](./TODO.md) so you know what must be done before launching your pr
 
 Change "Project" and "domain.tld" in this README.md below to reflect your project's name and domain name.
 
-Update the [Deploy](#Deploy) section below.
+Update the [Deploy](#deploy) section below.
 
 Setup done! Remove everything in this README.md above and including this line:
 

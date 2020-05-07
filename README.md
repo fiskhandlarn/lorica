@@ -62,7 +62,7 @@ Set your `ITSEC_NETWORK_BRUTE_FORCE_API_KEY` and `ITSEC_NETWORK_BRUTE_FORCE_API_
 Visit your project in the browser and run the WordPress installation wizard with these values:
 
 * *Username*: sysop
-* *Your Email*: service@yourdomain.tld
+* *Your Email*: service@domain.tld
 * *Search Engine Visibility*: <unchecked>
 
 Save the login url and credentials in your password file.
@@ -75,7 +75,9 @@ Add languages for Polylang in wp-admin (*Languages* in the side menu) so you can
 
 Read [TODO.md](./TODO.md) so you know what must be done before launching your project.
 
-Change "Project", [DeployBot](https://deploybot.com/) URL and "domain.tld" in this README.md below to reflect your project's name and domain name.
+Change "Project" and "domain.tld" in this README.md below to reflect your project's name and domain name.
+
+Update the [Deploy](#Deploy) section below.
 
 Setup done! Remove everything in this README.md above and including this line:
 
@@ -175,10 +177,10 @@ See also: [database/README.md](./database/README.md).
 
 ## Deploy
 
-Deploy with [DeployBot](https://xxx.deploybot.com/NNNNNN-NNNNN-project/) to:
+Deploy with [deploy service](URL) to:
 
 * [d.domain.tld](http://d.domain.tld)
 * [q.domain.tld](http://q.domain.tld)
 * [domain.tld](http://domain.tld)
 
-Tip: Use `composer run activate-maintenance` in DeployBot's ''Run commands after new version becomes active'' to deploy whilst keeping the site non-public.
+Tip: Run `composer run activate-maintenance` in your deploy service (after all files are added) to deploy whilst keeping the site non-public.

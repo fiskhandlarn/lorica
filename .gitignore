@@ -4,7 +4,8 @@
 .env
 .idea
 .vagrant
-backstop_data
+backstop_data/bitmaps_test/
+backstop_data/html_report/
 Homestead.json
 Homestead.yaml
 node_modules

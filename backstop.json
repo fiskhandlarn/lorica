@@ -8,23 +8,23 @@
     },
     {
       "label": "sm",
-      "width": 540,
-      "height": 810
+      "width": 576,
+      "height": 864
     },
     {
       "label": "md",
-      "width": 720,
-      "height": 1080
+      "width": 768,
+      "height": 1152
     },
     {
       "label": "lg",
-      "width": 960,
-      "height": 1080
+      "width": 992,
+      "height": 1488
     },
     {
       "label": "xl",
-      "width": 1140,
-      "height": 1710
+      "width": 1200,
+      "height": 1800
     }
   ],
   "scenarios": [

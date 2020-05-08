@@ -1,11 +1,18 @@
-up: docker%up
-	xdg-open "https://localhost:3000/"
-
 down:
 	docker-compose down --remove-orphans
 
+install:
+	composer install
+	npm install
+	npm run dev
+
 logs:
 	docker-compose logs
+
+start: install up
+
+up: docker%up
+	xdg-open "https://localhost:3000/"
 
 backstop%reference: docker%up
 	npm run backstop reference

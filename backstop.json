@@ -1,0 +1,50 @@
+{
+  "id": "lorica",
+  "viewports": [
+    {
+      "label": "xs",
+      "width": 320,
+      "height": 480
+    },
+    {
+      "label": "sm",
+      "width": 540,
+      "height": 810
+    },
+    {
+      "label": "md",
+      "width": 720,
+      "height": 1080
+    },
+    {
+      "label": "lg",
+      "width": 960,
+      "height": 1080
+    },
+    {
+      "label": "xl",
+      "width": 1140,
+      "height": 1710
+    }
+  ],
+  "scenarios": [
+    {
+      "label": "Lorica",
+      "url": "https://localhost:3000/",
+      "delay": "// default is 0, increased to avoid blank screenshots",
+      "delay": 5000,
+      "removeSelectors": ["#cookie-bar"]
+    }
+  ],
+  "paths": {
+    "bitmaps_test": "backstop_data/bitmaps_test",
+    "bitmaps_reference": "backstop_data/bitmaps_reference",
+    "engine_scripts": "backstop_data/engine_scripts",
+    "html_report": "backstop_data/html_report",
+    "ci_report": "backstop_data/ci_report"
+  },
+  "engine": "puppeteer",
+  "report": ["json", "html"],
+  "asyncCaptureLimit": "// default is 5, decrease to avoid blank screenshots",
+  "asyncCaptureLimit": 1
+}

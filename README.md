@@ -146,7 +146,7 @@ $ openssl req -x509 -nodes -days 3650 -newkey rsa:2048 -keyout .docker/.ssl/serv
 or
 
 ```bash
-make ssl:create
+$ make ssl:create
 ```
 
 Start Docker:
@@ -157,7 +157,7 @@ $ docker-compose up -d
 or
 
 ```bash
-make up
+$ make up
 ```
 
 Access the site via https://localhost:3000/ and phpMyAdmin via http://localhost:8082/.
@@ -174,6 +174,32 @@ $ make down
 ```
 
 See also: [database/README.md](./database/README.md).
+
+## BackstopJS
+
+[BackstopJS](http://backstopjs.org/) can be used for testing visual regression. If not using [Docker](#docker), change the `url` in [backstop.json](./backstop.json) as you see fit.
+
+### BackstopJS with Docker
+
+Initialize BackstopJS to have something to compare against:
+
+```bash
+$ make backstop:reference
+```
+
+Run tests (which creates screenshots and compares them against the reference screenshots):
+
+```bash
+$ make backstop:test
+```
+
+Test screenshots and results are genereated in `backstop_data/`.
+
+If the test you ran looks good you can approve them (thus making the test screenshots your new reference screenshots):
+
+```bash
+$ make backstop:approve
+```
 
 ## Deploy
 

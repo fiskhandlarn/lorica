@@ -1,5 +1,4 @@
-up:
-	docker-compose up -d
+up: docker%up
 	xdg-open "https://localhost:3000/"
 
 down:
@@ -7,6 +6,18 @@ down:
 
 logs:
 	docker-compose logs
+
+backstop%reference: docker%up
+	npm run backstop reference
+
+backstop%test: docker%up
+	npm run backstop test
+
+backstop%approve: docker%up
+	npm run backstop approve
+
+docker%up:
+	docker-compose up -d
 
 ssl%create:
 	mkdir -p .docker/.ssl

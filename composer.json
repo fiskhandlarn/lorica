@@ -21,7 +21,7 @@
     "wordplate/acf": "^6.0.0",
     "wordplate/framework": "^7.1.0",
     "wordplate/mail": "^4.0.0",
-    "wordplate/plate": "^4.1.0",
+    "wordplate/plate": "6.0.0",
     "wp-cli/wp-cli-bundle": "^2.4.0",
     "wpackagist-plugin/autodescription": "^3.2.4",
     "wpackagist-plugin/better-wp-security": "^7.7.1",

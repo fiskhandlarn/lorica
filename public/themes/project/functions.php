@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-//require_once template_path('library/disable-rest-api.php');
+//require_once get_theme_file_path('library/disable-rest-api.php');
 
-require_once stylesheet_path('/includes/plate.php');
+require_once get_theme_file_path('/includes/plate.php');
 if (function_exists('pll__')) {
-    require_once stylesheet_path('/includes/translations.php');
+    require_once get_theme_file_path('/includes/translations.php');
 }
-require_once stylesheet_path('/includes/image-sizes.php');
+require_once get_theme_file_path('/includes/image-sizes.php');
 
 // request support for lorica features
 add_theme_support('lorica-deregister-jquery');

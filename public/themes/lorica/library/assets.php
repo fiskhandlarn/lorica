@@ -8,12 +8,12 @@ if (!defined('ABSPATH')) {
 
 function asset_path($path)
 {
-    return stylesheet_path('assets/'.$path);
+    return get_theme_file_path('assets/'.$path);
 }
 
 function asset_url($url)
 {
-    return asset('assets/'.$url);
+    return get_theme_file_uri('assets/'.$url);
 }
 
 function image_path($path)
@@ -82,7 +82,7 @@ add_action('wp_enqueue_scripts', function () {
     if (get_theme_support('lorica-enqueue-modernizr')) {
         wp_enqueue_script(
             'modernizr',
-            asset('assets/scripts/modernizr.js'),
+            asset_url('scripts/modernizr.js'),
             false,
             filemtime_base36(asset_path('scripts/modernizr.js')),
             false

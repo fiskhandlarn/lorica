@@ -51,7 +51,7 @@ add_theme_support('plate-disable-toolbar', [
 add_theme_support('plate-permalink', '/%postname%/');
 
 // Set custom login logo.
-add_theme_support('plate-login-logo', asset('assets/images/favicons/android-chrome-192x192.png'));
+add_theme_support('plate-login-logo', get_theme_file_uri('assets/images/favicons/android-chrome-192x192.png'));
 
 // Set custom footer text.
 add_theme_support('plate-footer-text', 'Thank you for creating with <a href="https://github.com/fiskhandlarn/lorica">lorica</a>.');

@@ -24,10 +24,6 @@ Removes WordPress emoji support and it's bloating in `<head>`. Remove only if th
 
 Removes WordPress atom/rss feeds. Remove only if the site needs to have feeds.
 
-## [ekandreas/bladerunner](https://github.com/ekandreas/bladerunner)
-
-Blade support for templates.
-
 ## [Fly Dynamic Image Resizer](https://wordpress.org/plugins/fly-dynamic-image-resizer/)
 
 Helper for easily setting custom image sizes.
@@ -70,9 +66,13 @@ Simplifies database migration between live, stage and development servers. Save 
 
 # Composer packages
 
+## [fiskhandlarn/blade](https://github.com/fiskhandlarn/blade)
+
+Adds Laravel Blade support. Used in [parent theme](./public/themes/lorica) and can be used in your project theme.
+
 ## [johnbillion/extended-cpts](https://github.com/johnbillion/extended-cpts)
 
-"A library which provides extended functionality to WordPress custom post types and taxonomies." Highly recommended if you're using custom post types and taxonomies.
+"A library which provides extended functionality to WordPress custom post types and taxonomies". Highly recommended if you're using custom post types and taxonomies.
 
 ## [spatie/image-optimizer](https://github.com/spatie/image-optimizer)
 

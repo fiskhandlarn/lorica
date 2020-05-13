@@ -6,23 +6,27 @@ if (!defined('ABSPATH')) {
     exit();
 }
 
-function asset_path($path)
+function asset_path(string $path = ''): string
 {
+    $path = ltrim($path, '/');
     return get_theme_file_path('assets/'.$path);
 }
 
-function asset_url($url)
+function asset_url(string $url = ''): string
 {
+    $url = ltrim($url, '/');
     return get_theme_file_uri('assets/'.$url);
 }
 
-function image_path($path)
+function image_path(string $path = ''): string
 {
+    $path = ltrim($path, '/');
     return asset_path('images/'.$path);
 }
 
-function image_url($url)
+function image_url(string $url = ''): string
 {
+    $url = ltrim($url, '/');
     return asset_url('images/'.$url);
 }
 

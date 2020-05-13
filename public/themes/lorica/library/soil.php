@@ -13,7 +13,8 @@ if (!defined('ABSPATH')) {
 add_theme_support('soil-clean-up');
 
 // Disable asset versioning.
-add_theme_support('soil-disable-asset-versioning');
+// Lorica: this would remove our own cache busting (see /public/themes/lorica/library/assets.php)
+//add_theme_support('soil-disable-asset-versioning');
 
 // Disable trackbacks.
 add_theme_support('soil-disable-trackbacks');

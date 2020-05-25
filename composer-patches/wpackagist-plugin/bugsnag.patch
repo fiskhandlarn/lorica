@@ -1,8 +1,0 @@
---- bugsnag.php	Mon Mar 11 09:59:14 2019
-+++ bugsnag-patch.php	Mon Mar 11 09:55:28 2019
-@@ -311,4 +311,5 @@
-     }
- }
-
-+global $bugsnagWordpress; // PATCH to make variable reachable when plugin is loaded with wordplate
- $bugsnagWordpress = new Bugsnag_Wordpress();

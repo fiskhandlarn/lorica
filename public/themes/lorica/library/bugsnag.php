@@ -9,7 +9,7 @@ if (!defined('ABSPATH')) {
 if (!function_exists('bugsnag_error')) {
     function bugsnag_error($name, $message, array $metaData = null, $severity = null)
     {
-        if (!env('DISABLE_BUGSNAG')) {
+        if (env('BUGSNAG_SET_EXCEPTION_HANDLERS', true)) {
             if (class_exists('Bugsnag_Wordpress')) {
                 global $bugsnagWordpress;
 
@@ -22,11 +22,7 @@ if (!function_exists('bugsnag_error')) {
 }
 
 if (class_exists('Bugsnag_Wordpress')) {
-    if (env('DISABLE_BUGSNAG')) {
-        // https://github.com/bugsnag/bugsnag-wordpress/issues/27#issuecomment-458890694
-        restore_error_handler();
-        restore_exception_handler();
-    } else {
+    if (env('BUGSNAG_SET_EXCEPTION_HANDLERS', true)) {
         global $bugsnagWordpress;
 
         if (isset($bugsnagWordpress)) {

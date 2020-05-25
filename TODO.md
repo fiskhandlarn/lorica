@@ -22,5 +22,5 @@ if (!is_home()) {
 * Create a user for the client with the user role **editor** or lower
 * Set [Google Analytics](https://analytics.google.com/) Tracking ID (see call to `google_analytics_deploy` in [functions.php](./public/themes/project/functions.php))
 * Set [Facebook Pixel](https://www.facebook.com/business/a/facebook-pixel) Tracking ID (see call to `pixel_deploy` in [functions.php](./public/themes/project/functions.php))
-* Configure [Bugsnag](/wordpress/wp-admin/options-general.php?page=bugsnag) with the API key and set **Notify Bugsnag About** to "Crashes, errors & warnings" and remove `DISABLE_BUGSNAG` from deploy `.env` files
+* Set your `BUGSNAG_API_KEY` in the `.env` file, set **Notify Bugsnag About** to "Crashes, errors & warnings" in the [Bugsnag settings](/wordpress/wp-admin/options-general.php?page=bugsnag) and either remove `BUGSNAG_SET_EXCEPTION_HANDLERS` or set it to `true` in the production `.env` files
 * Define browser support in [.browserslistrc](./.browserslistrc)

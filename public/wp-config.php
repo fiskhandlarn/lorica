@@ -50,7 +50,8 @@ $application = new WordPlate\Application(
 |
 */
 
-// define('WP_ALLOW_MULTISITE', env('WP_ALLOW_MULTISITE', true));
+define('BUGSNAG_API_KEY', env('BUGSNAG_API_KEY', false));
+define('BUGSNAG_SET_EXCEPTION_HANDLERS', env('BUGSNAG_SET_EXCEPTION_HANDLERS', true));
 
 /*
 |--------------------------------------------------------------------------
